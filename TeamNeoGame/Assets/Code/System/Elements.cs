@@ -18,13 +18,13 @@ static class ElementC
         switch (e)
         {
             case Element.Fire:
-                return new Color(1, 0, 0);
+                return new Color(0.835f, 0.21f, 0.19f);
             case Element.Grass:
-                return new Color(1, 0, 0.85f);
+                return new Color(0.26f, 0.66f, 0.168f);
             case Element.Tan:
-                return new Color(0,0,0.85f);
+                return new Color(0.99f,0.83f,0.34f);
             case Element.Water:
-                return new Color(1,1,0);
+                return new Color(0.2f,0.2f,0,0.81f);
             default:
                 //Won't happen
                 return new Color(0,0,0);

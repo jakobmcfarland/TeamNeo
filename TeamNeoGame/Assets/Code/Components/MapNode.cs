@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.CoreModule;
 using UnityEngine;
 
 public class MapNode : MonoBehaviour
 {
-    Vector normalColor = 
+   // Vector normalColor = 
 
     // Start is called before the first frame update
     void Start()
