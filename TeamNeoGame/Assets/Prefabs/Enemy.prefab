@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1716868057977947447}
   - component: {fileID: 1716868057977947444}
+  - component: {fileID: 5208386833214094583}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -80,6 +81,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5208386833214094583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716868057977947445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f10a4bffb325a9d4fb8457a9cf6f88ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cm: {fileID: 0}
+  stance: {fileID: 1716868058238166049}
+  health: 100
+  attackTime: 3
+  damage: 10
+  attacking: 0
+  isAttacking: 1
+  canCounter: 0
+  healthText: {fileID: 0}
+  stanceAnim: {fileID: 885934200692133024}
 --- !u!1 &1716868058238166079
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +113,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1716868058238166078}
   - component: {fileID: 1716868058238166049}
+  - component: {fileID: 885934200692133024}
+  - component: {fileID: 5140043061889723512}
   m_Layer: 0
   m_Name: EnemyStanceAlert
   m_TagString: Untagged
@@ -159,3 +184,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &885934200692133024
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716868058238166079}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e31a1922659805d99a58780d2aec8595, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &5140043061889723512
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716868058238166079}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

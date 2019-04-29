@@ -24,7 +24,7 @@ static class ElementC
             case Element.Tan:
                 return new Color(0.99f,0.83f,0.34f);
             case Element.Water:
-                return new Color(0.2f,0.2f,0,0.81f);
+                return new Color(0.2f,0.2f,0.81f);
             default:
                 //Won't happen
                 return new Color(0,0,0);

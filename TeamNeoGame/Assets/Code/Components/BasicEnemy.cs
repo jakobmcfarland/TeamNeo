@@ -14,6 +14,7 @@ public class BasicEnemy : MonoBehaviour
     public bool isAttacking = true;
     public bool canCounter;
     public TextMeshProUGUI healthText;
+    public Animator stanceAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,11 @@ public class BasicEnemy : MonoBehaviour
         attackTimer -= Time.deltaTime;
         if (attackTimer < 1.0f && attackTimer > 0)
         {
-            canCounter = true;
+            if (!canCounter)
+            {
+                canCounter = true;
+                stanceAnim.SetTrigger("Flash");
+            }
         }
         else
         {

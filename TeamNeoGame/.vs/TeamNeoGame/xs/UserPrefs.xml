@@ -1,0 +1,36 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Code/System/Elements.cs">
+    <Files>
+      <File FileName="Assets/Code/Components/PlayerCombat.cs" Line="24" Column="1" />
+      <File FileName="Assets/Code/System/CombatManager.cs" Line="29" Column="38" />
+      <File FileName="Assets/Code/Components/MapNode.cs" Line="3" Column="1" />
+      <File FileName="Assets/Code/Components/BasicEnemy.cs" Line="16" Column="27" />
+      <File FileName="Assets/Code/Components/IOpponentAI.cs" Line="1" Column="1" />
+      <File FileName="Assets/Code/System/Elements.cs" Line="21" Column="47" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TeamNeoGame" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Code" expanded="True">
+                  <Node name="Components" expanded="True" />
+                  <Node name="System" expanded="True">
+                    <Node name="Elements.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
