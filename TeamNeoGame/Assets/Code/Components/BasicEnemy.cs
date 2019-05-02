@@ -17,6 +17,7 @@ public class BasicEnemy : MonoBehaviour
     public TextMeshProUGUI healthText;
     public HPBar hpBar;
     public Animator stanceAnim;
+    public StatusText st;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +33,9 @@ public class BasicEnemy : MonoBehaviour
         {
             if (!canCounter)
             {
+                st.Display("Can Counter!");
                 canCounter = true;
-                stanceAnim.SetTrigger("Flash");
+                stanceAnim.SetBool("CanCounter", true);
             }
         }
         else
@@ -42,6 +44,7 @@ public class BasicEnemy : MonoBehaviour
         }
         if (attackTimer < 0)
         {
+            st.Display("Attacking!");
             attackTimer = attackTime;
             Attack();
         }

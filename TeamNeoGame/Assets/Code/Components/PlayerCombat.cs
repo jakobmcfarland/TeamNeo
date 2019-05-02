@@ -19,6 +19,7 @@ public class PlayerCombat : MonoBehaviour
     public float critMod = 3.0f;
     public HPBar hpBar;
     public TextMeshProUGUI healthText;
+    public StatusText st;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,15 +60,19 @@ public class PlayerCombat : MonoBehaviour
                 {
                     if (attacking.Beats(cm.enemy.attacking) == 1)
                     {
+                        st.Display("Countering!"); 
                         cm.Counter();
                     }
                     else
                     {
+                        st.Display("Trying to Block!");
                         cm.Accelerate();
                     }
                 }
                 else
                 {
+                    st.Display("Trying to Block!");
+
                     cm.Accelerate();
                 }
             }

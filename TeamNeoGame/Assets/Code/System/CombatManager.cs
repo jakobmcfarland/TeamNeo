@@ -45,6 +45,7 @@ public class CombatManager : MonoBehaviour
             player.ModHealth(-enemy.damage);
             print(player.health);
         }
+        enemy.stanceAnim.SetBool("CanCounter", false);
     }
     public void Counter()
     {
