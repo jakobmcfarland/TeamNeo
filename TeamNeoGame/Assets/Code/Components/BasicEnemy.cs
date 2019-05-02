@@ -7,6 +7,7 @@ public class BasicEnemy : MonoBehaviour
     public CombatManager cm;
     public SpriteRenderer stance;
     public int health = 100;
+    public int maxHealth = 100;
     public float attackTime = 3.0f;
     private float attackTimer = 0.0f;
     public int damage = 10;
@@ -14,6 +15,7 @@ public class BasicEnemy : MonoBehaviour
     public bool isAttacking = true;
     public bool canCounter;
     public TextMeshProUGUI healthText;
+    public HPBar hpBar;
     public Animator stanceAnim;
     // Start is called before the first frame update
     void Start()
@@ -62,6 +64,7 @@ public class BasicEnemy : MonoBehaviour
     {
         health += mod;
         healthText.text = health.ToString();
+        hpBar.UpdateHP((float)health / (float)maxHealth);
     }
     Element PickAttack()
     {

@@ -10,12 +10,14 @@ public class PlayerCombat : MonoBehaviour
     public KeyCode blueKey;
     public CombatManager cm;
     public int health = 100;
+    public int maxHealth = 100;
     public Element attacking;
     public float attackTime = 1.0f;
     private float attackTimer = 0.0f;
     private bool at = false;
     public int damage = 10;
     public float critMod = 3.0f;
+    public HPBar hpBar;
     public TextMeshProUGUI healthText;
     // Start is called before the first frame update
     void Start()
@@ -79,5 +81,6 @@ public class PlayerCombat : MonoBehaviour
     {
         health += mod;
         healthText.text = health.ToString();
+        hpBar.UpdateHP((float)health / (float)maxHealth);
     }
 }
