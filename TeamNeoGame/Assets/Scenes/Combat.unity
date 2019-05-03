@@ -1852,26 +1852,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 9106449980278606278, guid: 0ba272909f8c36646946c9e70d754ab3,
-        type: 3}
-      propertyPath: cm
-      value: 
-      objectReference: {fileID: 628801514}
-    - target: {fileID: 9106449980278606278, guid: 0ba272909f8c36646946c9e70d754ab3,
-        type: 3}
-      propertyPath: healthText
-      value: 
-      objectReference: {fileID: 86196792}
-    - target: {fileID: 9106449980278606278, guid: 0ba272909f8c36646946c9e70d754ab3,
-        type: 3}
-      propertyPath: hpBar
-      value: 
-      objectReference: {fileID: 1977306954}
-    - target: {fileID: 9106449980278606278, guid: 0ba272909f8c36646946c9e70d754ab3,
-        type: 3}
-      propertyPath: st
-      value: 
-      objectReference: {fileID: 444977329}
     - target: {fileID: 6062446939100017105, guid: 0ba272909f8c36646946c9e70d754ab3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1927,6 +1907,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6062446939100017105, guid: 0ba272909f8c36646946c9e70d754ab3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062446939100017105, guid: 0ba272909f8c36646946c9e70d754ab3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6062446939100017104, guid: 0ba272909f8c36646946c9e70d754ab3,
         type: 3}
       propertyPath: m_Color.r
@@ -1942,5 +1932,25 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9106449980278606278, guid: 0ba272909f8c36646946c9e70d754ab3,
+        type: 3}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 628801514}
+    - target: {fileID: 9106449980278606278, guid: 0ba272909f8c36646946c9e70d754ab3,
+        type: 3}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 86196792}
+    - target: {fileID: 9106449980278606278, guid: 0ba272909f8c36646946c9e70d754ab3,
+        type: 3}
+      propertyPath: hpBar
+      value: 
+      objectReference: {fileID: 1977306954}
+    - target: {fileID: 9106449980278606278, guid: 0ba272909f8c36646946c9e70d754ab3,
+        type: 3}
+      propertyPath: st
+      value: 
+      objectReference: {fileID: 444977329}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ba272909f8c36646946c9e70d754ab3, type: 3}

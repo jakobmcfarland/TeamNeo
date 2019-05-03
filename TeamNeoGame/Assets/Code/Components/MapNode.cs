@@ -13,11 +13,9 @@ public class MapNode : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
 
-    public Color incompleteNormalColor = Color.white;
-    public Color completeNormalColor = new Color(0.35f, 0.35f, 0.35f);
-    public Color currentNormalColor = Color.blue;
-    public Color overColor = Color.grey;
-    public Color downColor = new Color(0.35f, 0.35f, 0.35f);
+    public Color incompleteNormalColor = new Color(1.0f, 0.0f, 0.0f, 0.5f);
+    public Color completeNormalColor = new Color(0.0f, 1.0f, 0.5f, 0.5f);
+    public Color currentNormalColor = new Color(0.0f, 0.5f, 0.0f, 0.5f);
 
     public MapNode previusObjectA;
     public MapNode previusObjectB;
@@ -35,32 +33,19 @@ public class MapNode : MonoBehaviour
         previusNodeB = previusObjectB.GetComponent<MapNode>();
 
         if (nodeState == NodeState.Current) spriteRenderer.color = currentNormalColor;
+        else spriteRenderer.color = incompleteNormalColor;
     }
 
-    void OnMouseEnter()
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if(previusNodeA.nodeState == NodeState.Current) spriteRenderer.color = overColor;
-    }
-
-    void OnMouseExit()
-    {
-        if (previusNodeA.nodeState == NodeState.Current) spriteRenderer.color = incompleteNormalColor;
-    }
-
-    // Update when down
-    void OnMouseDown()
-    {
-        if (previusNodeA.nodeState == NodeState.Current) spriteRenderer.color = downColor;
-    }
-
-    // Update when clicked
-    void OnMouseUpAsButton()
-    {
-        if (nodeState == NodeState.Incomplete &&
-            ( previusNodeA.nodeState == NodeState.Current
-            || previusNodeB.nodeState == NodeState.Current))
+        if (other.collider.GetComponent<MapPlayerController>() != null)
         {
-            ActivateNode();
+            if (nodeState == NodeState.Incomplete &&
+            (previusNodeA.nodeState == NodeState.Current
+            || previusNodeB.nodeState == NodeState.Current))
+            {
+                ActivateNode();
+            }
         }
     }
 
