@@ -38,13 +38,10 @@ public class CombatManager : MonoBehaviour
             print("Blocked!");
             //Blocked
             player.ModHealth(-(int)(0.1f * enemy.damage));
-            player.ModStamina(player.staminaGain);
         }
         else
         {
             print("Not Blocked!");
-            print(enemy.attacking);
-            print(player.attacking);
             player.ModHealth(-enemy.damage);
             print(player.health);
         }
