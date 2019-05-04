@@ -68,10 +68,10 @@
     <Compile Include="Assets\Code\Components\MapNode.cs" />
     <Compile Include="Assets\Code\Components\MapPlayerController.cs" />
     <Compile Include="Assets\Code\Components\PlayerCombat.cs" />
+    <Compile Include="Assets\Code\HPBar.cs" />
+    <Compile Include="Assets\Code\StatusText.cs" />
     <Compile Include="Assets\Code\System\CombatManager.cs" />
     <Compile Include="Assets\Code\System\Elements.cs" />
-    <Compile Include="Assets\HPBar.cs" />
-    <Compile Include="Assets\StatusText.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
