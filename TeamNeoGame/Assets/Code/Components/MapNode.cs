@@ -6,7 +6,8 @@ public enum NodeState
 {
     Incomplete,
     Complete,
-    Current
+    Current,
+    Start
 }
 
 public class MapNode : MonoBehaviour
@@ -14,14 +15,14 @@ public class MapNode : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     public Color incompleteNormalColor = new Color(1.0f, 0.0f, 0.0f, 0.5f);
-    public Color completeNormalColor = new Color(0.0f, 1.0f, 0.5f, 0.5f);
-    public Color currentNormalColor = new Color(0.0f, 0.5f, 0.0f, 0.5f);
+    public Color completeNormalColor = new Color(0.5f, 1.0f, 1.0f, 0.5f); 
+    public Color currentNormalColor = new Color(0.0f, 0.5f, 0.5f, 0.5f);
 
     public MapNode previusObjectA;
     public MapNode previusObjectB;
 
-    public MapNode previusNodeA;
-    public MapNode previusNodeB;
+    MapNode previusNodeA;
+    MapNode previusNodeB;
 
     public NodeState nodeState = NodeState.Incomplete;
 
@@ -32,17 +33,18 @@ public class MapNode : MonoBehaviour
         previusNodeA = previusObjectA.GetComponent<MapNode>();
         previusNodeB = previusObjectB.GetComponent<MapNode>();
 
-        if (nodeState == NodeState.Current) spriteRenderer.color = currentNormalColor;
-        else spriteRenderer.color = incompleteNormalColor;
+        //if (nodeState == NodeState.Start) spriteRenderer.color = currentNormalColor; else
+        spriteRenderer.color = incompleteNormalColor;
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (other.collider.GetComponent<MapPlayerController>() != null)
+        if (collider.GetComponent<MapPlayerController>() != null)
         {
-            if (nodeState == NodeState.Incomplete &&
-            (previusNodeA.nodeState == NodeState.Current
-            || previusNodeB.nodeState == NodeState.Current))
+            if (nodeState == NodeState.Start
+            || (nodeState == NodeState.Incomplete 
+            && (previusNodeA.nodeState == NodeState.Current
+            || previusNodeB.nodeState == NodeState.Current)))
             {
                 ActivateNode();
             }
@@ -51,12 +53,12 @@ public class MapNode : MonoBehaviour
 
     void ActivateNode()
     {
-        spriteRenderer.color = currentNormalColor;
-        nodeState = NodeState.Current;
-
         previusNodeA.spriteRenderer.color = completeNormalColor;
         previusNodeB.spriteRenderer.color = completeNormalColor;
         previusNodeA.nodeState = NodeState.Complete;
         previusNodeB.nodeState = NodeState.Complete;
+
+        spriteRenderer.color = currentNormalColor;
+        nodeState = NodeState.Current;
     }
 }
