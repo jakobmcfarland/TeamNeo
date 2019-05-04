@@ -11,6 +11,10 @@ public class PlayerCombat : MonoBehaviour
     public CombatManager cm;
     public int health = 100;
     public int maxHealth = 100;
+    public int stamina = 0;
+    public int maxStamina = 100;
+    public int staminaCost = 20;
+    public int staminaGain = 10;
     public Element attacking;
     public float attackTime = 1.0f;
     private float attackTimer = 0.0f;
@@ -18,6 +22,7 @@ public class PlayerCombat : MonoBehaviour
     public int damage = 10;
     public float critMod = 3.0f;
     public HPBar hpBar;
+    public HPBar staminaBar;
     public TextMeshProUGUI healthText;
     public StatusText st;
     // Start is called before the first frame update
@@ -58,9 +63,10 @@ public class PlayerCombat : MonoBehaviour
             {
                 if (cm.enemy.canCounter)
                 {
-                    if (attacking.Beats(cm.enemy.attacking) == 1)
+                    if (attacking.Beats(cm.enemy.attacking) == 1 && stamina >= staminaCost)
                     {
                         st.Display("Countering!"); 
+                        ModStamina(-staminaCost);
                         cm.Counter();
                     }
                     else
@@ -87,5 +93,9 @@ public class PlayerCombat : MonoBehaviour
         health += mod;
         healthText.text = health.ToString();
         hpBar.UpdateHP((float)health / (float)maxHealth);
+    }
+    public void ModStamina(int mod) {
+        stamina += mod;
+        staminaBar.UpdateHP((float)stamina / (float)maxStamina);
     }
 }

@@ -60,8 +60,9 @@ public class BasicEnemy : MonoBehaviour
     }
     void Attack()
     {
-        attacking = PickAttack();
+        
         cm.Clash();
+        attacking = PickAttack();
     }
     public void ModHealth(int mod)
     {
