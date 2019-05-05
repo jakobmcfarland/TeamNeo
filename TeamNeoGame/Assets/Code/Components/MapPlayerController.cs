@@ -7,12 +7,12 @@ public class MapPlayerController : MonoBehaviour
     public float mapPlayerWalkSpeed = 15.0f;
     public float mapPlayerMaxSpeed = 15.0f;
 
-    Rigidbody2D rigidbody;
+    Rigidbody2D rigidbody_;
     Animator animator;
 
     private void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        rigidbody_ = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
@@ -27,6 +27,6 @@ public class MapPlayerController : MonoBehaviour
         animator.SetFloat("playerVerticalSpeed", movement.y);
         movement = movement.normalized * mapPlayerWalkSpeed;
 
-        rigidbody.velocity = movement;
+        rigidbody_.velocity = movement;
     }
 }
