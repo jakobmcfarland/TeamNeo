@@ -24,7 +24,7 @@ public class CombatManager : MonoBehaviour
     }
     public void Accelerate()
     {
-        enemy.Accelerate();
+        //enemy.Accelerate();
     }
     public void HurtPlayer(int damage)
     {
@@ -33,7 +33,7 @@ public class CombatManager : MonoBehaviour
     }
     public void Clash()
     {
-        if (enemy.attacking == player.attacking)
+        /*if (enemy.attacking == player.attacking)
         {
             print("Blocked!");
             //Blocked
@@ -48,7 +48,7 @@ public class CombatManager : MonoBehaviour
             player.ModHealth(-enemy.damage);
             print(player.health);
         }
-        enemy.stanceAnim.SetBool("CanCounter", false);
+        enemy.stanceAnim.SetBool("CanCounter", false);*/
     }
     public void Counter()
     {

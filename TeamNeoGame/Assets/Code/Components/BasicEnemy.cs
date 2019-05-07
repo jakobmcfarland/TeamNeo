@@ -11,7 +11,10 @@ public class BasicEnemy : MonoBehaviour
     public float attackTime = 3.0f;
     private float attackTimer = 0.0f;
     public int damage = 10;
-    public  Element attacking;
+    public Element[] attacking;
+    public AttackBox[] attackBoxes;
+    public GameObject attackGroup;
+    public int attackCount = 4;
     public bool isAttacking = true;
     public bool canCounter;
     public TextMeshProUGUI healthText;
@@ -22,47 +25,18 @@ public class BasicEnemy : MonoBehaviour
     void Start()
     {
         attackTimer = attackTime;
-        attacking = PickAttack();
     }
-
+    void FillAttacks()
+    {
+        for(var i = 0; i < attackCount; i++)
+        {
+            attacking[i] = PickAttack();
+        }
+    }
     // Update is called once per frame
     void Update()
     {
-        attackTimer -= Time.deltaTime;
-        if (attackTimer < 1.0f && attackTimer > 0)
-        {
-            if (!canCounter)
-            {
-                st.Display("Can Counter!");
-                canCounter = true;
-                stanceAnim.SetBool("CanCounter", true);
-            }
-        }
-        else
-        {
-            canCounter = false;
-        }
-        if (attackTimer < 0)
-        {
-            st.Display("Attacking!");
-            attackTimer = attackTime;
-            Attack();
-        }
-        if (stance.color != attacking.ToColor())
-        {
-            stance.color = attacking.ToColor();
-        }
-    }
-    public void Accelerate()
-    {
-        Attack();
-        attackTimer = attackTime;
-    }
-    void Attack()
-    {
-        
-        cm.Clash();
-        attacking = PickAttack();
+
     }
     public void ModHealth(int mod)
     {

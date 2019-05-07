@@ -34,7 +34,7 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         attackTimer -= Time.deltaTime;
-        if (attackTimer <= 0)
+        /*if (attackTimer <= 0)
         {
             if (Input.GetKeyDown(blueKey))
             {
@@ -82,7 +82,7 @@ public class PlayerCombat : MonoBehaviour
                     cm.Accelerate();
                 }
             }
-        }
+        }*/
     }
     public void Accelerate()
     {
