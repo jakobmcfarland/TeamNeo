@@ -39,55 +39,6 @@ public class PlayerCombat : MonoBehaviour
             ModStamina(-stamina);
             cm.AttackEnemy(damage);
         }
-        /*if (attackTimer <= 0)
-        {
-            if (Input.GetKeyDown(blueKey))
-            {
-                attacking = Element.Water;
-                attackTimer = attackTime;
-            }
-            else if (Input.GetKeyDown(greenKey))
-            {
-                attacking = Element.Grass;
-                attackTimer = attackTime;
-
-            }
-            else if (Input.GetKeyDown(redKey))
-            {
-                attacking = Element.Fire;
-                attackTimer = attackTime;
-
-            }
-            else if (Input.GetKeyDown(tanKey))
-            {
-                attacking = Element.Tan;
-                attackTimer = attackTime;
-
-            }
-            if (cm.enemy.isAttacking && Input.GetKeyDown(blueKey) || Input.GetKeyDown(greenKey) || Input.GetKeyDown(redKey) || Input.GetKeyDown(tanKey))
-            {
-                if (cm.enemy.canCounter)
-                {
-                    if (attacking.Beats(cm.enemy.attacking) == 1 && stamina >= staminaCost)
-                    {
-                        st.Display("Countering!"); 
-                        ModStamina(-staminaCost);
-                        cm.Counter();
-                    }
-                    else
-                    {
-                        st.Display("Trying to Block!");
-                        cm.Accelerate();
-                    }
-                }
-                else
-                {
-                    st.Display("Trying to Block!");
-
-                    cm.Accelerate();
-                }
-            }
-        }*/
     }
     public void Accelerate()
     {
@@ -96,11 +47,17 @@ public class PlayerCombat : MonoBehaviour
     public void ModHealth(int mod)
     {
         health += mod;
+        if (health > maxHealth) {
+            health = maxHealth;
+        }
         healthText.text = health.ToString();
         hpBar.UpdateHP((float)health / (float)maxHealth);
     }
     public void ModStamina(int mod) {
         stamina += mod;
+        if(stamina > maxStamina) {
+            stamina = maxStamina;
+        }
         staminaBar.UpdateHP((float)stamina / (float)maxStamina);
     }
 }

@@ -17,6 +17,7 @@ public class AttackManager : MonoBehaviour
     public KeyCode blueKey;
     public int hpWrong = 10;
     public int staminaRight = 10;
+    public HPBar timeBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +68,7 @@ public class AttackManager : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
+        timeBar.UpdateHP(timer/time);
         if (timer <= 0) {
             Finish();
         }
