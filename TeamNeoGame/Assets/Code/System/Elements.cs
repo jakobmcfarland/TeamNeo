@@ -12,7 +12,20 @@ public enum Element
 
 static class ElementC
 {
-
+    public static float ToDegrees(this Element e) {
+        switch(e) {
+            case Element.Fire:
+                return 0;
+            case Element.Water:
+                return 90;
+            case Element.Grass:
+                return 270;
+            case Element.Tan:
+                return 180;
+            default:
+                return 0;  
+        }
+    }
     public static Color ToColor(this Element e)
     {
         switch (e)

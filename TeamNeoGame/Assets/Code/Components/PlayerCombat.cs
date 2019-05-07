@@ -8,6 +8,7 @@ public class PlayerCombat : MonoBehaviour
     public KeyCode redKey;
     public KeyCode tanKey;
     public KeyCode blueKey;
+    public KeyCode attackKey;
     public CombatManager cm;
     public int health = 100;
     public int maxHealth = 100;
@@ -34,6 +35,10 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         attackTimer -= Time.deltaTime;
+        if(Input.GetKeyDown(attackKey) && stamina >= maxStamina) {
+            ModStamina(-stamina);
+            cm.AttackEnemy(damage);
+        }
         /*if (attackTimer <= 0)
         {
             if (Input.GetKeyDown(blueKey))

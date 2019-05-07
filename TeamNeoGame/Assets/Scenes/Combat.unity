@@ -1202,6 +1202,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4758938456729159240, guid: 7d43f06243ed3bbe2a7bb1cbba4c6bcc,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 67926103340967526, guid: b15f68d95502a0245a0316dbf08837b7,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d43f06243ed3bbe2a7bb1cbba4c6bcc, type: 3}
 --- !u!4 &913830381 stripped
@@ -1450,6 +1456,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4758938456729159240, guid: 7d43f06243ed3bbe2a7bb1cbba4c6bcc,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 67926103340967526, guid: b15f68d95502a0245a0316dbf08837b7,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d43f06243ed3bbe2a7bb1cbba4c6bcc, type: 3}
 --- !u!4 &1009447957 stripped
@@ -1726,6 +1738,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4758938456729159240, guid: 7d43f06243ed3bbe2a7bb1cbba4c6bcc,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 67926103340967526, guid: b15f68d95502a0245a0316dbf08837b7,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d43f06243ed3bbe2a7bb1cbba4c6bcc, type: 3}
 --- !u!4 &1368193781 stripped
@@ -2228,6 +2246,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4758938456729159240, guid: 7d43f06243ed3bbe2a7bb1cbba4c6bcc,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 67926103340967526, guid: b15f68d95502a0245a0316dbf08837b7,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d43f06243ed3bbe2a7bb1cbba4c6bcc, type: 3}
 --- !u!4 &4922755102169616637 stripped
@@ -2285,6 +2309,11 @@ PrefabInstance:
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 4931018760033602401}
+    - target: {fileID: 9106449980278606278, guid: 0ba272909f8c36646946c9e70d754ab3,
+        type: 3}
+      propertyPath: attackKey
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 6062446939100017105, guid: 0ba272909f8c36646946c9e70d754ab3,
         type: 3}
       propertyPath: m_LocalPosition.x

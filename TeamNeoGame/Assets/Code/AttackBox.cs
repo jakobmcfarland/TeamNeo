@@ -23,6 +23,8 @@ public class AttackBox : MonoBehaviour
     {
         element = el;
         sprite.color = el.ToColor();
+        gameObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        gameObject.transform.Rotate(0,0,el.ToDegrees());
     }
     public void SetDone(bool done)
     {

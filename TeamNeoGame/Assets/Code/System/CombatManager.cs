@@ -26,6 +26,9 @@ public class CombatManager : MonoBehaviour
     {
         //enemy.Accelerate();
     }
+    public void AttackEnemy(int damage) {
+        enemy.ModHealth(-damage);
+    }
     public void HurtPlayer(int damage)
     {
         player.ModHealth(-damage);
