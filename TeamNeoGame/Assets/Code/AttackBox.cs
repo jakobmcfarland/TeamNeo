@@ -22,8 +22,8 @@ public class AttackBox : MonoBehaviour
     public void SetElement(Element el)
     {
         element = el;
-        //.sprite.color = Color.white;
-        sprite.color = el.ToColor();
+        sprite.color = Color.white;
+        //sprite.color = el.ToColor();
         gameObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
         gameObject.transform.Rotate(0,0,el.ToDegrees());
     }
