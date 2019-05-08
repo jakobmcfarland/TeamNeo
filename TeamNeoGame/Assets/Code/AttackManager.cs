@@ -18,6 +18,9 @@ public class AttackManager : MonoBehaviour
     public int hpWrong = 10;
     public int staminaRight = 10;
     public HPBar timeBar;
+    public float bufferTime = 1.0f;
+    private float bTimer = 0;
+    private bool buffer = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,9 +43,9 @@ public class AttackManager : MonoBehaviour
     }
     public void Finish()
     {
-        player.ModHealth(-(attackCount - right) * hpWrong);
-        player.ModStamina(right * staminaRight);
-        Begin();
+        timer = time;
+        bTimer = bufferTime;
+        buffer = true;
     }
     Element PickAttack()
     {
@@ -64,11 +67,28 @@ public class AttackManager : MonoBehaviour
             return Element.Fire;
         }
     }
+    void TryE(bool r) {
+        if (r) {
+            player.ModStamina(staminaRight);
+        } else {
+            player.ModHealth(-hpWrong);
+        }  
+    }
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
+        if(buffer) {
+            bTimer -= Time.deltaTime;
+            if (bTimer <= 0) {
+                buffer = false;
+                Begin();
+            }
+        }
+      
         timeBar.UpdateHP(timer/time);
+          if(!buffer) {
+                    timer -= Time.deltaTime;
+
         if (timer <= 0) {
             Finish();
         }
@@ -76,11 +96,15 @@ public class AttackManager : MonoBehaviour
         {
             if(attacks[hit].element == Element.Water)
             {
+                TryE(true);
+
                 attacks[hit].SetDone(true);
                 right++;
             }
             else
             {
+               TryE(false);
+
                 attacks[hit].SetDone(false);
 
             }
@@ -90,11 +114,13 @@ public class AttackManager : MonoBehaviour
         {
             if (attacks[hit].element == Element.Grass)
             {
+                TryE(true);
                 attacks[hit].SetDone(true);
                 right++;
             }
             else
             {
+                TryE(false);
                 attacks[hit].SetDone(false);
 
             }
@@ -105,11 +131,14 @@ public class AttackManager : MonoBehaviour
         {
             if (attacks[hit].element == Element.Fire)
             {
+                                TryE(true);
+
                 attacks[hit].SetDone(true);
                 right++;
             }
             else
             {
+                TryE(false);
                 attacks[hit].SetDone(false);
 
             }
@@ -120,11 +149,14 @@ public class AttackManager : MonoBehaviour
         {
             if (attacks[hit].element == Element.Tan)
             {
+                                TryE(true);
+
                 attacks[hit].SetDone(true);
                 right++;
             }
             else
             {
+                TryE(false);
                 attacks[hit].SetDone(false);
 
             }
@@ -136,4 +168,5 @@ public class AttackManager : MonoBehaviour
             Finish();
         }
     }
+}
 }

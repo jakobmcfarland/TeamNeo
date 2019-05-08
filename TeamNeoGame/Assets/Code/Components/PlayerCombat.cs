@@ -20,7 +20,7 @@ public class PlayerCombat : MonoBehaviour
     public float attackTime = 1.0f;
     private float attackTimer = 0.0f;
     private bool at = false;
-    public int damage = 10;
+    public int damage = 50;
     public float critMod = 3.0f;
     public HPBar hpBar;
     public HPBar staminaBar;
