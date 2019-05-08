@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 public class PlayerCombat : MonoBehaviour
 {
     public KeyCode greenKey;
@@ -26,6 +27,7 @@ public class PlayerCombat : MonoBehaviour
     public HPBar staminaBar;
     public TextMeshProUGUI healthText;
     public StatusText st;
+    public Image staminaGauge;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,5 +61,6 @@ public class PlayerCombat : MonoBehaviour
             stamina = maxStamina;
         }
         staminaBar.UpdateHP((float)stamina / (float)maxStamina);
+        staminaGauge.fillAmount = (float)stamina / (float)maxStamina;
     }
 }
