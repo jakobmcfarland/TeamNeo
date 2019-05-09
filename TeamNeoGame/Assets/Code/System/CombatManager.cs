@@ -61,22 +61,6 @@ public class CombatManager : MonoBehaviour
     }
     public void Clash()
     {
-        /*if (enemy.attacking == player.attacking)
-        {
-            print("Blocked!");
-            //Blocked
-            player.ModHealth(-(int)(0.1f * enemy.damage));
-            player.ModStamina(player.staminaGain);
-        }
-        else
-        {
-            print("Not Blocked!");
-            print(enemy.attacking);
-            print(player.attacking);
-            player.ModHealth(-enemy.damage);
-            print(player.health);
-        }
-        enemy.stanceAnim.SetBool("CanCounter", false);*/
     }
     public void Counter()
     {
