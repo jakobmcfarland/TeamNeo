@@ -55,16 +55,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Code\AttackBox.cs" />
-     <Compile Include="Assets\Code\AttackManager.cs" />
+     <Compile Include="Assets\Code\Components\AttackBox.cs" />
      <Compile Include="Assets\Code\Components\BasicEnemy.cs" />
+     <Compile Include="Assets\Code\Components\HPBar.cs" />
      <Compile Include="Assets\Code\Components\IOpponentAI.cs" />
      <Compile Include="Assets\Code\Components\mapCameraFollow.cs" />
      <Compile Include="Assets\Code\Components\MapNode.cs" />
      <Compile Include="Assets\Code\Components\MapPlayerController.cs" />
      <Compile Include="Assets\Code\Components\PlayerCombat.cs" />
-     <Compile Include="Assets\Code\HPBar.cs" />
-     <Compile Include="Assets\Code\StatusText.cs" />
+     <Compile Include="Assets\Code\Components\SelectMenu.cs" />
+     <Compile Include="Assets\Code\Components\StatusText.cs" />
+     <Compile Include="Assets\Code\System\AttackManager.cs" />
+     <Compile Include="Assets\Code\System\CombatInfo.cs" />
      <Compile Include="Assets\Code\System\CombatManager.cs" />
      <Compile Include="Assets\Code\System\Elements.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

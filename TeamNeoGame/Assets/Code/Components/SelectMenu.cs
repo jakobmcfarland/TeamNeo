@@ -21,14 +21,14 @@ public class SelectMenu : MonoBehaviour
     void Update()
     {
      	if (Input.GetKeyDown(upKey)) {
-     		if (selected >= options.length-1) {
+     		if (selected == options.Length - 1 ) {
      			selected = 0;
      		} else {
      			selected++;
      		}
      	} else if (Input.GetKeyDown(downKey)){
      		if (selected == 0) {
-     			selected = options.length-1;
+     			selected = options.Length - 1;
      		} else {
      			selected--;
      		}
@@ -46,5 +46,16 @@ public class SelectMenu : MonoBehaviour
      				break;
      		}
      	}
+        for(int i =0;i < options.Length;i++)
+        {
+            if(i == selected)
+            {
+                options[i].enabled = true;
+            }
+            else
+            {
+                options[i].enabled = false;
+            }
+        }
     }
 }
