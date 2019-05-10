@@ -63,6 +63,7 @@
      <Compile Include="Assets\Code\Combat\Elements.cs" />
      <Compile Include="Assets\Code\Combat\HPBar.cs" />
      <Compile Include="Assets\Code\Combat\IOpponentAI.cs" />
+     <Compile Include="Assets\Code\Components\Cinematic.cs" />
      <Compile Include="Assets\Code\Components\GameOverMenu.cs" />
      <Compile Include="Assets\Code\Components\MainMenu.cs" />
      <Compile Include="Assets\Code\Components\StatusText.cs" />
