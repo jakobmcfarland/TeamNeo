@@ -89,80 +89,84 @@ public class AttackManager : MonoBehaviour
           if(!buffer) {
                     timer -= Time.deltaTime;
 
-        if (timer <= 0) {
-            Finish();
-        }
-        if (Input.GetKeyDown(blueKey))
-        {
-            if(attacks[hit].element == Element.Water)
+            if (timer <= 0)
             {
-                TryE(true);
-
-                attacks[hit].SetDone(true);
-                right++;
+                Finish();
             }
-            else
+            if (player.stamina < player.maxStamina)
             {
-               TryE(false);
+                if (Input.GetKeyDown(blueKey))
+                {
+                    if (attacks[hit].element == Element.Water)
+                    {
+                        TryE(true);
 
-                attacks[hit].SetDone(false);
+                        attacks[hit].SetDone(true);
+                        right++;
+                    }
+                    else
+                    {
+                        TryE(false);
 
+                        attacks[hit].SetDone(false);
+
+                    }
+                    hit++;
+                }
+                else if (Input.GetKeyDown(greenKey))
+                {
+                    if (attacks[hit].element == Element.Grass)
+                    {
+                        TryE(true);
+                        attacks[hit].SetDone(true);
+                        right++;
+                    }
+                    else
+                    {
+                        TryE(false);
+                        attacks[hit].SetDone(false);
+
+                    }
+                    hit++;
+
+                }
+                else if (Input.GetKeyDown(redKey))
+                {
+                    if (attacks[hit].element == Element.Fire)
+                    {
+                        TryE(true);
+
+                        attacks[hit].SetDone(true);
+                        right++;
+                    }
+                    else
+                    {
+                        TryE(false);
+                        attacks[hit].SetDone(false);
+
+                    }
+                    hit++;
+
+                }
+                else if (Input.GetKeyDown(tanKey))
+                {
+                    if (attacks[hit].element == Element.Tan)
+                    {
+                        TryE(true);
+
+                        attacks[hit].SetDone(true);
+                        right++;
+                    }
+                    else
+                    {
+                        TryE(false);
+                        attacks[hit].SetDone(false);
+
+                    }
+                    hit++;
+
+                }
             }
-            hit++;
-        }
-        else if (Input.GetKeyDown(greenKey))
-        {
-            if (attacks[hit].element == Element.Grass)
-            {
-                TryE(true);
-                attacks[hit].SetDone(true);
-                right++;
-            }
-            else
-            {
-                TryE(false);
-                attacks[hit].SetDone(false);
-
-            }
-            hit++;
-
-        }
-        else if (Input.GetKeyDown(redKey))
-        {
-            if (attacks[hit].element == Element.Fire)
-            {
-                                TryE(true);
-
-                attacks[hit].SetDone(true);
-                right++;
-            }
-            else
-            {
-                TryE(false);
-                attacks[hit].SetDone(false);
-
-            }
-            hit++;
-
-        }
-        else if (Input.GetKeyDown(tanKey))
-        {
-            if (attacks[hit].element == Element.Tan)
-            {
-                                TryE(true);
-
-                attacks[hit].SetDone(true);
-                right++;
-            }
-            else
-            {
-                TryE(false);
-                attacks[hit].SetDone(false);
-
-            }
-            hit++;
-
-        }
         if (hit == attackCount)
         {
             Finish();

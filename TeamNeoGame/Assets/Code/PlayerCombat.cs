@@ -29,9 +29,11 @@ public class PlayerCombat : MonoBehaviour
     public TextMeshProUGUI healthText;
     public StatusText st;
     public Image staminaGauge;
+    private Animator staminaAnim;
     // Start is called before the first frame update
     void Start()
     {
+        staminaAnim = staminaGauge.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -67,5 +69,13 @@ public class PlayerCombat : MonoBehaviour
         }
         staminaBar.UpdateHP((float)stamina / (float)maxStamina);
         staminaGauge.fillAmount = (float)stamina / (float)maxStamina;
+        if(staminaGauge.fillAmount >= 1)
+        {
+            staminaAnim.SetBool("Flash", true);
+        }
+        else
+        {
+            staminaAnim.SetBool("Flash", false);
+        }
     }
 }

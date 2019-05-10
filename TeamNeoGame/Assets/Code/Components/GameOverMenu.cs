@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-public class SelectMenu : MonoBehaviour
+public class GameOverMenu : MonoBehaviour
 {
 	public TextMeshProUGUI[] options; 
 	public KeyCode upKey;

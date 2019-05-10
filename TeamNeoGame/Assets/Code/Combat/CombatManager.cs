@@ -21,15 +21,15 @@ public class CombatManager : MonoBehaviour
     void SetDefaultParameters() {
         CombatInfo.CombatInfo combatInfo = CombatInfo.CurrentCombatInfo.CombatInfo;
         combatInfo.EnemyName = "swamp man";
-        combatInfo .EnemySprite = Resources.Load<Sprite>("Enemy");
-        combatInfo .PlayerDamage = 50;
-        combatInfo .EnemyDamage = 10;
-        combatInfo .StaminaGain = 10;
-        combatInfo .MaxStamina = 100;
-        combatInfo .MaxHealth = 100;
-        combatInfo .EnemyHealth = 100;
-        combatInfo .TimePerBar = 5.0f;
-        combatInfo .ArrowCount = 4;
+        combatInfo.EnemySprite = Resources.Load<Sprite>("Enemy");
+        combatInfo.PlayerDamage = 50;
+        combatInfo.EnemyDamage = 10;
+        combatInfo.StaminaGain = 10;
+        combatInfo.MaxStamina = 100;
+        combatInfo.MaxHealth = 100;
+        combatInfo.EnemyHealth = 100;
+        combatInfo.TimePerBar = 5.0f;
+        combatInfo.ArrowCount = 4;
         combatInfo.BufferTime = 1.0f;
     }
     void StartCombat()
