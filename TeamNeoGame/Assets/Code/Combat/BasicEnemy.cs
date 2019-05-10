@@ -28,7 +28,7 @@ public class BasicEnemy : MonoBehaviour
         hpBar.UpdateHP((float)health / (float)maxHealth);
         if(health <= 0) {
             print("Victory!");
-            //SceneManager.LoadScene("Map");
+            SceneManager.LoadScene("Map");
         }
     }
 }

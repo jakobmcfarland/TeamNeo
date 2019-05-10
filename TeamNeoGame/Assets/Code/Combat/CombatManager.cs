@@ -18,6 +18,7 @@ public class CombatManager : MonoBehaviour
     {
         
     }
+
     void SetDefaultParameters()
     {
         CombatInfo.EnemyName = "swamp man";
@@ -31,6 +32,7 @@ public class CombatManager : MonoBehaviour
         CombatInfo .TimePerBar = 5.0f;
         CombatInfo .ArrowCount = 4;
         CombatInfo.BufferTime = 1.0f;
+
     }
     void StartCombat()
     {
