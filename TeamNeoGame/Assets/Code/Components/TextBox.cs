@@ -30,7 +30,7 @@ public class TBox: MonoBehaviour {
 	private SpriteRenderer textSprite;
 	void Start() {
 		textBox = GetComponent<TextMeshProUGUI>();
-		textSprite = enabled;
+		textSprite.enabled = enabled;
 	}
 	void Update() {
 

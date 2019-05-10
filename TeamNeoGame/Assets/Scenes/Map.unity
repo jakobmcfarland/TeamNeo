@@ -527,6 +527,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 886979395119783747, guid: f732369caa514824d923f40d6bd34080,
         type: 3}
+    - target: {fileID: 4556979567103301760, guid: abe11816efd77a740a8823479691d84c,
+        type: 3}
+      propertyPath: mapPlayerMaxSpeed
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556979567103301760, guid: abe11816efd77a740a8823479691d84c,
+        type: 3}
+      propertyPath: mapPlayerWalkSpeed
+      value: 7.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abe11816efd77a740a8823479691d84c, type: 3}
 --- !u!1001 &4758109587501899370

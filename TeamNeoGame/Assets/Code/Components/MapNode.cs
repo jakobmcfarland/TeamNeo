@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public enum NodeState
@@ -12,6 +13,8 @@ public enum NodeState
 
 public class MapNode : MonoBehaviour
 {
+    public CombatInfo.CombatInfo combatInfo;
+
     public SpriteRenderer spriteRenderer;
 
     public Color incompleteNormalColor = new Color(1.0f, 0.0f, 0.0f, 0.5f);
@@ -60,5 +63,8 @@ public class MapNode : MonoBehaviour
 
         spriteRenderer.color = currentNormalColor;
         nodeState = NodeState.Current;
+
+        CombatInfo.CurrentCombatInfo.CombatInfo = combatInfo;
+        SceneManager.LoadScene("Combat");
     }
 }
