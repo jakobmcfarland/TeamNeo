@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PlayerCombat : MonoBehaviour
 {
     public KeyCode greenKey;
@@ -54,6 +55,10 @@ public class PlayerCombat : MonoBehaviour
         }
         healthText.text = health.ToString();
         hpBar.UpdateHP((float)health / (float)maxHealth);
+        if(health <= 0) {
+            print("Loss!");
+            SceneManager.LoadScene("GameOver");
+        }
     }
     public void ModStamina(int mod) {
         stamina += mod;

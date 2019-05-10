@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class BasicEnemy : MonoBehaviour
 {
     public CombatManager cm;
@@ -25,5 +26,9 @@ public class BasicEnemy : MonoBehaviour
         health += mod;
         healthText.text = health.ToString();
         hpBar.UpdateHP((float)health / (float)maxHealth);
+        if(health <= 0) {
+            print("Victory!");
+            //SceneManager.LoadScene("Map");
+        }
     }
 }
