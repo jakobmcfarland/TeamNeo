@@ -18,34 +18,33 @@ public class CombatManager : MonoBehaviour
     {
         
     }
-    void SetDefaultParameters() {
-        CombatInfo.CombatInfo combatInfo = CombatInfo.CurrentCombatInfo.CombatInfo;
-        combatInfo.EnemyName = "swamp man";
-        combatInfo .EnemySprite = Resources.Load<Sprite>("Enemy");
-        combatInfo .PlayerDamage = 50;
-        combatInfo .EnemyDamage = 10;
-        combatInfo .StaminaGain = 10;
-        combatInfo .MaxStamina = 100;
-        combatInfo .MaxHealth = 100;
-        combatInfo .EnemyHealth = 100;
-        combatInfo .TimePerBar = 5.0f;
-        combatInfo .ArrowCount = 4;
-        combatInfo.BufferTime = 1.0f;
+    void SetDefaultParameters()
+    {
+        CombatInfo.EnemyName = "swamp man";
+        CombatInfo .EnemySprite = Resources.Load<Sprite>("Enemy");
+        CombatInfo .PlayerDamage = 50;
+        CombatInfo .EnemyDamage = 10;
+        CombatInfo .StaminaGain = 10;
+        CombatInfo .MaxStamina = 100;
+        CombatInfo .MaxHealth = 100;
+        CombatInfo .EnemyHealth = 100;
+        CombatInfo .TimePerBar = 5.0f;
+        CombatInfo .ArrowCount = 4;
+        CombatInfo.BufferTime = 1.0f;
     }
     void StartCombat()
     {
-        CombatInfo.CombatInfo combatInfo = CombatInfo.CurrentCombatInfo.CombatInfo;
-        enemy.name = combatInfo.EnemyName;
-        enemy.GetComponent<SpriteRenderer>().sprite = combatInfo.EnemySprite;
-        player.damage = combatInfo.PlayerDamage;
-        enemy.attackManager.hpWrong = combatInfo.EnemyDamage;
-        enemy.attackManager.staminaRight = combatInfo.StaminaGain;
-        player.maxStamina = combatInfo.MaxStamina;
-        player.maxHealth = combatInfo.MaxHealth;
-        enemy.maxHealth = combatInfo.EnemyHealth;
-        enemy.attackManager.time = combatInfo.TimePerBar;
-        enemy.attackManager.attackCount = combatInfo.ArrowCount;
-        enemy.attackManager.bufferTime = combatInfo.BufferTime;
+        enemy.name = CombatInfo.EnemyName;
+        enemy.GetComponent<SpriteRenderer>().sprite = CombatInfo.EnemySprite;
+        player.damage = CombatInfo.PlayerDamage;
+        enemy.attackManager.hpWrong = CombatInfo.EnemyDamage;
+        enemy.attackManager.staminaRight = CombatInfo.StaminaGain;
+        player.maxStamina = CombatInfo.MaxStamina;
+        player.maxHealth = CombatInfo.MaxHealth;
+        enemy.maxHealth = CombatInfo.EnemyHealth;
+        enemy.attackManager.time = CombatInfo.TimePerBar;
+        enemy.attackManager.attackCount = CombatInfo.ArrowCount;
+        enemy.attackManager.bufferTime = CombatInfo.BufferTime;
         player.enabled = true;
         enemy.enabled = true;
     }
