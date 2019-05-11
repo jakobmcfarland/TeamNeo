@@ -6,6 +6,7 @@ public class CombatManager : MonoBehaviour
 {
     public PlayerCombat player;
     public BasicEnemy enemy;
+    public AttackManager am;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +31,7 @@ public class CombatManager : MonoBehaviour
         CombatInfo .MaxHealth = 100;
         CombatInfo .EnemyHealth = 100;
         CombatInfo .TimePerBar = 5.0f;
-        CombatInfo .ArrowCount = 4;
+        CombatInfo .ArrowCount = 6;
         CombatInfo.BufferTime = 1.0f;
 
     }
@@ -49,6 +50,7 @@ public class CombatManager : MonoBehaviour
         enemy.attackManager.bufferTime = CombatInfo.BufferTime;
         player.enabled = true;
         enemy.enabled = true;
+        am.Begin();
     }
     public void Accelerate()
     {

@@ -22,15 +22,15 @@ public class AttackManager : MonoBehaviour
     private float bTimer = 0;
     private bool buffer = false;
     // Start is called before the first frame update
-    void Start()
+   /* void begi()
     {
-        attacks = this.gameObject.GetComponentsInChildren<AttackBox>();
         print(attacks.Length);
         Begin();
 
-    }
+    }*/
     public void Begin()
     {
+        attacks = this.gameObject.GetComponentsInChildren<AttackBox>();
         timer = time;
         hit = 0;
         right = 0;
@@ -39,6 +39,11 @@ public class AttackManager : MonoBehaviour
             attacks[i].done = false;
             attacks[i].success = false;
             attacks[i].SetElement(PickAttack());
+            attacks[i].GetComponent<SpriteRenderer>().enabled = true;
+
+        }
+        for(int i = attackCount; i < attacks.Length; i++) {
+            attacks[i].GetComponent<SpriteRenderer>().enabled = false;
         }
     }
     public void Finish()
@@ -79,7 +84,7 @@ public class AttackManager : MonoBehaviour
     {
         if(buffer) {
             bTimer -= Time.deltaTime;
-            if (bTimer <= 0) {
+            if (bTimer <= 0 && player.stamina <= player.maxStamina) {
                 buffer = false;
                 Begin();
             }
@@ -93,7 +98,7 @@ public class AttackManager : MonoBehaviour
             {
                 Finish();
             }
-            if (player.stamina < player.maxStamina)
+            if (true)
             {
                 if (Input.GetKeyDown(blueKey))
                 {
