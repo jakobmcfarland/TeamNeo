@@ -28,11 +28,38 @@ public class TBox: MonoBehaviour {
 	public KeyCode nextKey;
 	private TextMeshProUGUI textBox;
 	private SpriteRenderer textSprite;
+    private bool done;
+    private float timer;
 	void Start() {
 		textBox = GetComponent<TextMeshProUGUI>();
 		textSprite.enabled = enabled;
 	}
 	void Update() {
-
-	}
+        if (Input.GetKeyDown(nextKey))
+        {
+            if (!done)
+            {
+                done = true;
+                textBox.text = dialogue[index];
+            }
+            else
+            {
+                index++;
+                done = false;
+            }
+        }
+        if (!done)
+        {
+            if (textBox.text.Length == dialogue[index].Length)
+            {
+                done = true;
+            }
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                textBox.text += dialogue[index][textBox.text.Length];
+                timer = dialogue[index].Length / timePerBox;
+            }
+        }
+    }
 }
