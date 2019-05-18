@@ -18,4 +18,5 @@ public static class CombatInfo
     public static float TimePerBar { get; set; }
     public static int ArrowCount { get; set; }
     public static float BufferTime { get; set; }
+    public static Environment Env { get; set; }
 }

@@ -61,6 +61,7 @@
      <Compile Include="Assets\Code\Combat\CombatInfo.cs" />
      <Compile Include="Assets\Code\Combat\CombatManager.cs" />
      <Compile Include="Assets\Code\Combat\Elements.cs" />
+     <Compile Include="Assets\Code\Combat\Environment.cs" />
      <Compile Include="Assets\Code\Combat\HPBar.cs" />
      <Compile Include="Assets\Code\Combat\IOpponentAI.cs" />
      <Compile Include="Assets\Code\Combat\PlayerCombat.cs" />

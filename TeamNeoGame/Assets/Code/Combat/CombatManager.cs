@@ -7,6 +7,8 @@ public class CombatManager : MonoBehaviour
     public PlayerCombat player;
     public BasicEnemy enemy;
     public AttackManager am;
+    public SpriteRenderer background;
+    public SpriteRenderer platform;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,11 +35,11 @@ public class CombatManager : MonoBehaviour
         CombatInfo.TimePerBar = 5.0f;
         CombatInfo.ArrowCount = 6;
         CombatInfo.BufferTime = 1.0f;
-
+        CombatInfo.Env = Environment.Grass;
     }
     void StartCombat()
     {
-        enemy.name = CombatInfo.EnemyName;
+        enemy.SetName(CombatInfo.EnemyName);
         enemy.GetComponent<SpriteRenderer>().sprite = CombatInfo.EnemySprite;
         player.damage = CombatInfo.PlayerDamage;
         enemy.attackManager.hpWrong = CombatInfo.EnemyDamage;
@@ -48,13 +50,18 @@ public class CombatManager : MonoBehaviour
         enemy.attackManager.time = CombatInfo.TimePerBar;
         enemy.attackManager.attackCount = CombatInfo.ArrowCount;
         enemy.attackManager.bufferTime = CombatInfo.BufferTime;
+        SelectEnvironment(CombatInfo.Env);
         player.enabled = true;
         enemy.enabled = true;
         am.Begin();
     }
+    public void SelectEnvironment(Environment env)
+    {
+        platform.sprite = env.PlatformSprite();
+        background.sprite = env.BackgroundSprite();
+    }
     public void Accelerate()
     {
-        //enemy.Accelerate();
     }
     public void AttackEnemy(int damage)
     {

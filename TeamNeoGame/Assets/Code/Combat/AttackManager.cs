@@ -44,6 +44,7 @@ public class AttackManager : MonoBehaviour
     {
         for (int i = hit; i < attackCount; i++)
         {
+            print(i);
             attacks[i].SetDone(false);
             TryE(false);
         }

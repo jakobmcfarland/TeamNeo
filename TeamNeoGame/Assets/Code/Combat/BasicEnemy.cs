@@ -10,7 +10,8 @@ public class BasicEnemy : MonoBehaviour
     public int maxHealth = 100;
     public int damage = 10;
     public AttackManager attackManager;
-    public string name;
+    public string ename;
+    public TextMeshProUGUI nameText;
     public TextMeshProUGUI healthText;
     public HPBar hpBar;
     // Start is called before the first frame update
@@ -19,7 +20,11 @@ public class BasicEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+    }
+    public void SetName(string nam)
+    {
+        ename = nam;
+        nameText.text = nam.ToUpper();
     }
     public void ModHealth(int mod)
     {
