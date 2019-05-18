@@ -30,6 +30,7 @@ public class PlayerCombat : MonoBehaviour
     public StatusText st;
     public Image staminaGauge;
     private Animator staminaAnim;
+    public AttackManager attackManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +44,14 @@ public class PlayerCombat : MonoBehaviour
         if(Input.GetKeyDown(attackKey) && stamina >= maxStamina) {
             ModStamina(-stamina);
             cm.AttackEnemy(damage);
+        }
+        if(staminaGauge.fillAmount >= 1 && attackManager.buffer)
+        {
+            staminaAnim.SetBool("Flash", true);
+        }
+        else
+        {
+            staminaAnim.SetBool("Flash", false);
         }
     }
     public void Accelerate()
@@ -69,13 +78,6 @@ public class PlayerCombat : MonoBehaviour
         }
         staminaBar.UpdateHP((float)stamina / (float)maxStamina);
         staminaGauge.fillAmount = (float)stamina / (float)maxStamina;
-        if(staminaGauge.fillAmount >= 1)
-        {
-            staminaAnim.SetBool("Flash", true);
-        }
-        else
-        {
-            staminaAnim.SetBool("Flash", false);
-        }
+
     }
 }
