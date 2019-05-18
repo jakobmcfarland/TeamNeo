@@ -63,5 +63,6 @@ public class MapNode : MonoBehaviour
         nodeState = NodeState.Current;
 
         SceneManager.LoadScene("Combat");
+        
     }
 }
