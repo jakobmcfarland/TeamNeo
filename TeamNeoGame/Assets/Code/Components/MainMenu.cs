@@ -39,7 +39,7 @@ public class MainMenu : MonoBehaviour
      				SceneManager.LoadScene("Map");
      				break;
                 case 1:
-                    print("No credits yet!");
+                    SceneManager.LoadScene("Credits");
                     break;
                 case 2:
                     Application.Quit();

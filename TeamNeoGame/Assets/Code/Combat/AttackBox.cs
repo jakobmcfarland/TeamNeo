@@ -8,6 +8,7 @@ public class AttackBox : MonoBehaviour
     public bool success = false;
     public Element element;
     private SpriteRenderer sprite;
+    public SpriteRenderer fill;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +20,22 @@ public class AttackBox : MonoBehaviour
     {
         
     }
+    public void Hide()
+    {
+        fill.enabled = false;
+        sprite.enabled = false;
+    }
+    public void Show()
+    {
+        fill.enabled = true;
+        sprite.enabled = true;
+    }
     public void SetElement(Element el)
     {
         element = el;
-        sprite.color = Color.white;
-        //sprite.color = el.ToColor();
+        fill.color = Color.white;
         gameObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
-        gameObject.transform.Rotate(0,0,el.ToDegrees());
+        gameObject.transform.Rotate(0,0,el.ToDegrees() + 90);
     }
     public void SetDone(bool done)
     {
@@ -33,11 +43,11 @@ public class AttackBox : MonoBehaviour
         success = done;
         if (success)
         {
-            sprite.color = Color.green;
+            fill.color = Color.green;
         }
         else
         {
-            sprite.color = Color.red;
+            fill.color = Color.red;
         }
     }
 }

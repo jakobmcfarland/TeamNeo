@@ -32,11 +32,11 @@ public class AttackManager : MonoBehaviour
             attacks[i].done = false;
             attacks[i].success = false;
             attacks[i].SetElement(PickAttack());
-            attacks[i].GetComponent<SpriteRenderer>().enabled = true;
+            attacks[i].Show();
 
         }
         for(int i = attackCount; i < attacks.Length; i++) {
-            attacks[i].GetComponent<SpriteRenderer>().enabled = false;
+            attacks[i].Hide();
         }
     }
     public void Finish()
