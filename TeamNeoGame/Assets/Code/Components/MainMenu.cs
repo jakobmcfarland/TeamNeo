@@ -38,13 +38,10 @@ public class MainMenu : MonoBehaviour
      			case 0:
      				SceneManager.LoadScene("Map");
      				break;
-     			case 1:
-                    SceneManager.LoadScene("Cinematic");
-     				break;
-                case 2:
+                case 1:
                     print("No credits yet!");
                     break;
-                case 3:
+                case 2:
                     Application.Quit();
                     break;
      			default:

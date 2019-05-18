@@ -11,7 +11,7 @@ public class HPBar : MonoBehaviour
     private GradientColorKey[] colorKey;
     private GradientAlphaKey[] alphaKey;
     private float timer = 1.0f;
-    private float percent = 1.0f;
+    public float percent = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +49,17 @@ public class HPBar : MonoBehaviour
     public void UpdateHP(float newPercent)
     {
         percent = newPercent;
+
+        if (newPercent >= 1)
+        {
+            sprite.transform.localScale = new Vector3(maxSize, 0.5f, 1);
+            timer = 1;
+            if (useGradient)
+            {
+                sprite.color = gradient.Evaluate(1);
+            }
+            return;
+        }
         timer = 0;
     }
 }

@@ -23,7 +23,7 @@ public class CombatManager : MonoBehaviour
     void SetDefaultParameters()
     {
         CombatInfo.EnemyName = "swamp man";
-        CombatInfo .EnemySprite = Resources.Load<Sprite>("SamuraiBattle1");
+        CombatInfo .EnemySprite = Resources.Load<Sprite>("EnemyBattle1");
         CombatInfo .PlayerDamage = 50;
         CombatInfo .EnemyDamage = 10;
         CombatInfo .StaminaGain = 10;
