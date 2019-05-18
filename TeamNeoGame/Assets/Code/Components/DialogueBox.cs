@@ -49,7 +49,7 @@ public class DialogueBox : MonoBehaviour
             if (timer <= 0)
             {
                 textBox.text += dialogue[index][textBox.text.Length].ToString().ToUpper();
-                timer = timePerBox / dialogue[index].Length ;
+                timer = timePerBox / dialogue[index].Length;
             }
         }
     }

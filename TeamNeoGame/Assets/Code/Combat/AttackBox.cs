@@ -18,7 +18,7 @@ public class AttackBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void Hide()
     {
@@ -35,7 +35,7 @@ public class AttackBox : MonoBehaviour
         element = el;
         fill.color = Color.white;
         gameObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
-        gameObject.transform.Rotate(0,0,el.ToDegrees() + 90);
+        gameObject.transform.Rotate(0, 0, el.ToDegrees() + 90);
     }
     public void SetDone(bool done)
     {

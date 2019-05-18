@@ -16,7 +16,7 @@ public class MapNode : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     public Color incompleteNormalColor = new Color(1.0f, 0.0f, 0.0f, 0.5f);
-    public Color completeNormalColor = new Color(0.5f, 1.0f, 1.0f, 0.5f); 
+    public Color completeNormalColor = new Color(0.5f, 1.0f, 1.0f, 0.5f);
     public Color currentNormalColor = new Color(0.0f, 0.5f, 0.5f, 0.5f);
 
     public MapNode previusObjectA;
@@ -43,7 +43,7 @@ public class MapNode : MonoBehaviour
         if (collider.GetComponent<MapPlayerController>() != null)
         {
             if (nodeState == NodeState.Start
-            || (nodeState == NodeState.Incomplete 
+            || (nodeState == NodeState.Incomplete
             && (previusNodeA.nodeState == NodeState.Current
             || previusNodeB.nodeState == NodeState.Current)))
             {
@@ -63,6 +63,6 @@ public class MapNode : MonoBehaviour
         nodeState = NodeState.Current;
 
         SceneManager.LoadScene("Combat");
-        
+
     }
 }

@@ -10,11 +10,11 @@ namespace Assets.Code.Components
     {
 
 
-        void StartAttack( );
+        void StartAttack();
 
-        void FinishAttack( );
+        void FinishAttack();
 
-        int GetAttackTime( );
+        int GetAttackTime();
 
         void SetAttackTime(int time);
     }

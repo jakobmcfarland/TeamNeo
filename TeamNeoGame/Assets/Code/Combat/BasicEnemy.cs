@@ -15,7 +15,7 @@ public class BasicEnemy : MonoBehaviour
     public HPBar hpBar;
     // Start is called before the first frame update
     void Start()
-    {    }
+    { }
     // Update is called once per frame
     void Update()
     {
@@ -26,7 +26,8 @@ public class BasicEnemy : MonoBehaviour
         health += mod;
         healthText.text = health.ToString();
         hpBar.UpdateHP((float)health / (float)maxHealth);
-        if(health <= 0) {
+        if (health <= 0)
+        {
             print("Victory!");
             SceneManager.LoadScene("Map");
         }

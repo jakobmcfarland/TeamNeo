@@ -17,7 +17,7 @@ public class AttackManager : MonoBehaviour
     public KeyCode blueKey;
     public int hpWrong = 10;
     public int staminaRight = 10;
-    public HPBar timeBar;
+    public TimeBar timeBar;
     public float bufferTime = 1.0f;
     private float bTimer = 0;
     public bool buffer = false;
@@ -27,7 +27,7 @@ public class AttackManager : MonoBehaviour
         timer = time;
         hit = 0;
         right = 0;
-        for(int i = 0; i < attackCount; i++)
+        for (int i = 0; i < attackCount; i++)
         {
             attacks[i].done = false;
             attacks[i].success = false;
@@ -35,12 +35,18 @@ public class AttackManager : MonoBehaviour
             attacks[i].Show();
 
         }
-        for(int i = attackCount; i < attacks.Length; i++) {
+        for (int i = attackCount; i < attacks.Length; i++)
+        {
             attacks[i].Hide();
         }
     }
     public void Finish()
     {
+        for (int i = hit; i < attackCount; i++)
+        {
+            attacks[i].SetDone(false);
+            TryE(false);
+        }
         timer = time;
         bTimer = bufferTime;
         buffer = true;
@@ -65,27 +71,34 @@ public class AttackManager : MonoBehaviour
             return Element.Fire;
         }
     }
-    void TryE(bool r) {
-        if (r) {
+    void TryE(bool r)
+    {
+        if (r)
+        {
             player.ModStamina(staminaRight);
-        } else {
+        }
+        else
+        {
             player.ModHealth(-hpWrong);
-        }  
+        }
     }
     // Update is called once per frame
     void Update()
     {
-        if(buffer) {
+        if (buffer)
+        {
             bTimer -= Time.deltaTime;
-            if (bTimer <= 0 && player.stamina <= player.maxStamina) {
+            if (bTimer <= 0 && player.stamina <= player.maxStamina)
+            {
                 buffer = false;
                 Begin();
             }
         }
-      
-        timeBar.UpdateHP(timer/time);
-          if(!buffer) {
-                    timer -= Time.deltaTime;
+
+        timeBar.UpdateTime(timer / time);
+        if (!buffer)
+        {
+            timer -= Time.deltaTime;
 
             if (timer <= 0)
             {
@@ -165,10 +178,10 @@ public class AttackManager : MonoBehaviour
 
                 }
             }
-        if (hit == attackCount)
-        {
-            Finish();
+            if (hit == attackCount)
+            {
+                Finish();
+            }
         }
     }
-}
 }

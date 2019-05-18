@@ -37,14 +37,16 @@ public class HPBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timer < 1.0f) {
+        if (timer < 1.0f)
+        {
             timer += Time.deltaTime;
             var lerp = Mathf.Lerp(sprite.transform.localScale.x / maxSize, percent, timer);
             sprite.transform.localScale = new Vector3(lerp * maxSize, 0.5f, 1);
-            if (useGradient) {
+            if (useGradient)
+            {
                 sprite.color = gradient.Evaluate(lerp);
             }
-        }   
+        }
     }
     public void UpdateHP(float newPercent)
     {

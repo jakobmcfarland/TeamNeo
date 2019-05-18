@@ -17,7 +17,7 @@ public class StatusText : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        if(timer <= 0 && text.text != "")
+        if (timer <= 0 && text.text != "")
         {
             text.text = "";
         }

@@ -27,7 +27,6 @@ public class PlayerCombat : MonoBehaviour
     public HPBar hpBar;
     public HPBar staminaBar;
     public TextMeshProUGUI healthText;
-    public StatusText st;
     public Image staminaGauge;
     private Animator staminaAnim;
     public AttackManager attackManager;
@@ -41,11 +40,12 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         attackTimer -= Time.deltaTime;
-        if(Input.GetKeyDown(attackKey) && stamina >= maxStamina) {
+        if (Input.GetKeyDown(attackKey) && stamina >= maxStamina)
+        {
             ModStamina(-stamina);
             cm.AttackEnemy(damage);
         }
-        if(staminaGauge.fillAmount >= 1 && attackManager.buffer)
+        if (staminaGauge.fillAmount >= 1 && attackManager.buffer)
         {
             staminaAnim.SetBool("Flash", true);
         }
@@ -61,19 +61,23 @@ public class PlayerCombat : MonoBehaviour
     public void ModHealth(int mod)
     {
         health += mod;
-        if (health > maxHealth) {
+        if (health > maxHealth)
+        {
             health = maxHealth;
         }
         healthText.text = health.ToString();
         hpBar.UpdateHP((float)health / (float)maxHealth);
-        if(health <= 0) {
+        if (health <= 0)
+        {
             print("Loss!");
             SceneManager.LoadScene("GameOver");
         }
     }
-    public void ModStamina(int mod) {
+    public void ModStamina(int mod)
+    {
         stamina += mod;
-        if(stamina > maxStamina) {
+        if (stamina > maxStamina)
+        {
             stamina = maxStamina;
         }
         staminaBar.UpdateHP((float)stamina / (float)maxStamina);

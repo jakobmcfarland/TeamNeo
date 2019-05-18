@@ -17,21 +17,21 @@ public class CombatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void SetDefaultParameters()
     {
         CombatInfo.EnemyName = "swamp man";
-        CombatInfo .EnemySprite = Resources.Load<Sprite>("EnemyBattle1");
-        CombatInfo .PlayerDamage = 50;
-        CombatInfo .EnemyDamage = 10;
-        CombatInfo .StaminaGain = 10;
-        CombatInfo .MaxStamina = 100;
-        CombatInfo .MaxHealth = 100;
-        CombatInfo .EnemyHealth = 100;
-        CombatInfo .TimePerBar = 5.0f;
-        CombatInfo .ArrowCount = 6;
+        CombatInfo.EnemySprite = Resources.Load<Sprite>("EnemyBattle1");
+        CombatInfo.PlayerDamage = 50;
+        CombatInfo.EnemyDamage = 10;
+        CombatInfo.StaminaGain = 10;
+        CombatInfo.MaxStamina = 100;
+        CombatInfo.MaxHealth = 100;
+        CombatInfo.EnemyHealth = 100;
+        CombatInfo.TimePerBar = 5.0f;
+        CombatInfo.ArrowCount = 6;
         CombatInfo.BufferTime = 1.0f;
 
     }
@@ -56,7 +56,8 @@ public class CombatManager : MonoBehaviour
     {
         //enemy.Accelerate();
     }
-    public void AttackEnemy(int damage) {
+    public void AttackEnemy(int damage)
+    {
         enemy.ModHealth(-damage);
     }
     public void HurtPlayer(int damage)
@@ -70,7 +71,7 @@ public class CombatManager : MonoBehaviour
     public void Counter()
     {
         print("Countered!");
-        enemy.ModHealth( -(int)(player.damage * player.critMod));
+        enemy.ModHealth(-(int)(player.damage * player.critMod));
         print(enemy.health);
     }
 }

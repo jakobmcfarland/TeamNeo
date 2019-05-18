@@ -18,7 +18,7 @@ public class Combat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     void LoadCombat()
     {
@@ -37,6 +37,6 @@ public class Combat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
