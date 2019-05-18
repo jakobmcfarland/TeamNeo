@@ -20,14 +20,7 @@ public class AttackManager : MonoBehaviour
     public HPBar timeBar;
     public float bufferTime = 1.0f;
     private float bTimer = 0;
-    private bool buffer = false;
-    // Start is called before the first frame update
-   /* void begi()
-    {
-        print(attacks.Length);
-        Begin();
-
-    }*/
+    public bool buffer = false;
     public void Begin()
     {
         attacks = this.gameObject.GetComponentsInChildren<AttackBox>();
