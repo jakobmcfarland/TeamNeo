@@ -65,6 +65,7 @@
      <Compile Include="Assets\Code\Combat\HPBar.cs" />
      <Compile Include="Assets\Code\Combat\IOpponentAI.cs" />
      <Compile Include="Assets\Code\Combat\PlayerCombat.cs" />
+     <Compile Include="Assets\Code\Combat\StaminaBar.cs" />
      <Compile Include="Assets\Code\Combat\TimeBar.cs" />
      <Compile Include="Assets\Code\Components\Cinematic.cs" />
      <Compile Include="Assets\Code\Components\Combat.cs" />
@@ -77,6 +78,7 @@
      <Compile Include="Assets\Code\Map\mapCameraFollow.cs" />
      <Compile Include="Assets\Code\Map\MapNode.cs" />
      <Compile Include="Assets\Code\Map\MapPlayerController.cs" />
+     <Compile Include="Assets\Code\StaminaBar.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

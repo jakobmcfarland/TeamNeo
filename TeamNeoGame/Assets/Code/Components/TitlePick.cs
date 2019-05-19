@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Text.RegularExpressions;
 public class TitlePick : MonoBehaviour
 {
-    private TextMeshProUGUI titleText;
+    public TextMeshProUGUI titleText1;
+    public TextMeshProUGUI titleText2;
     // Start is called before the first frame update
     void Start()
     {
-        titleText = GetComponent<TextMeshProUGUI>();
         var allTitles = Resources.Load<TextAsset>("titles");
-        var listTitles = allTitles.text.Split('\n');
+        var listTitles = allTitles.text.Trim().Split('\n');
         int index = Random.Range(0, listTitles.Length);
-        titleText.text = listTitles[index].ToUpper();
+        string title = listTitles[index].ToUpper().Trim();
+        string[] txt = Regex.Split(title, "SAMURAI");
+        titleText1.text = txt[0];
+        titleText2.text = txt[1];
     }
 
     // Update is called once per frame

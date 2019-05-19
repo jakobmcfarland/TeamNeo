@@ -35,7 +35,7 @@ public class CombatManager : MonoBehaviour
         CombatInfo.TimePerBar = 5.0f;
         CombatInfo.ArrowCount = 6;
         CombatInfo.BufferTime = 1.0f;
-        CombatInfo.Env = Environment.Grass;
+        CombatInfo.Env = Environment.City;
     }
     void StartCombat()
     {

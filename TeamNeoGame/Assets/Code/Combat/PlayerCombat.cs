@@ -80,7 +80,7 @@ public class PlayerCombat : MonoBehaviour
         {
             stamina = maxStamina;
         }
-        staminaBar.UpdateHP((float)stamina / (float)maxStamina);
+        //staminaBar.UpdateHP((float)stamina / (float)maxStamina);
         staminaGauge.fillAmount = (float)stamina / (float)maxStamina;
 
     }
