@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/* File     mapNode
+ * by       Jakob McFarland
+ * date     5/19/2019
+ * brief    
+ *      Component, logic, and visuals for map nodes
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;

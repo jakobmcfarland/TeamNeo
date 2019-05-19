@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/* File     mapCameraFollow
+ * by       Jakob McFarland
+ * date     5/19/2019
+ * brief    
+ *      Follow the player with lerp and within bounds.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

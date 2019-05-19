@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/* File     mapPlayerController
+ * by       Jakob McFarland
+ * date     5/19/2019
+ * brief    
+ *      Player controller for the map player.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
