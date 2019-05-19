@@ -6,20 +6,33 @@ using TMPro;
 public class MainMenu : MonoBehaviour
 {
     public TextMeshProUGUI[] options;
+    public List<GameObject> menuItems;
     public KeyCode upKey;
     public KeyCode downKey;
     public KeyCode pickKey;
     public int selected = 0;
 
+    public Color deactiveColor;
+    public Color activeColor;
+
+    public float menuItemXOffset;
+
+    bool dirty = true;
+
     // Start is called before the first frame update
     void Start()
     {
         options = this.gameObject.GetComponentsInChildren<TextMeshProUGUI>();
+        menuItems.Add( GameObject.Find("Start Game") );
+        menuItems.Add(GameObject.Find("Credits") );
+        menuItems.Add(GameObject.Find("Exit") );
+
+        menuItemXOffset = 0.5f;
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {  
         if (Input.GetKeyDown(upKey))
         {
             if (selected == options.Length - 1)
@@ -30,6 +43,8 @@ public class MainMenu : MonoBehaviour
             {
                 selected++;
             }
+
+            dirty = true;
         }
         else if (Input.GetKeyDown(downKey))
         {
@@ -41,6 +56,8 @@ public class MainMenu : MonoBehaviour
             {
                 selected--;
             }
+
+            dirty = true;
         }
         if (Input.GetKeyDown(pickKey))
         {
@@ -60,16 +77,26 @@ public class MainMenu : MonoBehaviour
                     break;
             }
         }
-        for (int i = 0; i < options.Length; i++)
+
+        if (dirty)
         {
-            if (i == selected)
+            for (int i = 0; i < options.Length; i++)
             {
-                options[i].enabled = true;
+                if (i == selected)
+                {
+                    options[i].enabled = true;
+                    menuItems[i].GetComponent<TextMeshProUGUI>().color = activeColor; 
+                    //menuItems[i].GetComponent<Transform>().position -= new Vector3(menuItemXOffset, 0.0f, 0.0f);
+                }
+                else
+                {
+                    options[i].enabled = false;
+                    menuItems[i].GetComponent<TextMeshProUGUI>().color = deactiveColor;
+                    //menuItems[i].GetComponent<Transform>().position += new Vector3(menuItemXOffset, 0.0f, 0.0f);
+                }
             }
-            else
-            {
-                options[i].enabled = false;
-            }
+
+            dirty = false;
         }
     }
 }
