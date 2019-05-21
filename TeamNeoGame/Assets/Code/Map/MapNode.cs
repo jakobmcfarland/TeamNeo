@@ -38,8 +38,9 @@ public class MapNode : MonoBehaviour
         spriteRenderer.color = incompleteNormalColor;
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D col)
     {
+        Collider2D collider = col.collider;
         if (collider.GetComponent<MapPlayerController>() != null)
         {
             if (nodeState == NodeState.Start

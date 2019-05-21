@@ -496,7 +496,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1005,7 +1005,7 @@ PrefabInstance:
     - target: {fileID: 4556979567103301766, guid: abe11816efd77a740a8823479691d84c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -14.47
       objectReference: {fileID: 0}
     - target: {fileID: 4556979567103301766, guid: abe11816efd77a740a8823479691d84c,
         type: 3}
@@ -1070,6 +1070,11 @@ PrefabInstance:
     - target: {fileID: 4556979567103301763, guid: abe11816efd77a740a8823479691d84c,
         type: 3}
       propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556979567103301763, guid: abe11816efd77a740a8823479691d84c,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4556979567103301761, guid: abe11816efd77a740a8823479691d84c,
