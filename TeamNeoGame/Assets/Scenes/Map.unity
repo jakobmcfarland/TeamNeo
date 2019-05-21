@@ -227,7 +227,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4359802040904368819}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4359802040904368820}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d83e888df16a6645bc5ac8355b0b751, type: 3}
@@ -411,7 +411,7 @@ Tilemap:
   - m_RefCount: 5
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Origin: {x: -10, y: -17, z: 0}
   m_Size: {x: 21, y: 55, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -458,8 +458,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1279100130}
   - component: {fileID: 1279100129}
-  - component: {fileID: 1279100128}
   - component: {fileID: 1279100127}
+  - component: {fileID: 1279100128}
   m_Layer: 0
   m_Name: Node (2)
   m_TagString: Untagged
@@ -486,8 +486,8 @@ MonoBehaviour:
   previusObjectA: {fileID: 1714195326}
   previusObjectB: {fileID: 1714195326}
   nodeState: 0
---- !u!60 &1279100128
-PolygonCollider2D:
+--- !u!70 &1279100128
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -500,23 +500,8 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.43301272, y: 0.24999999}
-      - {x: -0.4330127, y: -0.25000003}
-      - {x: 0.00000004371139, y: -0.5}
-      - {x: 0.43301272, y: -0.24999996}
-      - {x: 0.43301272, y: 0.24999996}
+  m_Size: {x: 1.75, y: 0.75}
+  m_Direction: 1
 --- !u!212 &1279100129
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -554,7 +539,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8ba6750561fbe49458d1ec6760c320a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db40b058f4bbd50d3ac965f49a4fb776, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -573,7 +558,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279100126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.7, y: 26, z: -1}
+  m_LocalPosition: {x: 10.85, y: 26, z: -1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -589,6 +574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1282245208}
   - component: {fileID: 1282245207}
+  - component: {fileID: 1282245209}
   m_Layer: 0
   m_Name: New Sprite
   m_TagString: Untagged
@@ -658,6 +644,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1282245209
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282245206}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 3.7737763, y: 24.943203}
+  - {x: -30.641989, y: 22.95307}
+  - {x: -30.437391, y: -34.142174}
+  - {x: 30.569126, y: -33.58599}
+  - {x: 30.590748, y: 33.426704}
+  - {x: 2.152313, y: 33.424866}
+  - {x: 2.4849594, y: 25.22616}
+  - {x: 17.323402, y: 24.805399}
+  - {x: 17.62111, y: -12.163778}
+  - {x: 7.901606, y: -12.357101}
+  - {x: 7.808273, y: -17.23778}
+  - {x: 11.0142975, y: -17.340408}
+  - {x: 11.19891, y: -24.474642}
+  - {x: -4.9378705, y: -24.464087}
+  - {x: -4.82219, y: -33.64318}
+  - {x: -21.574446, y: -33.63485}
+  - {x: -21.847252, y: -9.977377}
+  - {x: -19.439064, y: -10.018217}
+  - {x: -19.521479, y: -0.7573261}
+  - {x: -10.41938, y: -0.8784294}
+  - {x: -10.250903, y: 1.5289736}
+  - {x: 3.70065, y: 1.3868113}
+  - {x: 3.651559, y: 24.766409}
 --- !u!1 &1298617589
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,8 +737,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1714195329}
   - component: {fileID: 1714195328}
-  - component: {fileID: 1714195327}
   - component: {fileID: 1714195326}
+  - component: {fileID: 1714195327}
   m_Layer: 0
   m_Name: Node (1)
   m_TagString: Untagged
@@ -740,8 +765,8 @@ MonoBehaviour:
   previusObjectA: {fileID: 605623587}
   previusObjectB: {fileID: 605623587}
   nodeState: 0
---- !u!60 &1714195327
-PolygonCollider2D:
+--- !u!70 &1714195327
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -750,27 +775,12 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.43301272, y: 0.24999999}
-      - {x: -0.4330127, y: -0.25000003}
-      - {x: 0.00000004371139, y: -0.5}
-      - {x: 0.43301272, y: -0.24999996}
-      - {x: 0.43301272, y: 0.24999996}
+  m_Size: {x: 1.75, y: 0.75}
+  m_Direction: 1
 --- !u!212 &1714195328
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -808,7 +818,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8ba6750561fbe49458d1ec6760c320a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db40b058f4bbd50d3ac965f49a4fb776, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -827,7 +837,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714195325}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.63, y: 0.31, z: -1}
+  m_LocalPosition: {x: 10, y: 0.5, z: -1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -859,12 +869,12 @@ PrefabInstance:
     - target: {fileID: 4359802040436250513, guid: a42502b5f9eccde4385742a141baf7b7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.36
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 4359802040436250513, guid: a42502b5f9eccde4385742a141baf7b7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.18
+      value: -16
       objectReference: {fileID: 0}
     - target: {fileID: 4359802040436250513, guid: a42502b5f9eccde4385742a141baf7b7,
         type: 3}
@@ -921,8 +931,37 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4359802040436250514, guid: a42502b5f9eccde4385742a141baf7b7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: db40b058f4bbd50d3ac965f49a4fb776,
+        type: 3}
+    m_RemovedComponents:
+    - {fileID: 4359802040436250519, guid: a42502b5f9eccde4385742a141baf7b7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a42502b5f9eccde4385742a141baf7b7, type: 3}
+--- !u!1 &4359802040904368820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4359802040436250515, guid: a42502b5f9eccde4385742a141baf7b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4359802040904368819}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &4359802040904368821
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359802040904368820}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.75, y: 0.75}
+  m_Direction: 1
 --- !u!1001 &4556979567338389474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -993,12 +1032,22 @@ PrefabInstance:
     - target: {fileID: 4556979567103301763, guid: abe11816efd77a740a8823479691d84c,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.125
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4556979567103301763, guid: abe11816efd77a740a8823479691d84c,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556979567103301763, guid: abe11816efd77a740a8823479691d84c,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556979567103301763, guid: abe11816efd77a740a8823479691d84c,
+        type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4556979567103301761, guid: abe11816efd77a740a8823479691d84c,
         type: 3}
@@ -1033,7 +1082,7 @@ PrefabInstance:
     - target: {fileID: 4758109587684060110, guid: 224b6244162eaec449f3c33c5d7d90ba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.6
+      value: -60.6
       objectReference: {fileID: 0}
     - target: {fileID: 4758109587684060110, guid: 224b6244162eaec449f3c33c5d7d90ba,
         type: 3}
