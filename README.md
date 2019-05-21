@@ -1,2 +1,2 @@
 # What is this?
-This is a temporary reposotory for our team's game (name TBD)
+Samurai [Simon](https://en.wikipedia.org/wiki/Simon_(game)).
