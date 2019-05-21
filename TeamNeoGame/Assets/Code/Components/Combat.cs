@@ -5,22 +5,17 @@ using UnityEngine;
 public class Combat : MonoBehaviour
 {
     public string EnemyName = "Enemy";
-    public Sprite EnemySprite = Resources.Load<Sprite>("Enemy");
-    public static int PlayerDamage = 50;
-    public static int EnemyDamage = 10;
-    public static int StaminaGain = 10;
-    public static int MaxStamina = 100;
-    public static int MaxHealth = 100;
-    public static int EnemyHealth = 100;
-    public static float TimePerBar = 5.0f;
-    public static int ArrowCount = 6;
-    public static float BufferTimer = 0.1f;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-    void LoadCombat()
+    public Sprite EnemySprite;
+    public int PlayerDamage = 50;
+    public int EnemyDamage = 10;
+    public int StaminaGain = 10;
+    public int MaxStamina = 100;
+    public int MaxHealth = 100;
+    public int EnemyHealth = 100;
+    public float TimePerBar = 5.0f;
+    public int ArrowCount = 6;
+    public float BufferTimer = 0.1f;
+    public void LoadCombat()
     {
         CombatInfo.EnemyName = EnemyName;
         CombatInfo.EnemySprite = EnemySprite;
@@ -33,10 +28,5 @@ public class Combat : MonoBehaviour
         CombatInfo.TimePerBar = TimePerBar;
         CombatInfo.ArrowCount = ArrowCount;
         CombatInfo.BufferTime = BufferTimer;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

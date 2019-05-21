@@ -47,6 +47,7 @@ public class MapNode : MonoBehaviour
             && (previusNodeA.nodeState == NodeState.Current
             || previusNodeB.nodeState == NodeState.Current)))
             {
+                SaveGameManager.SaveGame(collider.transform.position, CombatInfo.CombatsFinished);
                 ActivateNode();
             }
         }
@@ -61,8 +62,13 @@ public class MapNode : MonoBehaviour
 
         spriteRenderer.color = currentNormalColor;
         nodeState = NodeState.Current;
+        Combat combat = gameObject.GetComponent<Combat>();
 
-        SceneManager.LoadScene("Combat");
+        if (combat != null)
+        {
+            combat.LoadCombat();
+            SceneManager.LoadScene("Combat");
 
+        }
     }
 }
