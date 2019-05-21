@@ -19,7 +19,6 @@ public class StaminaBar : MonoBehaviour
         {
             timer += Time.deltaTime;
             img.fillAmount = Mathf.Lerp(img.fillAmount, percent, timer);
-
         }
     }
     void UpdateStamina(float nper)

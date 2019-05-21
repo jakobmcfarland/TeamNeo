@@ -50,9 +50,12 @@ public class MainMenu : MonoBehaviour
                     SceneManager.LoadScene("Map");
                     break;
                 case 1:
-                    SceneManager.LoadScene("Credits");
+                    SceneManager.LoadScene("Map");
                     break;
                 case 2:
+                    SceneManager.LoadScene("Credits");
+                    break;
+                case 3:
                     Application.Quit();
                     break;
                 default:
