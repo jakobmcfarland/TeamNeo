@@ -5,15 +5,14 @@ using UnityEngine;
 
 public static class SaveGameManager
 {
-    public static void SaveGame(Vector3 position, List<Combat> combatsFinished)
+    public static void SaveGame(Vector3 position, int combatsFinished)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string filePath = Application.persistentDataPath + "/GameData.test";
         FileStream stream = new FileStream(filePath, FileMode.Create);
 
         GameData data = new GameData(position, combatsFinished);
-        Debug.Log (position.x);
-        formatter.Serialize(stream, data);
+            formatter.Serialize(stream, data);
         stream.Close();
     }
 

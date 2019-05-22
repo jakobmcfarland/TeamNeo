@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class CombatInfo
 {
-    public static List<Combat> CombatsFinished = new List<Combat>();
+    public  static int CombatsFinished;
     public static string EnemyName { get; set; }
     public static Sprite EnemySprite { get; set; }
     public static int PlayerDamage { get; set; }
