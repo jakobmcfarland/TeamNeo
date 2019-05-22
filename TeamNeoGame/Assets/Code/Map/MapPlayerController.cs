@@ -37,7 +37,7 @@ public class MapPlayerController : MonoBehaviour
 
         movement = movement.normalized * mapPlayerWalkSpeed;
 
-        rigidbody_.velocity = movement;
+        rigidbody_.velocity = movement;  
 
         if (movement.x > 0)
         {
@@ -71,6 +71,12 @@ public class MapPlayerController : MonoBehaviour
             animator.Play("Idle");
             spriteRenderer_.sprite = currentIdle;
             //Debug.Log(spriteRenderer_.sprite);
+        }
+
+        if (movement.x != 0 || movement.y != 0)
+        {
+            MapNodeManager.GetInstance().ReadyToBattle = true;
+            print("here");
         }
     }
 }

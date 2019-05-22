@@ -14,7 +14,7 @@ public enum NodeState
 public class MapNode : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
-
+    MapNodeManager manager;
     public Color incompleteNormalColor = new Color(1.0f, 0.0f, 0.0f, 0.5f);
     public Color completeNormalColor = new Color(0.5f, 1.0f, 1.0f, 0.5f);
     public Color currentNormalColor = new Color(0.0f, 0.5f, 0.5f, 0.5f);
@@ -34,6 +34,8 @@ public class MapNode : MonoBehaviour
         previusNodeA = previusObjectA.GetComponent<MapNode>();
         previusNodeB = previusObjectB.GetComponent<MapNode>();
 
+        manager = GetComponentInParent<MapNodeManager>();
+
         //if (nodeState == NodeState.Start) spriteRenderer.color = currentNormalColor; else
         spriteRenderer.color = incompleteNormalColor;
     }
@@ -41,17 +43,20 @@ public class MapNode : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         Collider2D collider = col.collider;
-        if (collider.GetComponent<MapPlayerController>() != null)
-        {
-            if (nodeState == NodeState.Start
-            || (nodeState == NodeState.Incomplete
-            && (previusNodeA.nodeState == NodeState.Current
-            || previusNodeB.nodeState == NodeState.Current)))
+        if(manager != null)
+            if (collider.GetComponent<MapPlayerController>() != null && manager.ReadyToBattle)
             {
-                SaveGameManager.SaveGame(collider.transform.position, CombatInfo.CombatsFinished);
-                ActivateNode();
+                Debug.Log(previusNodeA.nodeState);
+                if (nodeState == NodeState.Start
+                || (nodeState == NodeState.Incomplete
+                && (previusNodeA.nodeState == NodeState.Current
+                || previusNodeB.nodeState == NodeState.Current)))
+                {
+                    SaveGameManager.SaveGame(collider.transform.position, CombatInfo.CombatsFinished);
+                    Debug.Log(collider.transform.position);
+                    ActivateNode();
+                }
             }
-        }
     }
 
     void ActivateNode()
@@ -64,12 +69,10 @@ public class MapNode : MonoBehaviour
         spriteRenderer.color = currentNormalColor;
         nodeState = NodeState.Current;
         Combat combat = gameObject.GetComponent<Combat>();
-
         if (combat != null)
         {
             combat.LoadCombat();
             SceneManager.LoadScene("Combat");
-
         }
     }
 }

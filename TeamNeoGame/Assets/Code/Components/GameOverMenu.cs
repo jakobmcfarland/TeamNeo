@@ -47,7 +47,8 @@ public class GameOverMenu : MonoBehaviour
             switch (selected)
             {
                 case 0:
-                    SceneManager.LoadScene("Combat");
+                    SceneManager.LoadScene("Map");
+
                     break;
                 case 1:
                     Application.Quit();
