@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class MapNodeManager : MonoBehaviour
 {
-    public GameObject Player = null;
-    [HideInInspector]
-    public bool ReadyToBattle = false;
-
     static MapNodeManager instance;
+    public GameObject Player;
     public static MapNodeManager GetInstance()
     { return instance; }
 
@@ -16,17 +13,12 @@ public class MapNodeManager : MonoBehaviour
     {
         if (instance == null)
             instance = this;
-        GameData data = SaveGameManager.LoadGame();
-        CombatInfo.CombatsFinished = data.CombatsFinished;
-        if (data != null)
-        {
-            Player.transform.position = new Vector3(data.mapPos[0], data.mapPos[1], data.mapPos[2]);
-
+        if(GameState.GetInstance().Loaded)
             for (int i = 0; i < CombatInfo.CombatsFinished; i++)
             {
+                Player.transform.position = GameState.GetInstance().Player;
                 MapNodeManager.GetInstance().nodes[i].nodeState = NodeState.Current;
             }
-        }
     }
 
 

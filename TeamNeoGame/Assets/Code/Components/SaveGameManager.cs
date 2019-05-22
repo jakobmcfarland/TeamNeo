@@ -13,10 +13,11 @@ public static class SaveGameManager
 
         GameData data = new GameData(position, combatsFinished);
             formatter.Serialize(stream, data);
+        GameState.GetInstance().ReadyToBattle = false;
         stream.Close();
     }
 
-    public static GameData LoadGame()
+    public static void LoadGame()
     {
         string filePath = Application.persistentDataPath + "/GameData.test";
         if (File.Exists(filePath))
@@ -25,14 +26,19 @@ public static class SaveGameManager
             FileStream stream = new FileStream(filePath, FileMode.Open);
 
             GameData data = formatter.Deserialize(stream) as GameData;
+
+            CombatInfo.CombatsFinished = data.CombatsFinished;
+            if (data != null)
+            {
+                GameState.GetInstance().Player = new Vector3(data.mapPos[0], data.mapPos[1], data.mapPos[2]);
+                GameState.GetInstance().Loaded = true;
+            }
             stream.Close();
 
-            return data;
         }
         else
         {
             Debug.LogError("SAVEFILE NOT FOUND");
-            return null;
         }
     }
 }
