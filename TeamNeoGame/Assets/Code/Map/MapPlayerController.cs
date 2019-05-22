@@ -7,15 +7,24 @@ public class MapPlayerController : MonoBehaviour
     public float mapPlayerWalkSpeed = 15.0f;
     public float mapPlayerMaxSpeed = 15.0f;
 
+    bool idle;
+
     Rigidbody2D rigidbody_;
     SpriteRenderer spriteRenderer_;
     Animator animator;
+
+    public Sprite idleForward;
+    public Sprite idleSide;
+    public Sprite idleBack;
+
+    Sprite currentIdle;
 
     private void Start()
     {
         rigidbody_ = GetComponent<Rigidbody2D>();
         spriteRenderer_ = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        currentIdle = idleForward;
     }
 
     // Update is called once per frame
@@ -24,17 +33,44 @@ public class MapPlayerController : MonoBehaviour
         Vector2 movement = new Vector2(0.0f, 0.0f);
 
         movement.x = Input.GetAxisRaw("Horizontal");
-        animator.SetFloat("playerHorizontalSpeed", Mathf.Abs(movement.x));
         movement.y = Input.GetAxisRaw("Vertical");
-        animator.SetFloat("playerVerticalSpeed", movement.y);
+
         movement = movement.normalized * mapPlayerWalkSpeed;
 
-        if (movement.y == 0.0f)
+        rigidbody_.velocity = movement;
+
+        if (movement.x > 0)
         {
-            if (movement.x > 0) spriteRenderer_.flipX = true;
-            else spriteRenderer_.flipX = false;
+            spriteRenderer_.flipX = true;
+            currentIdle = idleSide;
+            animator.Play("MapPlayerSideAnimation");
+        }
+        else if (movement.x < 0)
+        {
+            spriteRenderer_.flipX = false;
+            currentIdle = idleSide;
+            animator.Play("MapPlayerSideAnimation");
+        }
+        else
+        {
+            if (movement.y > 0)
+            {
+                currentIdle = idleBack;
+                animator.Play("MapPlayerBackAnimation");
+            }
+            else if (movement.y < 0)
+            {
+                currentIdle = idleForward;
+                animator.Play("MapPlayerForwardAnimation");
+            }
         }
 
-        rigidbody_.velocity = movement;
+        //has the player stopped? 
+        if ( movement.x == 0 && movement.y == 0 )
+        {
+            animator.Play("Idle");
+            spriteRenderer_.sprite = currentIdle;
+            //Debug.Log(spriteRenderer_.sprite);
+        }
     }
 }
