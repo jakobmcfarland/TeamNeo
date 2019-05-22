@@ -19,7 +19,7 @@ public class MapPlayerController : MonoBehaviour
     public Sprite idleBack;
 
     Sprite currentIdle;
-
+    public KeyCode inspectKey;
     private void Start()
     {
         rigidbody_ = GetComponent<Rigidbody2D>();
@@ -75,7 +75,20 @@ public class MapPlayerController : MonoBehaviour
         if (movement.x != 0 || movement.y != 0)
         {
             MapNodeManager.GetInstance().ReadyToBattle = true;
-            print("here");
+        }
+    }
+    void OnTriggerStay2D(Collider2D collider) 
+    {
+        Inspectable inspect = collider.GetComponent<Inspectable>();
+        if(Input.GetKeyDown(inspectKey)) {
+            Debug.Log("print(\"fdsa\");");
+        if(inspect != null){
+                Debug.Log("print(\"fdsa\");");
+                inspect.Inspect();
+
+            }
+        } else {
+           // print("dvsa");
         }
     }
 }
