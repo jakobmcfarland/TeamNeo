@@ -1,28 +1,34 @@
 fileFormatVersion: 2
-guid: 3c240d1e808347446a8bb49f68ddbc5c
+guid: d86ba9cf98650d2469c38e779dba7b93
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3896779470706487856
-    second: MapPlayerWalkBack_0
+      213: 854547555633942528
+    second: MapPlayerWalkRight_0
   - first:
-      213: 8667507761445925361
-    second: MapPlayerWalkBack_1
+      213: 8370363710132903989
+    second: MapPlayerWalkRight_1
   - first:
-      213: 3230255800526916862
-    second: MapPlayerWalkBack_2
+      213: 973614476897984982
+    second: MapPlayerWalkRight_2
   - first:
-      213: 6492940776759512854
-    second: MapPlayerWalkBack_3
+      213: -2344005864925935565
+    second: MapPlayerWalkRight_3
   - first:
-      213: -357932415674121999
-    second: MapPlayerWalkBack_4
+      213: -3273923280995260862
+    second: MapPlayerWalkRight_4
   - first:
-      213: -6229432123681145071
-    second: MapPlayerWalkBack_5
+      213: -3976847366221576772
+    second: MapPlayerWalkRight_5
   - first:
-      213: 9082567210235401184
-    second: MapPlayerWalkBack_6
+      213: -1311155410510960648
+    second: MapPlayerWalkRight_6
+  - first:
+      213: -6339135883783413444
+    second: MapPlayerWalkRight_7
+  - first:
+      213: -8750978323425436785
+    second: MapPlayerWalkRight_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -101,27 +107,16 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MapPlayerWalkBack_0
+      name: MapPlayerWalkRight_0
       rect:
         serializedVersion: 2
         x: 0
         y: 33
-        width: 16
+        width: 14
         height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -130,19 +125,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50636fb638e25b64c8399ad24badf438
-      internalID: -3896779470706487856
+      spriteID: e292688333a7fc744a6c64bd04f5604f
+      internalID: 854547555633942528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MapPlayerWalkBack_1
+      name: MapPlayerWalkRight_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 14
         y: 33
-        width: 16
+        width: 14
         height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -151,19 +146,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adcbeeeaffde5e244a9c7df58b76670e
-      internalID: 8667507761445925361
+      spriteID: 0573a7fe686e7e1499145067d9299210
+      internalID: 8370363710132903989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MapPlayerWalkBack_2
+      name: MapPlayerWalkRight_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 28
         y: 33
-        width: 16
+        width: 14
         height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -172,19 +167,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3a522531218cc649b219fcbba40ffeb
-      internalID: 3230255800526916862
+      spriteID: f0bfd395948d62b4ab5d34778dac25fb
+      internalID: 973614476897984982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MapPlayerWalkBack_3
+      name: MapPlayerWalkRight_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 42
         y: 33
-        width: 16
+        width: 14
         height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -193,19 +188,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7582e623359fc164781841f42c36f647
-      internalID: 6492940776759512854
+      spriteID: 7479608a124fdc341b99c9e8ea7617bc
+      internalID: -2344005864925935565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MapPlayerWalkBack_4
+      name: MapPlayerWalkRight_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 33
+        width: 14
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792f91ecffb97fd429fb4f406c38ea27
+      internalID: -3273923280995260862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapPlayerWalkRight_5
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
+        width: 14
         height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -214,19 +230,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e77668f3b9b540949b420b066d972894
-      internalID: -357932415674121999
+      spriteID: a3e1abd6e01d55c43af5ad6e81bbc115
+      internalID: -3976847366221576772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MapPlayerWalkBack_5
+      name: MapPlayerWalkRight_6
       rect:
         serializedVersion: 2
-        x: 16
+        x: 14
         y: 0
-        width: 16
+        width: 14
         height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -235,19 +251,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaadc6516dc30694fb0be4e03bb4c394
-      internalID: -6229432123681145071
+      spriteID: 1ff1faf094da9a44395540641a6bc615
+      internalID: -1311155410510960648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MapPlayerWalkBack_6
+      name: MapPlayerWalkRight_7
       rect:
         serializedVersion: 2
-        x: 32
+        x: 28
         y: 0
-        width: 16
+        width: 14
         height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -256,8 +272,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e4b1414cc0a0db45a6c78c79b55e599
-      internalID: 9082567210235401184
+      spriteID: 74c3c0319786e4d4f9c8bcc378c35149
+      internalID: -6339135883783413444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapPlayerWalkRight_8
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 14
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378043353c395624580d0172656da60b
+      internalID: -8750978323425436785
       vertices: []
       indices: 
       edges: []
@@ -265,7 +302,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 368b648943b5c59439d19e1496d51938
+    spriteID: 3369ac0587cfc094b99fa40143a0b885
     internalID: 0
     vertices: []
     indices: 
