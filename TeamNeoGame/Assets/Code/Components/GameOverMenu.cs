@@ -48,7 +48,7 @@ public class GameOverMenu : MonoBehaviour
             {
                 case 0:
                     SceneManager.LoadScene("Map");
-
+                    
                     break;
                 case 1:
                     Application.Quit();
