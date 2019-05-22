@@ -19,6 +19,7 @@ public class DialogueBox : MonoBehaviour
     }
     void Update()
     {
+        
         if (Input.GetKeyDown(nextKey))
         {
             if (!done)
