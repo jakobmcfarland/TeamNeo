@@ -14,7 +14,8 @@ public class MapPlayerController : MonoBehaviour
     Animator animator;
 
     public Sprite idleForward;
-    public Sprite idleSide;
+    public Sprite idleLeft;
+    public Sprite idleRight;
     public Sprite idleBack;
 
     Sprite currentIdle;
@@ -41,15 +42,13 @@ public class MapPlayerController : MonoBehaviour
 
         if (movement.x > 0)
         {
-            spriteRenderer_.flipX = true;
-            currentIdle = idleSide;
-            animator.Play("MapPlayerSideAnimation");
+            currentIdle = idleRight;
+            animator.Play("MapPlayerRightAnimation");
         }
         else if (movement.x < 0)
         {
-            spriteRenderer_.flipX = false;
-            currentIdle = idleSide;
-            animator.Play("MapPlayerSideAnimation");
+            currentIdle = idleLeft;
+            animator.Play("MapPlayerLeftAnimation");
         }
         else
         {
