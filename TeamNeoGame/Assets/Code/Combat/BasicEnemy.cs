@@ -34,6 +34,10 @@ public class BasicEnemy : MonoBehaviour
         if (health <= 0)
         {
             print("Victory!");
+            Combat thisCombat;
+            thisCombat = Combat.ToCombat();
+            print(thisCombat.EnemyName);
+             CombatInfo.CombatsFinished.Add(thisCombat);
             SceneManager.LoadScene("Map");
         }
     }

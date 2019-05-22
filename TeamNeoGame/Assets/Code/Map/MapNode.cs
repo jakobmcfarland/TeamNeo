@@ -43,6 +43,7 @@ public class MapNode : MonoBehaviour
         Collider2D collider = col.collider;
         if (collider.GetComponent<MapPlayerController>() != null)
         {
+            Debug.Log(previusNodeA.nodeState);
             if (nodeState == NodeState.Start
             || (nodeState == NodeState.Incomplete
             && (previusNodeA.nodeState == NodeState.Current
@@ -64,12 +65,11 @@ public class MapNode : MonoBehaviour
         spriteRenderer.color = currentNormalColor;
         nodeState = NodeState.Current;
         Combat combat = gameObject.GetComponent<Combat>();
-
+        Debug.Log("here");
         if (combat != null)
         {
             combat.LoadCombat();
             SceneManager.LoadScene("Combat");
-
         }
     }
 }
