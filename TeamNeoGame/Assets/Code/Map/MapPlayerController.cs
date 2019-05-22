@@ -74,6 +74,7 @@ public class MapPlayerController : MonoBehaviour
 
         if (movement.x != 0 || movement.y != 0)
         {
+
             MapNodeManager.GetInstance().ReadyToBattle = true;
         }
     }

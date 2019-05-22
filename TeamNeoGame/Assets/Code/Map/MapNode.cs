@@ -41,8 +41,8 @@ public class MapNode : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         Collider2D collider = col.collider;
-        if(MapNodeManager.GetInstance() != null)
-            if (collider.GetComponent<MapPlayerController>() != null && MapNodeManager.GetInstance().ReadyToBattle)
+        if (MapNodeManager.GetInstance() != null)
+            if (collider.GetComponent<MapPlayerController>() != null && GameState.GetInstance().ReadyToBattle)
             {
                 if (nodeState == NodeState.Start
                 || (nodeState == NodeState.Incomplete

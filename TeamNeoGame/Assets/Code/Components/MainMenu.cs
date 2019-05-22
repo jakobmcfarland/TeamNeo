@@ -52,6 +52,7 @@ public class MainMenu : MonoBehaviour
                     SceneManager.LoadScene("Map");
                     break;
                 case 1:
+                    SaveGameManager.LoadGame();
                     SceneManager.LoadScene("Map");
                     break;
                 case 2:
