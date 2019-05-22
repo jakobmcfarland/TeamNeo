@@ -30,10 +30,15 @@ public class PlayerCombat : MonoBehaviour
     public Image staminaGauge;
     private Animator staminaAnim;
     public AttackManager attackManager;
+    public int healthCount = 3;
+    public TextMeshProUGUI hpPotionText;
+    public float healPerPotion = 0.5f;
+    public KeyCode healKey;
     // Start is called before the first frame update
     void Start()
     {
         staminaAnim = staminaGauge.GetComponent<Animator>();
+        hpPotionText.text = healthCount.ToString();
     }
 
     // Update is called once per frame
@@ -47,12 +52,16 @@ public class PlayerCombat : MonoBehaviour
         }
         if (staminaGauge.fillAmount >= 1 && attackManager.buffer)
         {
-            staminaAnim.SetBool("Flash", true);
+            //staminaAnim.SetBool("Flash", true);
         }
         else
         {
-            staminaAnim.SetBool("Flash", false);
+            //staminaAnim.SetBool("Flash", false);
         }
+        if (healthCount > 0 && Input.GetKeyDown(healKey)) {
+            UsePotion();
+        }
+
     }
     public void Accelerate()
     {
@@ -80,8 +89,13 @@ public class PlayerCombat : MonoBehaviour
         {
             stamina = maxStamina;
         }
-        //staminaBar.UpdateHP((float)stamina / (float)maxStamina);
         staminaGauge.fillAmount = (float)stamina / (float)maxStamina;
-
+    }
+    public void UsePotion() {
+        print("use");
+        healthCount--;
+        CombatInfo.HealthPotionCount--;
+        ModHealth((int)(healPerPotion * (float)maxHealth));
+        hpPotionText.text = healthCount.ToString();
     }
 }

@@ -33,7 +33,6 @@ public class AttackManager : MonoBehaviour
             attacks[i].success = false;
             attacks[i].SetElement(PickAttack());
             attacks[i].Show();
-
         }
         for (int i = attackCount; i < attacks.Length; i++)
         {

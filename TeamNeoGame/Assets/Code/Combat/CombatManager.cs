@@ -12,7 +12,7 @@ public class CombatManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //SetDefaultParameters();
+        SetDefaultParameters();
         StartCombat();
     }
 
@@ -36,6 +36,7 @@ public class CombatManager : MonoBehaviour
         CombatInfo.ArrowCount = 6;
         CombatInfo.BufferTime = 1.0f;
         CombatInfo.Env = Environment.City;
+        CombatInfo.HealthPotionCount = 3;
     }
     void StartCombat()
     {
@@ -50,6 +51,7 @@ public class CombatManager : MonoBehaviour
         enemy.attackManager.time = CombatInfo.TimePerBar;
         enemy.attackManager.attackCount = CombatInfo.ArrowCount;
         enemy.attackManager.bufferTime = CombatInfo.BufferTime;
+        player.healthCount = CombatInfo.HealthPotionCount;
         SelectEnvironment(CombatInfo.Env);
         player.enabled = true;
         enemy.enabled = true;
