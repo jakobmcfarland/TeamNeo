@@ -29,6 +29,11 @@ public class MapPlayerController : MonoBehaviour
         animator.SetFloat("playerVerticalSpeed", movement.y);
         movement = movement.normalized * mapPlayerWalkSpeed;
 
+        if (movement.x != 0 || movement.y != 0)
+        {
+            MapNodeManager.GetInstance().ReadyToBattle = true;
+            print("here");
+        }
         if (movement.y == 0.0f)
         {
             if (movement.x > 0) spriteRenderer_.flipX = true;

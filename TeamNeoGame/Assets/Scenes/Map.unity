@@ -460,6 +460,7 @@ GameObject:
   - component: {fileID: 1279100129}
   - component: {fileID: 1279100127}
   - component: {fileID: 1279100128}
+  - component: {fileID: 1279100131}
   m_Layer: 0
   m_Name: Node (2)
   m_TagString: Untagged
@@ -564,6 +565,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1279100131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279100126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5170769fa06ddf544b438b380ce467bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyName: 3
+  EnemySprite: {fileID: 0}
+  PlayerDamage: 50
+  EnemyDamage: 10
+  StaminaGain: 10
+  MaxStamina: 100
+  MaxHealth: 100
+  EnemyHealth: 100
+  TimePerBar: 5
+  ArrowCount: 6
+  BufferTimer: 0.1
 --- !u!1 &1282245206
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +780,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdcfffcf14e6fc74ca47bdf45e26bd7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 2114791264}
+  ReadyToBattle: 0
   nodes:
   - {fileID: 605623587}
   - {fileID: 1714195326}

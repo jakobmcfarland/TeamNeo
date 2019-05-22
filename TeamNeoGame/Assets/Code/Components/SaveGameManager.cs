@@ -12,14 +12,14 @@ public static class SaveGameManager
         FileStream stream = new FileStream(filePath, FileMode.Create);
 
         GameData data = new GameData(position, combatsFinished);
-
+        Debug.Log (position.x);
         formatter.Serialize(stream, data);
         stream.Close();
     }
 
     public static GameData LoadGame()
     {
-        string filePath = Application.persistentDataPath + "/GameData.blerag";
+        string filePath = Application.persistentDataPath + "/GameData.test";
         if (File.Exists(filePath))
         {
             BinaryFormatter formatter = new BinaryFormatter();
