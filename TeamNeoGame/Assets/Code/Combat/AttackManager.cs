@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class AttackManager : MonoBehaviour
 {
     public int attackCount = 4;
@@ -21,6 +21,9 @@ public class AttackManager : MonoBehaviour
     public float bufferTime = 1.0f;
     private float bTimer = 0;
     public bool buffer = false;
+    public int streak = 0;
+    public float damageScale = 1.01f;
+    public TextMeshProUGUI streakText;
     public void Begin()
     {
         attacks = this.gameObject.GetComponentsInChildren<AttackBox>();
@@ -76,11 +79,14 @@ public class AttackManager : MonoBehaviour
         if (r)
         {
             player.ModStamina(staminaRight);
+            streak++;
         }
         else
         {
+            streak = 0;
             player.ModHealth(-hpWrong);
         }
+        streakText.text = "x"+streak.ToString();
     }
     // Update is called once per frame
     void Update()
