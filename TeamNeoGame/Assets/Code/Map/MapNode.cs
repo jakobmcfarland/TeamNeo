@@ -44,6 +44,7 @@ public class MapNode : MonoBehaviour
         if (MapNodeManager.GetInstance() != null)
             if (collider.GetComponent<MapPlayerController>() != null && GameState.GetInstance().ReadyToBattle)
             {
+                Debug.Log(previusNodeA.nodeState);
                 if (nodeState == NodeState.Start
                 || (nodeState == NodeState.Incomplete
                 && (previusNodeA.nodeState == NodeState.Current

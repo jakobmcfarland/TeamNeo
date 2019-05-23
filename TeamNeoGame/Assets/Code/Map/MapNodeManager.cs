@@ -13,12 +13,14 @@ public class MapNodeManager : MonoBehaviour
     {
         if (instance == null)
             instance = this;
-        if(GameState.GetInstance().Loaded)
+        if (GameState.GetInstance().Loaded)
+        {
             for (int i = 0; i < CombatInfo.CombatsFinished; i++)
             {
                 Player.transform.position = GameState.GetInstance().Player;
-                MapNodeManager.GetInstance().nodes[i].nodeState = NodeState.Current;
+               // MapNodeManager.GetInstance().nodes[i].nodeState = NodeState.Current;
             }
+        }
     }
 
 

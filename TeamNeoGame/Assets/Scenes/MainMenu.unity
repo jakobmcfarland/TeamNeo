@@ -2365,6 +2365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {x: 0, y: 0, z: 0}
+  MaxHealth: 100
   ReadyToBattle: 0
   Loaded: 0
 --- !u!4 &1787051876
