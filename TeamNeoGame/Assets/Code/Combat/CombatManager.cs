@@ -12,7 +12,7 @@ public class CombatManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetDefaultParameters();
+        //SetDefaultParameters();
         StartCombat();
     }
 
@@ -36,7 +36,6 @@ public class CombatManager : MonoBehaviour
         CombatInfo.ArrowCount = 6;
         CombatInfo.BufferTime = 1.0f;
         CombatInfo.Env = Environment.City;
-        CombatInfo.HealthPotionCount = 3;
     }
     void StartCombat()
     {
@@ -67,7 +66,7 @@ public class CombatManager : MonoBehaviour
     }
     public void AttackEnemy(int damage)
     {
-        enemy.ModHealth(-damage);
+        enemy.ModHealth((int)(-damage * Mathf.Pow(am.damageScale, (float)am.streak)));
     }
     public void HurtPlayer(int damage)
     {

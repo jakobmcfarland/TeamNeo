@@ -38,8 +38,8 @@ public class MapNodeManager : MonoBehaviour
             for (int i = 0; i < CombatInfo.CombatsFinished; i++)
             {
                 Player.transform.position = GameState.GetInstance().Player;
-                MapNodeManager.GetInstance().nodes[i].nodeState = NodeState.Current;
+               // MapNodeManager.GetInstance().nodes[i].nodeState = NodeState.Current;
             }
         }
-    } 
+    }
 }

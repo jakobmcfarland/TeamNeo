@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameState : MonoBehaviour
 {
     public Vector3 Player = new Vector3(0,0,0);
+    public int MaxHealth;
+    public static int curHealth;
     [HideInInspector]
     public bool ReadyToBattle;
 
@@ -20,6 +22,7 @@ public class GameState : MonoBehaviour
         if (instance == null)
             instance = this;
         DontDestroyOnLoad(this.gameObject);
+        CombatInfo.MaxHealth = MaxHealth;
     }
     public void LoadGame()
     {
@@ -27,5 +30,6 @@ public class GameState : MonoBehaviour
         {
             MapNodeManager.GetInstance().nodes[i].nodeState = NodeState.Current;
         }
+        print(CombatInfo.HealthPotionCount);
     }
 }

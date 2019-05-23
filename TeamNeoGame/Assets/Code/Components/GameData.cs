@@ -7,7 +7,8 @@ public class GameData
 {
     public int CombatsFinished;
     public float[] mapPos;
-
+    public int healthPotions;
+    public int health;
     public GameData(Vector3 pos, int combats)
     {
         mapPos = new float[3];
@@ -17,5 +18,7 @@ public class GameData
         mapPos[1] = pos.y;
         mapPos[2] = pos.z;
         mapPos[2] = pos.z;
+        healthPotions = CombatInfo.HealthPotionCount;
+        health = GameState.curHealth;
     }
 }

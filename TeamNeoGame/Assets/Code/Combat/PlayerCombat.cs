@@ -34,11 +34,16 @@ public class PlayerCombat : MonoBehaviour
     public TextMeshProUGUI hpPotionText;
     public float healPerPotion = 0.5f;
     public KeyCode healKey;
+
     // Start is called before the first frame update
     void Start()
     {
         staminaAnim = staminaGauge.GetComponent<Animator>();
         hpPotionText.text = healthCount.ToString();
+        health = GameState.curHealth;
+        Debug.Log(GameState.curHealth);
+        Debug.Log("Health: " + health);
+      //  ModHealth(health);
     }
 
     // Update is called once per frame
@@ -92,7 +97,6 @@ public class PlayerCombat : MonoBehaviour
         staminaGauge.fillAmount = (float)stamina / (float)maxStamina;
     }
     public void UsePotion() {
-        print("use");
         healthCount--;
         CombatInfo.HealthPotionCount--;
         ModHealth((int)(healPerPotion * (float)maxHealth));

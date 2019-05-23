@@ -3,6 +3,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
+
 public static class SaveGameManager
 {
     public static void SaveGame(Vector3 position, int combatsFinished)
@@ -14,6 +15,8 @@ public static class SaveGameManager
         GameData data = new GameData(position, combatsFinished);
             formatter.Serialize(stream, data);
         GameState.GetInstance().ReadyToBattle = false;
+        Debug.Log(data.health);
+        Debug.Log("saved");
         stream.Close();
     }
 
@@ -27,12 +30,16 @@ public static class SaveGameManager
 
             GameData data = formatter.Deserialize(stream) as GameData;
 
-            CombatInfo.CombatsFinished = data.CombatsFinished;
             if (data != null)
             {
+                CombatInfo.CombatsFinished = data.CombatsFinished;
                 GameState.GetInstance().Player = new Vector3(data.mapPos[0], data.mapPos[1], data.mapPos[2]);
                 GameState.GetInstance().Loaded = true;
+                GameState.curHealth = data.health;
+                Debug.Log(GameState.curHealth);
+                CombatInfo.HealthPotionCount = data.healthPotions;
             }
+            Debug.Log("loaded");
             stream.Close();
 
         }
