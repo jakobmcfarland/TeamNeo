@@ -53,6 +53,11 @@ public class AttackManager : MonoBehaviour
         timer = time;
         bTimer = bufferTime;
         buffer = true;
+        if(player.stamina >=player.maxStamina) {
+            for(int i = 0; i < attackCount; i++) {
+                attacks[i].Hide();   
+            }
+        }
     }
     Element PickAttack()
     {
@@ -94,7 +99,7 @@ public class AttackManager : MonoBehaviour
         if (buffer)
         {
             bTimer -= Time.deltaTime;
-            if (bTimer <= 0 && player.stamina <= player.maxStamina)
+            if (bTimer <= 0 && player.stamina < player.maxStamina)
             {
                 buffer = false;
                 Begin();
