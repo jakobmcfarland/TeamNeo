@@ -49,9 +49,12 @@ public class MainMenu : MonoBehaviour
             switch (selected)
             {
                 case 0:
+                    CombatInfo.HealthPotionCount = 3;
+                    GameState.curHealth = 100;
                     SceneManager.LoadScene("Map");
                     break;
                 case 1:
+                    SaveGameManager.LoadGame();
                     SceneManager.LoadScene("Map");
                     break;
                 case 2:

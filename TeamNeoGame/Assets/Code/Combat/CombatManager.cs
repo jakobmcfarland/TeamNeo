@@ -50,6 +50,7 @@ public class CombatManager : MonoBehaviour
         enemy.attackManager.time = CombatInfo.TimePerBar;
         enemy.attackManager.attackCount = CombatInfo.ArrowCount;
         enemy.attackManager.bufferTime = CombatInfo.BufferTime;
+        player.healthCount = CombatInfo.HealthPotionCount;
         SelectEnvironment(CombatInfo.Env);
         player.enabled = true;
         enemy.enabled = true;
@@ -65,7 +66,7 @@ public class CombatManager : MonoBehaviour
     }
     public void AttackEnemy(int damage)
     {
-        enemy.ModHealth(-damage);
+        enemy.ModHealth((int)(-damage * Mathf.Pow(am.damageScale, (float)am.streak)));
     }
     public void HurtPlayer(int damage)
     {

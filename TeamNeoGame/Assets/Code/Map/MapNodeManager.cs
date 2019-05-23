@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MapNodeManager : MonoBehaviour
 {
-    public GameObject Player = null;
-    [HideInInspector]
-    public bool ReadyToBattle = false;
-
     static MapNodeManager instance;
+    public GameObject Player;
+
+    public List<MapNode> nodes;
+
     public static MapNodeManager GetInstance()
     { return instance; }
 
@@ -16,19 +16,30 @@ public class MapNodeManager : MonoBehaviour
     {
         if (instance == null)
             instance = this;
-        GameData data = SaveGameManager.LoadGame();
-        CombatInfo.CombatsFinished = data.CombatsFinished;
-        if (data != null)
-        {
-            Player.transform.position = new Vector3(data.mapPos[0], data.mapPos[1], data.mapPos[2]);
+
+        if (GameState.GetInstance().Loaded)
+        { 
+            MapNodeManager mapNodeManager = MapNodeManager.GetInstance();
+
+            //Map Node Initilization
+            MapNode node = mapNodeManager.nodes[0];
+            node.ObjectName = "Node0";
+            node.nodeState = NodeState.Start;
+            node.Initilize();
+
+            node = mapNodeManager.nodes[1];
+            node.ObjectName = "Node1";
+            node.Initilize();
+
+            node = mapNodeManager.nodes[2];
+            node.ObjectName = "Node2";
+            node.Initilize();
 
             for (int i = 0; i < CombatInfo.CombatsFinished; i++)
             {
-                MapNodeManager.GetInstance().nodes[i].nodeState = NodeState.Current;
+                Player.transform.position = GameState.GetInstance().Player;
+               // MapNodeManager.GetInstance().nodes[i].nodeState = NodeState.Current;
             }
         }
     }
-
-
-    public List<MapNode> nodes;
 }

@@ -36,6 +36,7 @@ public class BasicEnemy : MonoBehaviour
             print("Victory!");
             CombatInfo.CombatsFinished++;
             SaveGameManager.SaveGame(new Vector3(0, 0, 0), CombatInfo.CombatsFinished);
+            GameState.curHealth = cm.player.health;
             SceneManager.LoadScene("Map");
         }
     }

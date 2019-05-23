@@ -20,6 +20,9 @@ TextureImporter:
   - first:
       213: -6229432123681145071
     second: MapPlayerWalkBack_5
+  - first:
+      213: 9082567210235401184
+    second: MapPlayerWalkBack_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -117,9 +120,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 18
-        height: 32
+        y: 33
+        width: 16
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,7 +130,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 264f6601c87f12c439e930fc7c710ada
+      spriteID: 50636fb638e25b64c8399ad24badf438
       internalID: -3896779470706487856
       vertices: []
       indices: 
@@ -137,10 +140,10 @@ TextureImporter:
       name: MapPlayerWalkBack_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 32
-        width: 18
-        height: 32
+        x: 16
+        y: 33
+        width: 16
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,7 +151,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 603ca25965587594290fa6b0518c24b7
+      spriteID: adcbeeeaffde5e244a9c7df58b76670e
       internalID: 8667507761445925361
       vertices: []
       indices: 
@@ -158,10 +161,10 @@ TextureImporter:
       name: MapPlayerWalkBack_2
       rect:
         serializedVersion: 2
-        x: 36
-        y: 32
-        width: 18
-        height: 32
+        x: 32
+        y: 33
+        width: 16
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,7 +172,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ab09da982558ce41bfde76b39866c83
+      spriteID: b3a522531218cc649b219fcbba40ffeb
       internalID: 3230255800526916862
       vertices: []
       indices: 
@@ -179,10 +182,10 @@ TextureImporter:
       name: MapPlayerWalkBack_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 18
-        height: 32
+        x: 48
+        y: 33
+        width: 16
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,7 +193,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5c0ab4dc8c3afa4ebd65829e41db952
+      spriteID: 7582e623359fc164781841f42c36f647
       internalID: 6492940776759512854
       vertices: []
       indices: 
@@ -200,10 +203,10 @@ TextureImporter:
       name: MapPlayerWalkBack_4
       rect:
         serializedVersion: 2
-        x: 18
+        x: 0
         y: 0
-        width: 18
-        height: 32
+        width: 16
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,7 +214,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1645968269ffb3148b63f8dcc8239ba2
+      spriteID: e77668f3b9b540949b420b066d972894
       internalID: -357932415674121999
       vertices: []
       indices: 
@@ -221,10 +224,10 @@ TextureImporter:
       name: MapPlayerWalkBack_5
       rect:
         serializedVersion: 2
-        x: 36
+        x: 16
         y: 0
-        width: 18
-        height: 32
+        width: 16
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,8 +235,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5af20340ab71b3409bf8fda11b69ac6
+      spriteID: eaadc6516dc30694fb0be4e03bb4c394
       internalID: -6229432123681145071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapPlayerWalkBack_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4b1414cc0a0db45a6c78c79b55e599
+      internalID: 9082567210235401184
       vertices: []
       indices: 
       edges: []
