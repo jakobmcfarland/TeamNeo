@@ -66,7 +66,7 @@ public class CombatManager : MonoBehaviour
     }
     public void AttackEnemy(int damage)
     {
-        enemy.ModHealth(-damage);
+        enemy.ModHealth((int)(-damage * Mathf.Pow(am.damageScale, (float)am.streak)));
     }
     public void HurtPlayer(int damage)
     {

@@ -34,6 +34,7 @@ public class PlayerCombat : MonoBehaviour
     public TextMeshProUGUI hpPotionText;
     public float healPerPotion = 0.5f;
     public KeyCode healKey;
+
     // Start is called before the first frame update
     void Start()
     {
