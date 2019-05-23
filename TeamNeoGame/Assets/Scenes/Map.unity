@@ -221,18 +221,6 @@ MonoBehaviour:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   lerpSpeed: 5
---- !u!114 &605623587 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4359802040436250512, guid: a42502b5f9eccde4385742a141baf7b7,
-    type: 3}
-  m_PrefabInstance: {fileID: 4359802040904368819}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4359802040904368820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d83e888df16a6645bc5ac8355b0b751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1188552005
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,16 +465,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1279100126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d83e888df16a6645bc5ac8355b0b751, type: 3}
+  m_Script: {fileID: 11500000, guid: 368a4429714027741a96ddac37de8160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
-  incompleteNormalColor: {r: 1, g: 0, b: 0, a: 0.5}
-  completeNormalColor: {r: 0.5, g: 1, b: 1, a: 0.5}
-  currentNormalColor: {r: 0, g: 0.5, b: 0.5, a: 0.5}
-  previusObjectA: {fileID: 1714195326}
-  previusObjectB: {fileID: 1714195326}
-  nodeState: 0
 --- !u!58 &1279100128
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -583,7 +564,6 @@ MonoBehaviour:
   EnemyDamage: 10
   StaminaGain: 10
   MaxStamina: 100
-  MaxHealth: 100
   EnemyHealth: 100
   TimePerBar: 5
   ArrowCount: 6
@@ -781,10 +761,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 2114791264}
-  nodes:
-  - {fileID: 605623587}
-  - {fileID: 1714195326}
-  - {fileID: 1279100127}
 --- !u!4 &1559086682
 Transform:
   m_ObjectHideFlags: 0
@@ -828,16 +804,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1714195325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d83e888df16a6645bc5ac8355b0b751, type: 3}
+  m_Script: {fileID: 11500000, guid: 368a4429714027741a96ddac37de8160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
-  incompleteNormalColor: {r: 1, g: 0, b: 0, a: 0.5}
-  completeNormalColor: {r: 0.5, g: 1, b: 1, a: 0.5}
-  currentNormalColor: {r: 0, g: 0.5, b: 0.5, a: 0.5}
-  previusObjectA: {fileID: 605623587}
-  previusObjectB: {fileID: 605623587}
-  nodeState: 0
 --- !u!58 &1714195327
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -934,7 +903,6 @@ MonoBehaviour:
   EnemyDamage: 10
   StaminaGain: 10
   MaxStamina: 100
-  MaxHealth: 100
   EnemyHealth: 100
   TimePerBar: 5
   ArrowCount: 6
@@ -1076,7 +1044,6 @@ MonoBehaviour:
   EnemyDamage: 10
   StaminaGain: 10
   MaxStamina: 100
-  MaxHealth: 100
   EnemyHealth: 100
   TimePerBar: 5
   ArrowCount: 6

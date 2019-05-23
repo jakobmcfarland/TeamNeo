@@ -6,7 +6,7 @@ public class WanderingAI : MonoBehaviour
 {
     public float FinalTimer = 0;
     public Vector2 End;
-    Vector2 Start = FindStart();
+    Vector2 start; // Blake: You can't call a function in the class scope
     float Distance;
     //a^2 +b^2 = c^2
     float timer = 0;
@@ -14,17 +14,19 @@ public class WanderingAI : MonoBehaviour
     bool direction = true;
     // speed = distance/time
     // v = d/t
+    void Start()
+    {
+        start = transform.position;
+    }
+
     void Update()
     {
         if (timer >= FinalTimer)
             direction = !direction;
         //flip direction if we have past the max time
-        float Distance = ((Start.x - End.x) * (Start.x - End.x)) + ((Start.y - End.y) * (Start.y - End.y));
-        Distance = Math.Sqrt(Distance);
+        float Distance = ((start.x - End.x) * (start.x - End.x)) + ((start.y - End.y) * (start.y - End.y));
+        Distance = Mathf.Sqrt(Distance);
         timer += Time.deltaTime;
         
-    }
-    void FindStart() {
-        Start = transform;
     }
 }
