@@ -11,64 +11,54 @@ public enum NodeState
     Start
 }
 
-public class MapNode : MonoBehaviour
+public class MapNode
 {
-    public SpriteRenderer spriteRenderer;
-    public Color incompleteNormalColor = new Color(1.0f, 0.0f, 0.0f, 0.5f);
-    public Color completeNormalColor = new Color(0.5f, 1.0f, 1.0f, 0.5f);
-    public Color currentNormalColor = new Color(0.0f, 0.5f, 0.5f, 0.5f);
-
-    public MapNode previusObjectA;
-    public MapNode previusObjectB;
-
-    MapNode previusNodeA;
-    MapNode previusNodeB;
-
+    public string ObjectName;
+    public int previusIndex;
     public NodeState nodeState = NodeState.Incomplete;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        previusNodeA = previusObjectA.GetComponent<MapNode>();
-        previusNodeB = previusObjectB.GetComponent<MapNode>();
+    Color incompleteNormalColor = new Color(1.0f, 0.0f, 0.0f, 0.5f);
+    Color completeNormalColor = new Color(0.5f, 1.0f, 1.0f, 0.5f);
+    Color currentNormalColor = new Color(0.0f, 0.5f, 0.5f, 0.5f);
 
+    SpriteRenderer spriteRenderer;
+
+    // Start is called before the first frame update
+    public void Initilize()
+    {
+        MapNodeManager mapNodeManager = MapNodeManager.GetInstance();
+        spriteRenderer = GameObject.Find(ObjectName).GetComponent<SpriteRenderer>();
 
         //if (nodeState == NodeState.Start) spriteRenderer.color = currentNormalColor; else
         spriteRenderer.color = incompleteNormalColor;
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    public void ActivateNode(Collider2D collider)
     {
-        Collider2D collider = col.collider;
-        if (MapNodeManager.GetInstance() != null)
+        MapNodeManager mapNodeManager = MapNodeManager.GetInstance();
+
+        if (mapNodeManager != null)
             if (collider.GetComponent<MapPlayerController>() != null && GameState.GetInstance().ReadyToBattle)
-            {
+            { 
                 if (nodeState == NodeState.Start
                 || (nodeState == NodeState.Incomplete
-                && (previusNodeA.nodeState == NodeState.Current
-                || previusNodeB.nodeState == NodeState.Current)))
+                && mapNodeManager.nodes[previusIndex].nodeState == NodeState.Current))
                 {
                     SaveGameManager.SaveGame(collider.transform.position, CombatInfo.CombatsFinished);
-                    ActivateNode();
+
+                    mapNodeManager.nodes[previusIndex].spriteRenderer.color = completeNormalColor;
+                    mapNodeManager.nodes[previusIndex].nodeState = NodeState.Complete;
+
+                    spriteRenderer.color = currentNormalColor;
+                    nodeState = NodeState.Current;
+                    //get combat info from the gameobject sprite render is on
+                    Combat combat = spriteRenderer.gameObject.GetComponent<Combat>();
+                    if (combat != null)
+                    {
+                        combat.LoadCombat();
+                        SceneManager.LoadScene("Combat");
+                    }
                 }
             }
-    }
-
-    void ActivateNode()
-    {
-        previusNodeA.spriteRenderer.color = completeNormalColor;
-        previusNodeB.spriteRenderer.color = completeNormalColor;
-        previusNodeA.nodeState = NodeState.Complete;
-        previusNodeB.nodeState = NodeState.Complete;
-
-        spriteRenderer.color = currentNormalColor;
-        nodeState = NodeState.Current;
-        Combat combat = gameObject.GetComponent<Combat>();
-        if (combat != null)
-        {
-            combat.LoadCombat();
-            SceneManager.LoadScene("Combat");
-        }
     }
 }

@@ -781,7 +781,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 2114791264}
-  ReadyToBattle: 0
   nodes:
   - {fileID: 605623587}
   - {fileID: 1714195326}
@@ -1188,7 +1187,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 886979395119783747, guid: f732369caa514824d923f40d6bd34080,
+      objectReference: {fileID: 8016105616413352037, guid: a4e7a83ca9452a84b87164c47beb33bc,
         type: 3}
     - target: {fileID: 4556979567103301761, guid: abe11816efd77a740a8823479691d84c,
         type: 3}
@@ -1198,12 +1197,12 @@ PrefabInstance:
     - target: {fileID: 4556979567103301761, guid: abe11816efd77a740a8823479691d84c,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.8
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 4556979567103301761, guid: abe11816efd77a740a8823479691d84c,
         type: 3}
       propertyPath: m_Size.y
-      value: 3.2
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 4556979567103301760, guid: abe11816efd77a740a8823479691d84c,
         type: 3}
@@ -1219,7 +1218,7 @@ PrefabInstance:
         type: 3}
       propertyPath: idleForward
       value: 
-      objectReference: {fileID: 886979395119783747, guid: f732369caa514824d923f40d6bd34080,
+      objectReference: {fileID: 8016105616413352037, guid: a4e7a83ca9452a84b87164c47beb33bc,
         type: 3}
     - target: {fileID: 4556979567103301760, guid: abe11816efd77a740a8823479691d84c,
         type: 3}
@@ -1231,7 +1230,19 @@ PrefabInstance:
         type: 3}
       propertyPath: idleBack
       value: 
-      objectReference: {fileID: -7704646228827139121, guid: 1d4ce76c3bca53a44a1659187001d79a,
+      objectReference: {fileID: -3896779470706487856, guid: 3c240d1e808347446a8bb49f68ddbc5c,
+        type: 3}
+    - target: {fileID: 4556979567103301760, guid: abe11816efd77a740a8823479691d84c,
+        type: 3}
+      propertyPath: idleLeft
+      value: 
+      objectReference: {fileID: -3667858240683696502, guid: 38ec1bffe80575641ba5a51f2cf4fc50,
+        type: 3}
+    - target: {fileID: 4556979567103301760, guid: abe11816efd77a740a8823479691d84c,
+        type: 3}
+      propertyPath: idleRight
+      value: 
+      objectReference: {fileID: 854547555633942528, guid: d86ba9cf98650d2469c38e779dba7b93,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abe11816efd77a740a8823479691d84c, type: 3}
