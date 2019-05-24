@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 5a2deb42863f9ac78a5bae8b0191be74
+guid: 1cdd3925c0a7cac40bac04ce1f49b706
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3736839333371218537
-    second: AttackBarFilled_0
+      213: 4136920780630218370
+    second: StaminaSword_0
+  - first:
+      213: -160351031552752486
+    second: StaminaSword_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -83,28 +86,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AttackBarFilled_0
+      name: StaminaSword_0
       rect:
         serializedVersion: 2
-        x: 126
-        y: 0
-        width: 450
-        height: 140
+        x: 0
+        y: 86
+        width: 145
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +104,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9b28644b799befbaaffeb49b5d94231
-      internalID: -3736839333371218537
+      spriteID: 6c24cdee4aebd9042bd7ce9321c399be
+      internalID: 4136920780630218370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaminaSword_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 145
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f52a6f0972e1384390fce9ad7956e7f
+      internalID: -160351031552752486
       vertices: []
       indices: 
       edges: []
@@ -121,7 +134,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2b0c2159bc35316a491fdbb4a2241845
+    spriteID: b9abb02faa67f5948aa97efd00330719
     internalID: 0
     vertices: []
     indices: 

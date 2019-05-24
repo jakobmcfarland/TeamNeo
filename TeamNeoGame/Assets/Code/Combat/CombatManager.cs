@@ -12,7 +12,7 @@ public class CombatManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //SetDefaultParameters();
+        SetDefaultParameters();
         StartCombat();
     }
 

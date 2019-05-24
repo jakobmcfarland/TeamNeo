@@ -1,34 +1,22 @@
 fileFormatVersion: 2
-guid: d86ba9cf98650d2469c38e779dba7b93
+guid: d06081c61d8e2b448855f1e654ae1e38
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 854547555633942528
-    second: MapPlayerWalkRight_0
+      213: 4250926123117471553
+    second: EnemyIdle_0
   - first:
-      213: 8370363710132903989
-    second: MapPlayerWalkRight_1
+      213: -8626430948324366259
+    second: EnemyIdle_1
   - first:
-      213: 973614476897984982
-    second: MapPlayerWalkRight_2
+      213: -6599519009133296541
+    second: EnemyIdle_2
   - first:
-      213: -2344005864925935565
-    second: MapPlayerWalkRight_3
+      213: -4137714196570529883
+    second: EnemyIdle_3
   - first:
-      213: -3273923280995260862
-    second: MapPlayerWalkRight_4
-  - first:
-      213: -3976847366221576772
-    second: MapPlayerWalkRight_5
-  - first:
-      213: -1311155410510960648
-    second: MapPlayerWalkRight_6
-  - first:
-      213: -6339135883783413444
-    second: MapPlayerWalkRight_7
-  - first:
-      213: -8750978323425436785
-    second: MapPlayerWalkRight_8
+      213: 1558792902711424901
+    second: EnemyIdle_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -68,11 +56,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,13 +99,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MapPlayerWalkRight_0
+      name: EnemyIdle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 33
-        width: 14
-        height: 33
+        y: 98
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +113,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e292688333a7fc744a6c64bd04f5604f
-      internalID: 854547555633942528
+      spriteID: 537e0516ca23b6a4ebe22143fd4729b7
+      internalID: 4250926123117471553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MapPlayerWalkRight_1
+      name: EnemyIdle_1
       rect:
         serializedVersion: 2
-        x: 14
-        y: 33
-        width: 14
-        height: 33
+        x: 44
+        y: 98
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0573a7fe686e7e1499145067d9299210
-      internalID: 8370363710132903989
+      spriteID: 4bf9a30bc4da72940a60da0bcea7a202
+      internalID: -8626430948324366259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MapPlayerWalkRight_2
+      name: EnemyIdle_2
       rect:
         serializedVersion: 2
-        x: 28
-        y: 33
-        width: 14
-        height: 33
+        x: 88
+        y: 98
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,62 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0bfd395948d62b4ab5d34778dac25fb
-      internalID: 973614476897984982
+      spriteID: f29f1aa0da7b34e46a89adb710f0c8ce
+      internalID: -6599519009133296541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MapPlayerWalkRight_3
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 33
-        width: 14
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7479608a124fdc341b99c9e8ea7617bc
-      internalID: -2344005864925935565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MapPlayerWalkRight_4
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 33
-        width: 14
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 792f91ecffb97fd429fb4f406c38ea27
-      internalID: -3273923280995260862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MapPlayerWalkRight_5
+      name: EnemyIdle_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 14
-        height: 33
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3e1abd6e01d55c43af5ad6e81bbc115
-      internalID: -3976847366221576772
+      spriteID: 107e30fc400dadd4abc9500224b3934c
+      internalID: -4137714196570529883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MapPlayerWalkRight_6
+      name: EnemyIdle_4
       rect:
         serializedVersion: 2
-        x: 14
+        x: 44
         y: 0
-        width: 14
-        height: 33
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,50 +197,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ff1faf094da9a44395540641a6bc615
-      internalID: -1311155410510960648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MapPlayerWalkRight_7
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 0
-        width: 14
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74c3c0319786e4d4f9c8bcc378c35149
-      internalID: -6339135883783413444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MapPlayerWalkRight_8
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 0
-        width: 14
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 378043353c395624580d0172656da60b
-      internalID: -8750978323425436785
+      spriteID: 096627eba49f0654bb67c962e0a096c5
+      internalID: 1558792902711424901
       vertices: []
       indices: 
       edges: []
@@ -302,7 +206,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3369ac0587cfc094b99fa40143a0b885
+    spriteID: f5c89c21f077fd145a67941ee6f5d214
     internalID: 0
     vertices: []
     indices: 
