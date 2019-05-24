@@ -1,11 +1,17 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+    Game Menu
+    William Siauw
+    This script controls the navigation of the menu
+******************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
-public class MainMenu : MonoBehaviour
+using UnityEngine;
+
+public class GameMenu : MonoBehaviour
 {
     public TextMeshProUGUI[] options;
+    public GameObject Player;
     public KeyCode upKey;
     public KeyCode downKey;
     public KeyCode pickKey;
@@ -14,15 +20,13 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string[] d = { "hey", "hey" };
-        TextBox.DisplayText(d, 2);
         options = this.gameObject.GetComponentsInChildren<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(upKey))
+        if (Input.GetKeyDown(downKey))
         {
             if (selected == options.Length - 1)
             {
@@ -33,7 +37,7 @@ public class MainMenu : MonoBehaviour
                 selected++;
             }
         }
-        else if (Input.GetKeyDown(downKey))
+        else if (Input.GetKeyDown(upKey))
         {
             if (selected == 0)
             {
@@ -49,23 +53,13 @@ public class MainMenu : MonoBehaviour
             switch (selected)
             {
                 case 0:
-                    CombatInfo.HealthPotionCount = 3;
-                    GameState.curHealth = 100;
-                    SceneManager.LoadScene("Map");
+                    SaveGameManager.SaveGame(Player.transform.position,CombatInfo.CombatsFinished);
                     break;
                 case 1:
-                    bool state = SaveGameManager.LoadGame();
-                    if(state)
-                        SceneManager.LoadScene("Map");
+                    print("use potion");
                     break;
                 case 2:
-                    SceneManager.LoadScene("Credits");
-                    break;
-                case 3:
                     Application.Quit();
-                    break;
-                default:
-                    print("This really shouldn't be happening");
                     break;
             }
         }
