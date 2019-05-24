@@ -8,7 +8,8 @@ public class mapCameraFollow : MonoBehaviour
     Transform player = null;
     Transform camera = null;
 
-    public Bounds mapBounds;
+    public Vector2 mapPositiveBounds;
+    public Vector2 mapNegativeBounds;
     public float lerpSpeed = 10.0f;
 
     // Start is called before the first frame update
@@ -29,6 +30,9 @@ public class mapCameraFollow : MonoBehaviour
         {
             Vector3 newCam = Vector3.Lerp(camera.position, player.position, lerpSpeed * Time.deltaTime);
             newCam.z = camera.position.z;
+
+            Mathf.Clamp( camera.position.x, mapNegativeBounds.x, mapPositiveBounds.x );
+            Mathf.Clamp( camera.position.y, mapNegativeBounds.y, mapPositiveBounds.y );
 
             camera.position = newCam;
         }
