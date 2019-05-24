@@ -20,4 +20,5 @@ public static class CombatInfo
     public static float BufferTime { get; set; }
     public static Environment Env { get; set; }
     public static int HealthPotionCount {get; set;}
+    public static int CoinCount { get; set; }
 }

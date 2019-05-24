@@ -14,8 +14,6 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string[] d = { "hey", "hey" };
-        TextBox.DisplayText(d, 2);
         options = this.gameObject.GetComponentsInChildren<TextMeshProUGUI>();
     }
 

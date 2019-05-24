@@ -16,7 +16,7 @@ public class GameMenu : MonoBehaviour
     public KeyCode downKey;
     public KeyCode pickKey;
     public int selected = 0;
-
+    public bool store = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,17 +50,33 @@ public class GameMenu : MonoBehaviour
         }
         if (Input.GetKeyDown(pickKey))
         {
-            switch (selected)
+            if (store)
             {
-                case 0:
-                    SaveGameManager.SaveGame(Player.transform.position,CombatInfo.CombatsFinished);
-                    break;
-                case 1:
-                    print("use potion");
-                    break;
-                case 2:
-                    Application.Quit();
-                    break;
+                switch(selected)
+                {
+                    case 0:
+                        CombatInfo.HealthPotionCount++;
+                        print("get potion");
+                        break;
+                    case 1:
+                        transform.parent.gameObject.SetActive(false);
+                        break;
+                }
+            }
+            else
+            {
+                switch (selected)
+                {
+                    case 0:
+                        SaveGameManager.SaveGame(Player.transform.position, CombatInfo.CombatsFinished);
+                        break;
+                    case 1:
+                        print("use potion");
+                        break;
+                    case 2:
+                        Application.Quit();
+                        break;
+                }
             }
         }
         for (int i = 0; i < options.Length; i++)

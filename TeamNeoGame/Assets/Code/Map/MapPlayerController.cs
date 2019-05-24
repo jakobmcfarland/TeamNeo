@@ -19,9 +19,10 @@ public class MapPlayerController : MonoBehaviour
     public Sprite idleLeft;
     public Sprite idleRight;
     public Sprite idleBack;
-
+    public GameObject storeMenu;
     Sprite currentIdle;
     public KeyCode inspectKey;
+    public KeyCode storeKey;
     private void Start()
     {
         rigidbody_ = GetComponent<Rigidbody2D>();
@@ -84,14 +85,14 @@ public class MapPlayerController : MonoBehaviour
     {
         Inspectable inspect = collider.GetComponent<Inspectable>();
         if(Input.GetKeyDown(inspectKey)) {
-            Debug.Log("print(\"fdsa\");");
         if(inspect != null){
-                Debug.Log("print(\"fdsa\");");
                 inspect.Inspect();
 
             }
-        } else {
-           // print("dvsa");
+        } else if (Input.GetKeyDown(storeKey) && collider.tag == "Store")
+        {
+            storeMenu.SetActive(true);
         }
+    
     }
 }
