@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Code.Map;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,7 +29,7 @@ public class GameState : MonoBehaviour
     {
         for (int i = 0; i < CombatInfo.CombatsFinished; i++)
         {
-            MapNodeManager.GetInstance().nodes[i].nodeState = NodeState.Current;
+            MapNodeList.nodes[i].nodeState = NodeState.Current;
         }
         print(CombatInfo.HealthPotionCount);
     }

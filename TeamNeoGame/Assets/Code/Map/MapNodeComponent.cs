@@ -9,11 +9,24 @@ namespace Assets.Code.Map
 {
     class MapNodeComponent : MonoBehaviour
     {
+        public int nodeIndex = -1;
         MapNode mapNode;
 
-        void OnCollisionEnter2D(Collision2D col)
+        void Start()
         {
-            mapNode.ActivateNode(col.collider);
+            if (nodeIndex >= 0 && nodeIndex < MapNodeList.nodes.Count())
+            {             
+                mapNode = MapNodeList.nodes[nodeIndex];
+                mapNode.Init(gameObject);
+            }
+        }
+
+        void OnTriggerEnter2D(Collider2D col)
+        {
+            if (mapNode != null)
+            {
+                mapNode.ActivateNode(col.gameObject);
+            }
         }
     }
 }
