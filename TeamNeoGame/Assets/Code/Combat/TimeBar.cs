@@ -1,17 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class TimeBar : MonoBehaviour
 {
-    private SpriteRenderer sprite;
-    public float maxSize = 3.743f;
+    private Image img;
     public float percent = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
-        sprite = GetComponent<SpriteRenderer>();
-        sprite.transform.localScale = new Vector3(maxSize, 0.5f, 1);
+        img = GetComponent<Image>();
+        img.fillAmount = 1;
     }
 
     // Update is called once per frame
@@ -21,6 +20,6 @@ public class TimeBar : MonoBehaviour
     public void UpdateTime(float newPercent)
     {
         percent = newPercent;
-        sprite.transform.localScale = new Vector3(maxSize * percent, 0.5f, 1);
+        img.fillAmount = percent;
     }
 }

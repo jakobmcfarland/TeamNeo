@@ -28,6 +28,7 @@ public class MapPlayerController : MonoBehaviour
         spriteRenderer_ = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         currentIdle = idleForward;
+        gameObject.transform.position = GameState.GetInstance().Player;
     }
 
     // Update is called once per frame

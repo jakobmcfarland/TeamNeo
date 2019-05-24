@@ -40,7 +40,7 @@ public class PlayerCombat : MonoBehaviour
     {
         staminaAnim = staminaGauge.GetComponent<Animator>();
         hpPotionText.text = healthCount.ToString();
-        health = GameState.curHealth;
+        //health = GameState.curHealth;
         Debug.Log(GameState.curHealth);
         Debug.Log("Health: " + health);
       //  ModHealth(health);
