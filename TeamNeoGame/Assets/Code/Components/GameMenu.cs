@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+    Game Menu
+    William Siauw
+    This script controls the navigation of the menu
+******************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -15,8 +20,6 @@ public class GameMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string[] d = { "hey", "hey" };
-        TextBox.DisplayText(d, 2);
         options = this.gameObject.GetComponentsInChildren<TextMeshProUGUI>();
     }
 
