@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4359802040436250513}
   - component: {fileID: 4359802040436250514}
-  - component: {fileID: 4359802040436250512}
+  - component: {fileID: 4359802040904368821}
+  - component: {fileID: 4359802040904368822}
+  - component: {fileID: 4359802040904368823}
   m_Layer: 0
   m_Name: MapNode
   m_TagString: Untagged
@@ -27,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4359802040436250515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: 0, z: -5}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 25, y: 25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -69,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8ba6750561fbe49458d1ec6760c320a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec01b0d711c4dd142be078236f6f8b13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -80,7 +82,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4359802040436250512
+--- !u!58 &4359802040904368821
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359802040436250515}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2
+--- !u!114 &4359802040904368822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,13 +107,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 4359802040436250515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d83e888df16a6645bc5ac8355b0b751, type: 3}
+  m_Script: {fileID: 11500000, guid: 5170769fa06ddf544b438b380ce467bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
-  incompleteNormalColor: {r: 1, g: 0, b: 0, a: 0.5}
-  completeNormalColor: {r: 0.5, g: 1, b: 1, a: 0.5}
-  currentNormalColor: {r: 0, g: 0.5, b: 0.5, a: 0.5}
-  previusObjectA: {fileID: 4359802040436250512}
-  previusObjectB: {fileID: 4359802040436250512}
-  nodeState: 0
+  EnemyName: Enemy
+  EnemySprite: {fileID: 21300000, guid: 6a7a17be898d002fe91d30e398a265b7, type: 3}
+  PlayerDamage: 50
+  EnemyDamage: 10
+  StaminaGain: 10
+  MaxStamina: 100
+  EnemyHealth: 100
+  TimePerBar: 5
+  ArrowCount: 6
+  BufferTimer: 0.1
+--- !u!114 &4359802040904368823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359802040436250515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368a4429714027741a96ddac37de8160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeIndex: 0

@@ -28,6 +28,7 @@ public class MapPlayerController : MonoBehaviour
         spriteRenderer_ = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         currentIdle = idleForward;
+        gameObject.transform.position = GameState.GetInstance().Player;
     }
 
     // Update is called once per frame
@@ -76,7 +77,7 @@ public class MapPlayerController : MonoBehaviour
 
         if (movement.x != 0 || movement.y != 0)
         {
-            //GameState.GetInstance().ReadyToBattle = true;
+            GameState.GetInstance().ReadyToBattle = true;
         }
     }
     void OnTriggerStay2D(Collider2D collider) 

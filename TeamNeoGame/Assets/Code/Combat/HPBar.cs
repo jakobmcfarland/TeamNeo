@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class HPBar : MonoBehaviour
 {
-    private SpriteRenderer sprite;
-    public float maxSize = 3.743f;
+    private Image img;
+    public float baseFill = 0.209f;
     public bool useGradient = true;
     private Gradient gradient;
     private GradientColorKey[] colorKey;
@@ -15,8 +15,7 @@ public class HPBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sprite = GetComponent<SpriteRenderer>();
-        sprite.transform.localScale = new Vector3(maxSize, 0.5f, 1);
+        img = GetComponent<Image>();
         gradient = new Gradient();
         colorKey = new GradientColorKey[3];
         colorKey[0].color = Color.red;
@@ -40,25 +39,25 @@ public class HPBar : MonoBehaviour
         if (timer < 1.0f)
         {
             timer += Time.deltaTime;
-            var lerp = Mathf.Lerp(sprite.transform.localScale.x / maxSize, percent, timer);
-            sprite.transform.localScale = new Vector3(lerp * maxSize, 0.5f, 1);
+            var lerp = Mathf.Lerp(img.fillAmount, percent, timer);
+            img.fillAmount = lerp;
             if (useGradient)
             {
-                sprite.color = gradient.Evaluate(lerp);
+                img.color = gradient.Evaluate(lerp);
             }
         }
     }
     public void UpdateHP(float newPercent)
     {
-        percent = newPercent;
+        percent = newPercent * (1-baseFill) + baseFill;
 
-        if (newPercent >= 1)
+        if (percent >= 1)
         {
-            sprite.transform.localScale = new Vector3(maxSize, 0.5f, 1);
+            img.fillAmount = 1;
             timer = 1;
             if (useGradient)
             {
-                sprite.color = gradient.Evaluate(1);
+                img.color = gradient.Evaluate(1);
             }
             return;
         }

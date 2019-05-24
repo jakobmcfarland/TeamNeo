@@ -1,4 +1,11 @@
-﻿using System.Collections.Generic;
+﻿/******************************************************************************
+    Save Game Manager
+    William Siauw
+    This script contains the dewfinitions for the functions to save and load the game. 
+    These functions are called externally for saving and loading
+******************************************************************************/
+
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
@@ -15,12 +22,11 @@ public static class SaveGameManager
         GameData data = new GameData(position, combatsFinished);
             formatter.Serialize(stream, data);
         GameState.GetInstance().ReadyToBattle = false;
-        Debug.Log(data.health);
         Debug.Log("saved");
         stream.Close();
     }
 
-    public static void LoadGame()
+    public static bool LoadGame()
     {
         string filePath = Application.persistentDataPath + "/GameData.test";
         if (File.Exists(filePath))
@@ -37,15 +43,19 @@ public static class SaveGameManager
                 GameState.GetInstance().Loaded = true;
                 GameState.curHealth = data.health;
                 Debug.Log(GameState.curHealth);
-                CombatInfo.HealthPotionCount = data.healthPotions;
+                Debug.Log("loaded");
+                stream.Close();
+                return true;
             }
-            Debug.Log("loaded");
-            stream.Close();
+            else
+                return false;
+
 
         }
         else
         {
             Debug.LogError("SAVEFILE NOT FOUND");
+            return false;
         }
     }
 }

@@ -54,8 +54,9 @@ public class MainMenu : MonoBehaviour
                     SceneManager.LoadScene("Map");
                     break;
                 case 1:
-                    SaveGameManager.LoadGame();
-                    SceneManager.LoadScene("Map");
+                    bool state = SaveGameManager.LoadGame();
+                    if(state)
+                        SceneManager.LoadScene("Map");
                     break;
                 case 2:
                     SceneManager.LoadScene("Credits");
