@@ -55,8 +55,13 @@ public class GameMenu : MonoBehaviour
                 switch(selected)
                 {
                     case 0:
-                        CombatInfo.HealthPotionCount++;
-                        print("get potion");
+                        if (CombatInfo.CoinCount > 1) {
+                            CombatInfo.HealthPotionCount++;
+                            CombatInfo.CoinCount -= 2;
+                            print("get potion");
+                        } else {
+                            print("not enough bucks");
+                        }
                         break;
                     case 1:
                         transform.parent.gameObject.SetActive(false);

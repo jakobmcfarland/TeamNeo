@@ -26,7 +26,7 @@ public class GameMenuManager : MonoBehaviour
             menuObj.SetActive(!menuObj.activeSelf);
         }
 
-        if (menuObj.activeSelf)
+        if (menuObj.activeSelf || player.GetComponent<MapPlayerController>().storeMenu.activeSelf)
         {
             player.GetComponent<MapPlayerController>().enabled = false;
             player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
