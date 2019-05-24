@@ -87,12 +87,10 @@ public class MapPlayerController : MonoBehaviour
         if(Input.GetKeyDown(inspectKey)) {
         if(inspect != null){
                 inspect.Inspect();
-
-            }
+        }
         } else if (Input.GetKeyDown(storeKey) && collider.tag == "Store")
         {
             storeMenu.SetActive(true);
         }
-    
     }
 }
