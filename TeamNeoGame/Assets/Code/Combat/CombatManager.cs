@@ -37,6 +37,7 @@ public class CombatManager : MonoBehaviour
         CombatInfo.BufferTime = 1.0f;
         CombatInfo.Env = Environment.City;
         CombatInfo.CoinsToDrop = 2;
+        CombatInfo.HealthPotionCount = 3;
     }
     void StartCombat()
     {

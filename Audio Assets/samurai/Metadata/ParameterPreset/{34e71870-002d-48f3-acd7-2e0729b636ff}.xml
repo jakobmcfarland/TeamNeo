@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{34e71870-002d-48f3-acd7-2e0729b636ff}">
+		<property name="name">
+			<value>Missed</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7f4fc7e3-5a7d-447b-8270-6656902b37fa}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{1ad1785c-f22d-4eb9-93f9-dfff2cf31e06}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{1ad1785c-f22d-4eb9-93f9-dfff2cf31e06}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="isHeld">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

@@ -544,8 +544,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 114274649}
+  - component: {fileID: 114274650}
   m_Layer: 5
-  m_Name: HPBar (1)
+  m_Name: PlayerHPBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -567,6 +568,25 @@ Transform:
   m_Father: {fileID: 532188614}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &114274650
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114274648}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e068930067f0524f8cafe92a74198c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &172190865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 663724049}
   - component: {fileID: 663724048}
+  - component: {fileID: 663724050}
   m_Layer: 0
   m_Name: StaminaSwordOutline
   m_TagString: Untagged
@@ -1402,6 +1423,25 @@ Transform:
   m_Father: {fileID: 1045639622}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &663724050
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663724047}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ebe7a155237b51e46adb47402b86e0b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &753396439
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,6 +2337,7 @@ GameObject:
   - component: {fileID: 1312745609}
   - component: {fileID: 1312745608}
   - component: {fileID: 1312745607}
+  - component: {fileID: 1312745610}
   m_Layer: 5
   m_Name: PI
   m_TagString: Untagged
@@ -2375,6 +2416,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312745605}
   m_CullTransparentMesh: 0
+--- !u!95 &1312745610
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312745605}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ebe7a155237b51e46adb47402b86e0b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1335707429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,7 +2931,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 6062446938304136892}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1842230807}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e430222b5f439f449b9a4c30408a3a6, type: 3}
@@ -2968,6 +3028,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1834253239}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1842230807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6062446939100017111, guid: 0ba272909f8c36646946c9e70d754ab3,
+    type: 3}
+  m_PrefabInstance: {fileID: 6062446938304136892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1842230808
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842230807}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ebe7a155237b51e46adb47402b86e0b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1869960425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,6 +3065,7 @@ GameObject:
   - component: {fileID: 1869960428}
   - component: {fileID: 1869960427}
   - component: {fileID: 1869960429}
+  - component: {fileID: 1869960430}
   m_Layer: 0
   m_Name: StaminaSwordFilled
   m_TagString: Untagged
@@ -3056,6 +3142,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6e68bdec0959dcab7a9dc8fcfd5c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1869960430
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869960425}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ebe7a155237b51e46adb47402b86e0b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1902054047
 GameObject:
   m_ObjectHideFlags: 0
@@ -3276,13 +3381,33 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 145473562274177492}
+  - component: {fileID: 145473562274177500}
   m_Layer: 5
-  m_Name: HPBar
+  m_Name: EnemyHPBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &145473562274177500
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145473562274177499}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ebe7a155237b51e46adb47402b86e0b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &465019595371569955
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{a6afac72-5ca2-4dd0-82f6-ee301d96c566}">
+		<property name="assetPath">
+			<value>enemy_grunt17.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.33608333333333335</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b1cebe09-6ea5-40c3-bd67-cfb72c48d87b}</destination>
+		</relationship>
+	</object>
+</objects>
