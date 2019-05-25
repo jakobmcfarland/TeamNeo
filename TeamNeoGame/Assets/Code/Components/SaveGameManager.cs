@@ -39,10 +39,9 @@ public static class SaveGameManager
             if (data != null)
             {
                 CombatInfo.CombatsFinished = data.CombatsFinished;
-                GameState.GetInstance().Player = new Vector3(data.mapPos[0], data.mapPos[1], data.mapPos[2]);
+                GameState.Player = new Vector3(data.mapPos[0], data.mapPos[1], data.mapPos[2]);
                 GameState.GetInstance().Loaded = true;
                 GameState.curHealth = data.health;
-                Debug.Log(GameState.curHealth);
                 Debug.Log("loaded");
                 stream.Close();
                 return true;

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CheatCodeManager : MonoBehaviour
 {
     int count;
@@ -31,13 +31,34 @@ public class CheatCodeManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
             if (count == 4)
             {
-                Debug.Log("cheatz");
+                if (activated)
+                    Debug.Log("cheat deactivated");
+                else
+                    Debug.Log("cheat activated");
                 activated = !activated;
                 count = 0;
             }
         if (activated)
         {
-
+            if(Input.GetKeyDown(KeyCode.F3))
+                if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Combat"))
+                {
+                    CombatManager cm = FindObjectOfType<CombatManager>();
+                    cm.AttackEnemy(cm.enemy.maxHealth);
+                    Debug.Log("Finished Combat Cheat");
+                }
+            if (Input.GetKeyDown(KeyCode.F4))
+            {
+                
+                Debug.Log("Heal Cheat");
+                if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Combat"))
+                {
+                    CombatManager cm = FindObjectOfType<CombatManager>();
+                    cm.player.ModHealth(GameState.GetInstance().MaxHealth);
+                }
+                else
+                    GameState.curHealth = GameState.GetInstance().MaxHealth;
+            }
         }
         
     }

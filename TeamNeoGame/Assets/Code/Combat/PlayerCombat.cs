@@ -40,10 +40,9 @@ public class PlayerCombat : MonoBehaviour
     {
         staminaAnim = staminaGauge.GetComponent<Animator>();
         hpPotionText.text = healthCount.ToString();
-        //health = GameState.curHealth;
-        Debug.Log(GameState.curHealth);
-        Debug.Log("Health: " + health);
-      //  ModHealth(health);
+        health = GameState.curHealth;
+        float percentage = (float)(health / (float)(maxHealth)) * 100;
+        hpBar.UpdateHP(percentage);
     }
 
     // Update is called once per frame
