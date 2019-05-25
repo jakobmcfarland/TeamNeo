@@ -34,7 +34,7 @@ public class PlayerCombat : MonoBehaviour
     public TextMeshProUGUI hpPotionText;
     public float healPerPotion = 0.5f;
     public KeyCode healKey;
-
+    public IceCream iceCream;
     // Start is called before the first frame update
     void Start()
     {
@@ -99,6 +99,7 @@ public class PlayerCombat : MonoBehaviour
     public void UsePotion() {
         healthCount--;
         CombatInfo.HealthPotionCount--;
+        iceCream.ModNum(healthCount);
         ModHealth((int)(healPerPotion * (float)maxHealth));
         hpPotionText.text = healthCount.ToString();
     }
