@@ -81,6 +81,7 @@
      <Compile Include="Assets\Code\Components\StatusText.cs" />
      <Compile Include="Assets\Code\Components\TextBox.cs" />
      <Compile Include="Assets\Code\Components\TitlePick.cs" />
+     <Compile Include="Assets\Code\IceCream.cs" />
      <Compile Include="Assets\Code\Map\mapCameraFollow.cs" />
      <Compile Include="Assets\Code\Map\MapNode.cs" />
      <Compile Include="Assets\Code\Map\MapNodeComponent.cs" />
