@@ -73,10 +73,10 @@ public class GameMenu : MonoBehaviour
                 switch (selected)
                 {
                     case 0:
-                        SaveGameManager.SaveGame(Player.transform.position, CombatInfo.CombatsFinished);
+                        print("use potion");
                         break;
                     case 1:
-                        print("use potion");
+                        SaveGameManager.SaveGame(Player.transform.position, CombatInfo.CombatsFinished);
                         break;
                     case 2:
                         Application.Quit();
