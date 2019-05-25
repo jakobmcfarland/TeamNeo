@@ -37,6 +37,7 @@ public class BasicEnemy : MonoBehaviour
             CombatInfo.CombatsFinished++;
             SaveGameManager.SaveGame(new Vector3(0, 0, 0), CombatInfo.CombatsFinished);
             GameState.curHealth = cm.player.health;
+
             CombatInfo.CoinCount+= CombatInfo.CoinsToDrop;
             SceneManager.LoadScene("Map");
         }

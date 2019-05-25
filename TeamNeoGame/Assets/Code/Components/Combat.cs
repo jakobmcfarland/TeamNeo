@@ -19,6 +19,7 @@ public class Combat : MonoBehaviour
         CombatInfo.EnemyName = EnemyName;
         CombatInfo.EnemySprite = EnemySprite;
         CombatInfo.PlayerDamage = PlayerDamage;
+        
         CombatInfo.EnemyDamage = EnemyDamage;
         CombatInfo.StaminaGain = StaminaGain;
         CombatInfo.MaxStamina = MaxStamina;

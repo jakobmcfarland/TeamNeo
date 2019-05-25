@@ -49,6 +49,7 @@ public class MainMenu : MonoBehaviour
                 case 0:
                     CombatInfo.HealthPotionCount = 3;
                     GameState.curHealth = 100;
+                   // GameState.Player = new Vector3(-22, -24.5f, 0);
                     SceneManager.LoadScene("Map");
                     break;
                 case 1:

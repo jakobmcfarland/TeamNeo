@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
-    public Vector3 Player = new Vector3(0,0,0);
+    public static Vector3 Player = new Vector3(0,0,0);
     public int MaxHealth;
     public static int curHealth;
     [HideInInspector]
