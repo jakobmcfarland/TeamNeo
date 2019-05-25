@@ -34,3 +34,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# FMOD Studio
+Audio Assets/samurai/.cache
+Audio Assets/samurai/.user
+Audio Assets/samurai/.unsaved
+Audio Assets/samurai/.*
