@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: 9d6d184e38ae3904785078b2f9c6ac2f
+guid: 22e279912f9a0e54dadf713a12c268df
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3023766824798548878
+    second: GrassTile_0
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -41,8 +44,8 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
-  spriteExtrude: 1
-  spriteMeshType: 1
+  spriteExtrude: 0
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 10
@@ -82,11 +85,32 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GrassTile_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a7e7f8a52ab304ebfa6fb462040555
+      internalID: -3023766824798548878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7cd04c1d5937b244b8b0369d51265a39
+    spriteID: cbcf9859f69a8b64492e0ad96af4046c
     internalID: 0
     vertices: []
     indices: 

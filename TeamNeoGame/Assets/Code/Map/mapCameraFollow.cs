@@ -8,6 +8,8 @@ public class mapCameraFollow : MonoBehaviour
     Transform player = null;
     Transform camera = null;
 
+    public bool DoSplitXBounds;
+
     public Vector2 mapPositiveBounds;
     public Vector2 mapNegativeBounds;
     public float lerpSpeed = 10.0f;
@@ -29,12 +31,16 @@ public class mapCameraFollow : MonoBehaviour
         if (player)
         {
             Vector3 newCam = Vector3.Lerp(camera.position, player.position, lerpSpeed * Time.deltaTime);
-            newCam.z = camera.position.z;
 
-            Mathf.Clamp( camera.position.x, mapNegativeBounds.x, mapPositiveBounds.x );
-            Mathf.Clamp( camera.position.y, mapNegativeBounds.y, mapPositiveBounds.y );
+            float x = Mathf.Clamp( newCam.x, mapNegativeBounds.x, mapPositiveBounds.x );
+            float y = Mathf.Clamp( newCam.y, mapNegativeBounds.y, mapPositiveBounds.y );
 
-            camera.position = newCam;
+            if(x < 9.0f)
+            {
+                y = Mathf.Clamp(newCam.y, mapNegativeBounds.y, -5.0f);
+            }
+
+            camera.position = new Vector3(x, y, camera.position.z);
         }
     }
 }
