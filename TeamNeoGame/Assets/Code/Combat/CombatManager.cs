@@ -9,17 +9,39 @@ public class CombatManager : MonoBehaviour
     public AttackManager am;
     public SpriteRenderer background;
     public SpriteRenderer platform;
+    public float startTime = 2;
+    private float startTimer = 0;
+    public float startAnimTime = 1;
+    public Animation[] startAnimations;
+    public Animator[] startAnimators;
+    private float startAnimTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
         SetDefaultParameters();
-        StartCombat();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        startTimer += Time.deltaTime;
+        startAnimTimer += Time.deltaTime;
+        if (startAnimTimer >= startAnimTime && startAnimTimer >= 0)
+        {
+            for (int i = 0; i< startAnimations.Length; i++)
+            {
+                startAnimations[i].enabled = true;
+               }
+            for (int i = 0; i< startAnimators.Length; i++)
+            {
+                startAnimators[i].enabled = true;
+            }
+        }
+        if (startTimer >= startTime && startTimer >= 0)
+        {
+            StartCombat();
+            startTimer = -1;
+        }
     }
 
     void SetDefaultParameters()
