@@ -87,7 +87,9 @@ public class MapPlayerController : MonoBehaviour
     {
         Inspectable inspect = collider.GetComponent<Inspectable>();
         if(Input.GetKeyDown(inspectKey)) {
+            Debug.Log("pressing");
         if(inspect != null){
+                Debug.Log("here");
                 inspect.Inspect();
         }
         } else if (Input.GetKeyDown(storeKey) && collider.tag == "Store")

@@ -18,5 +18,6 @@ public class Inspectable : MonoBehaviour
     }
     public void Inspect() {
         TextBox.DisplayText(description, 2);
+        Debug.Log("ASIUDHASHD");
     }
 }
