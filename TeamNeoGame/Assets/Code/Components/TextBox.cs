@@ -11,10 +11,10 @@ public class TextBox
         {
             prefab = Resources.Load<GameObject>("Prefabs/TextBox");
         }
-        GameObject text = Object.Instantiate(prefab, Camera.main.transform);
+        GameObject text = Object.Instantiate(prefab, GameObject.Find("Canvas").transform);
         
       //  text.transform.position = new Vector3(0, -3.5f, -1);
-        text.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+        //text.transform.localScale = new Vector3(0.5f, 0.5f, 1);
         text.GetComponentInChildren<DialogueBox>().dialogue = dialogue;
     }
 }
