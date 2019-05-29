@@ -59,7 +59,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &1116291631279196927
 MonoBehaviour:
@@ -490,15 +490,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8131309971740995252}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 749844478161f1829810d5763c894cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-  - Hello foolish dude
-  - you look like shrek
-  - bottom text
+  dialogue: []
   timePerBox: 2
   nextKey: 32
   textSprite: {fileID: 8131309970986320121}
