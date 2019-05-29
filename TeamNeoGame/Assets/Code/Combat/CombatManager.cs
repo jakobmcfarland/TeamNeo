@@ -15,6 +15,9 @@ public class CombatManager : MonoBehaviour
     public Animation[] startAnimations;
     public Animator[] startAnimators;
     private float startAnimTimer = 0;
+    public Animator spaceAnim;
+    public Animator slashAnim;
+    public FMODUnity.StudioEventEmitter hurtSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +27,9 @@ public class CombatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (startTimer >= 0){
         startTimer += Time.deltaTime;
+    }
         startAnimTimer += Time.deltaTime;
         if (startAnimTimer >= startAnimTime && startAnimTimer >= 0)
         {
@@ -60,9 +65,11 @@ public class CombatManager : MonoBehaviour
         CombatInfo.Env = Environment.City;
         CombatInfo.CoinsToDrop = 2;
         CombatInfo.HealthPotionCount = 3;
+        CombatInfo.FightType = 0;
     }
     void StartCombat()
     {
+        print("start combat");
         enemy.SetName(CombatInfo.EnemyName);
         enemy.GetComponent<SpriteRenderer>().sprite = CombatInfo.EnemySprite;
         player.damage = CombatInfo.PlayerDamage;
@@ -90,6 +97,9 @@ public class CombatManager : MonoBehaviour
     }
     public void AttackEnemy(int damage)
     {
+        hurtSound.Play();
+        slashAnim.SetTrigger("Slash");
+        spaceAnim.SetTrigger("Pressed");
         enemy.ModHealth((int)(-damage * Mathf.Pow(am.damageScale, (float)am.streak)));
     }
     public void HurtPlayer(int damage)

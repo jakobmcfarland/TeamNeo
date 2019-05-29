@@ -22,4 +22,6 @@ public static class CombatInfo
     public static int HealthPotionCount {get; set;}
     public static int CoinCount { get; set; }
     public static int CoinsToDrop {get; set; }
+    // Set to -1 for tutorial, 0 for normal, 1 for boss
+    public static int FightType {get; set;}
 }

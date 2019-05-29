@@ -42,6 +42,8 @@ public class MapPlayerController : MonoBehaviour
 
         movement = movement.normalized * mapPlayerWalkSpeed;
 
+        GameState.Player = transform.position;
+
         rigidbody_.velocity = movement;  
 
         if (movement.x > 0)
@@ -85,7 +87,9 @@ public class MapPlayerController : MonoBehaviour
     {
         Inspectable inspect = collider.GetComponent<Inspectable>();
         if(Input.GetKeyDown(inspectKey)) {
+            Debug.Log("pressing");
         if(inspect != null){
+                Debug.Log("here");
                 inspect.Inspect();
         }
         } else if (Input.GetKeyDown(storeKey) && collider.tag == "Store")

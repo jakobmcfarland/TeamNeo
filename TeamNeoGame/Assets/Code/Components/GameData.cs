@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+    Game Data
+    William Siauw
+    This script contains the constructor for the data the game will save.
+******************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

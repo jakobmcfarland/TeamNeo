@@ -15,6 +15,10 @@ public class AttackManager : MonoBehaviour
     public KeyCode redKey;
     public KeyCode tanKey;
     public KeyCode blueKey;
+    public KeyCode greenKey2;
+    public KeyCode redKey2;
+    public KeyCode tanKey2;
+    public KeyCode blueKey2;
     public int hpWrong = 10;
     public int staminaRight = 10;
     public TimeBar timeBar;
@@ -24,12 +28,15 @@ public class AttackManager : MonoBehaviour
     public int streak = 0;
     public float damageScale = 1.01f;
     public TextMeshProUGUI streakText;
+    public SpriteRenderer spaceSprite;
     public void Begin()
     {
+        print("begin");
         attacks = this.gameObject.GetComponentsInChildren<AttackBox>();
         timer = time;
         hit = 0;
         right = 0;
+        spaceSprite.enabled = false;
         for (int i = 0; i < attackCount; i++)
         {
             attacks[i].done = false;
@@ -46,7 +53,6 @@ public class AttackManager : MonoBehaviour
     {
         for (int i = hit; i < attackCount; i++)
         {
-            //print(i);
             attacks[i].SetDone(false);
             TryE(false);
         }
@@ -54,6 +60,8 @@ public class AttackManager : MonoBehaviour
         bTimer = bufferTime;
         buffer = true;
         if(player.stamina >=player.maxStamina) {
+                    spaceSprite.enabled = true;
+
             for(int i = 0; i < attackCount; i++) {
                 attacks[i].Hide();   
             }
@@ -101,6 +109,7 @@ public class AttackManager : MonoBehaviour
             bTimer -= Time.deltaTime;
             if (bTimer <= 0 && player.stamina < player.maxStamina)
             {
+                print("run");
                 buffer = false;
                 Begin();
             }
@@ -117,7 +126,7 @@ public class AttackManager : MonoBehaviour
             }
             if (true)
             {
-                if (Input.GetKeyDown(blueKey))
+                if (Input.GetKeyDown(blueKey) || Input.GetKeyDown(blueKey2))
                 {
                     if (attacks[hit].element == Element.Water)
                     {
@@ -135,7 +144,7 @@ public class AttackManager : MonoBehaviour
                     }
                     hit++;
                 }
-                else if (Input.GetKeyDown(greenKey))
+                else if (Input.GetKeyDown(greenKey)|| Input.GetKeyDown(greenKey2))
                 {
                     if (attacks[hit].element == Element.Grass)
                     {
@@ -152,7 +161,7 @@ public class AttackManager : MonoBehaviour
                     hit++;
 
                 }
-                else if (Input.GetKeyDown(redKey))
+                else if (Input.GetKeyDown(redKey)|| Input.GetKeyDown(redKey2))
                 {
                     if (attacks[hit].element == Element.Fire)
                     {
@@ -170,7 +179,7 @@ public class AttackManager : MonoBehaviour
                     hit++;
 
                 }
-                else if (Input.GetKeyDown(tanKey))
+                else if (Input.GetKeyDown(tanKey)|| Input.GetKeyDown(tanKey2))
                 {
                     if (attacks[hit].element == Element.Tan)
                     {

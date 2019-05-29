@@ -1,11 +1,16 @@
-﻿using Assets.Code.Map;
+﻿/******************************************************************************
+    Game State
+    William Siauw
+    This script contains the information that needs to be kept throughout the entire game
+******************************************************************************/
+using Assets.Code.Map;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
-    public static Vector3 Player = new Vector3(0,0,0);
+    public static Vector3 Player = new Vector3(-22,-24.5f,0);
     public int MaxHealth;
     public static int curHealth;
     [HideInInspector]
@@ -24,13 +29,5 @@ public class GameState : MonoBehaviour
             instance = this;
         DontDestroyOnLoad(this.gameObject);
         CombatInfo.MaxHealth = MaxHealth;
-    }
-    public void LoadGame()
-    {
-        for (int i = 0; i < CombatInfo.CombatsFinished; i++)
-        {
-            MapNodeList.nodes[i].nodeState = NodeState.Current;
-        }
-        print(CombatInfo.HealthPotionCount);
     }
 }
