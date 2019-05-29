@@ -17,8 +17,8 @@ public class Cinematic : MonoBehaviour
 
     }
     void End() {
-                      SetTutorialSettings();
-                SceneManager.LoadScene("Combat");  
+        SetTutorialSettings();
+        SceneManager.LoadScene("Combat");  
     }
     // Update is called once per frame
     void Update()
