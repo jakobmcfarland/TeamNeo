@@ -4,29 +4,57 @@ using UnityEngine;
 
 public class WanderingAI : MonoBehaviour
 {
-    public float FinalTimer = 0;
-    public Vector2 End;
-    Vector2 start; // Blake: You can't call a function in the class scope
-    float Distance;
-    //a^2 +b^2 = c^2
-    float timer = 0;
-    // True means moving towards End, False means moving away from End
-    bool direction = true;
+    public Vector3 direction;
+    public float speed = 0.5f;
+
+    public float Runtime = 0.2f;
+    public float RestTime = 0.1f;
+
+    float timer;
+    Vector3 start;
+    Animator animator;
+    SpriteRenderer spriteRenderer;
+
     // speed = distance/time
     // v = d/t
     void Start()
     {
-        start = transform.position;
+       start = transform.position;
+       animator = GetComponent<Animator>();
+       animator.SetBool("XDir", true);
+       spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        if (timer >= FinalTimer)
-            direction = !direction;
-        //flip direction if we have past the max time
-        float Distance = ((start.x - End.x) * (start.x - End.x)) + ((start.y - End.y) * (start.y - End.y));
-        Distance = Mathf.Sqrt(Distance);
         timer += Time.deltaTime;
-        
+
+        if (timer > RestTime)
+        {
+            transform.position += direction.normalized * speed;
+
+            if (timer > RestTime + Runtime)
+            {
+                direction.x = Random.Range(1, 4);
+                direction.y = Random.Range(1, 2);
+
+                if (transform.position.x > start.x)
+                {
+                    direction.x = -direction.x;
+                    spriteRenderer.flipX = true;
+                }
+                else
+                {
+                    spriteRenderer.flipX = false;
+                }
+
+                if (transform.position.y > start.y)
+                {
+                    direction.y = -direction.y;
+                }
+
+                timer = 0.0f;    
+            }
+        }
     }
 }

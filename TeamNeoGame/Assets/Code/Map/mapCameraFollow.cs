@@ -35,11 +35,6 @@ public class mapCameraFollow : MonoBehaviour
             float x = Mathf.Clamp( newCam.x, mapNegativeBounds.x, mapPositiveBounds.x );
             float y = Mathf.Clamp( newCam.y, mapNegativeBounds.y, mapPositiveBounds.y );
 
-            if(x < 9.0f)
-            {
-                y = Mathf.Clamp(newCam.y, mapNegativeBounds.y, -5.0f);
-            }
-
             camera.position = new Vector3(x, y, camera.position.z);
         }
     }
