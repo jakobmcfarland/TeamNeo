@@ -97,6 +97,7 @@ MonoBehaviour:
   maxHealth: 100
   damage: 10
   attackManager: {fileID: 0}
-  name: 
+  ename: 
+  nameText: {fileID: 0}
   healthText: {fileID: 0}
   hpBar: {fileID: 0}
