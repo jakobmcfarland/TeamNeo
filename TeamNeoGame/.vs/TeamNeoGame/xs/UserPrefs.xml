@@ -1,24 +1,28 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Inspectable.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PotionCounter.cs">
     <Files>
-      <File FileName="Assets/Code/Components/TextBox.cs" Line="20" Column="2" />
-      <File FileName="Assets/Code/Components/DialogueBox.cs" Line="38" Column="50" />
+      <File FileName="Assets/Code/Components/TextBox.cs" Line="13" Column="10" />
+      <File FileName="Assets/Code/Components/DialogueBox.cs" Line="22" Column="50" />
       <File FileName="Assets/Code/Components/TitlePick.cs" Line="18" Column="34" />
       <File FileName="Assets/Code/Components/MainMenu.cs" Line="16" Column="6" />
       <File FileName="Assets/Code/Map/MapNodeManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Code/Map/MapPlayerController.cs" Line="91" Column="29" />
+      <File FileName="Assets/Code/Map/MapPlayerController.cs" Line="88" Column="6" />
       <File FileName="Assets/Code/Components/GameOverMenu.cs" Line="1" Column="1" />
       <File FileName="Assets/Code/Components/GameMenuManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Code/Components/GameMenu.cs" Line="64" Column="18" />
       <File FileName="Assets/Code/Components/Combat.cs" Line="1" Column="1" />
-      <File FileName="Assets/Code/Combat/CombatManager.cs" Line="27" Column="29" />
+      <File FileName="Assets/Code/Combat/CombatManager.cs" Line="100" Column="11" />
       <File FileName="Assets/Code/Combat/PlayerCombat.cs" Line="1" Column="1" />
       <File FileName="Assets/Code/Combat/CombatInfo.cs" Line="8" Column="26" />
       <File FileName="Assets/Code/Components/GameState.cs" Line="1" Column="1" />
       <File FileName="Assets/Code/Components/SaveGameManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Code/Combat/AttackManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Inspectable.cs" Line="20" Column="36" />
+      <File FileName="Assets/Code/Inspectable.cs" Line="18" Column="1" />
       <File FileName="Assets/Code/Components/StatusText.cs" Line="1" Column="1" />
+      <File FileName="Assets/Code/TextBoxAnimate.cs" Line="22" Column="33" />
+      <File FileName="Assets/CoinCounter.cs" Line="7" Column="1" />
+      <File FileName="Assets/Code/Combat/BasicEnemy.cs" Line="1" Column="1" />
+      <File FileName="Assets/PotionCounter.cs" Line="4" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -31,13 +35,9 @@
                   <Node name="Components" expanded="True" />
                   <Node name="Map" expanded="True" />
                 </Node>
-                <Node name="Inspectable.cs" selected="True" />
+                <Node name="PotionCounter.cs" selected="True" />
               </Node>
             </Node>
-            <Node name="Assembly-CSharp-Editor-firstpass" expanded="True">
-              <Node name="Assets" expanded="True" />
-            </Node>
-            <Node name="Assembly-CSharp-firstpass" expanded="True" />
           </Node>
         </State>
       </Pad>

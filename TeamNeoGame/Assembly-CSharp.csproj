@@ -83,6 +83,7 @@
      <Compile Include="Assets\Code\Components\TitlePick.cs" />
      <Compile Include="Assets\Code\Credits.cs" />
      <Compile Include="Assets\Code\IceCream.cs" />
+     <Compile Include="Assets\Code\Inspectable.cs" />
      <Compile Include="Assets\Code\Map\mapCameraFollow.cs" />
      <Compile Include="Assets\Code\Map\MapNode.cs" />
      <Compile Include="Assets\Code\Map\MapNodeComponent.cs" />
@@ -90,9 +91,11 @@
      <Compile Include="Assets\Code\Map\MapNodeManager.cs" />
      <Compile Include="Assets\Code\Map\MapPlayerController.cs" />
      <Compile Include="Assets\Code\Map\WanderingAI.cs" />
-     <Compile Include="Assets\Inspectable.cs" />
-     <Compile Include="Assets\PopIn.cs" />
-     <Compile Include="Assets\PopSprite.cs" />
+     <Compile Include="Assets\Code\PopIn.cs" />
+     <Compile Include="Assets\Code\PopSprite.cs" />
+     <Compile Include="Assets\Code\TextBoxAnimate.cs" />
+     <Compile Include="Assets\CoinCounter.cs" />
+     <Compile Include="Assets\PotionCounter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

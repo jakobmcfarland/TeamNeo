@@ -97,7 +97,7 @@ public class CombatManager : MonoBehaviour
     }
     public void AttackEnemy(int damage)
     {
-        hurtSound.Play();
+        //hurtSound.Play();
         slashAnim.SetTrigger("Slash");
         spaceAnim.SetTrigger("Pressed");
         enemy.ModHealth((int)(-damage * Mathf.Pow(am.damageScale, (float)am.streak)));
