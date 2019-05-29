@@ -49,10 +49,18 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         attackTimer -= Time.deltaTime;
-        if (Input.GetKeyDown(attackKey) && stamina >= maxStamina)
+        if (Input.GetKeyDown(attackKey) && stamina >= maxStamina && !attackManager.paused)
         {
             ModStamina(-stamina);
             cm.AttackEnemy(damage);
+            print(damage);
+            if (cm.tuts[2] == 1 && cm.tuts[3] == 0) {
+                cm.tuts[3] = 1;
+                ModHealth(-50);
+                string[] d = {"press e to heal using ice cream", "health persists through battles", "so use them carefully", "but if you run out there's always the store!", "now slay your foe"};
+                TextBox.DisplayText(d, 5);
+                cm.Pause(true);
+            }
         }
         if (staminaGauge.fillAmount >= 1 && attackManager.buffer)
         {

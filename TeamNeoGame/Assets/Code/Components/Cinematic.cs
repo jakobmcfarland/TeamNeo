@@ -16,10 +16,16 @@ public class Cinematic : MonoBehaviour
         frames = Resources.LoadAll<Sprite>("Cinematic");
 
     }
-
+    void End() {
+                      SetTutorialSettings();
+                SceneManager.LoadScene("Combat");  
+    }
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape)) { 
+            End();
+        }
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
@@ -27,12 +33,29 @@ public class Cinematic : MonoBehaviour
             index++;
             if (index >= frames.Length)
             {
-                SceneManager.LoadScene("Map");
+                End();
             }
             else
             {
                 sprite.sprite = frames[index];
             }
         }
+    }
+    void SetTutorialSettings() {
+        CombatInfo.MaxHealth = 100;
+        CombatInfo.EnemyDamage = 1;
+        CombatInfo.EnemyHealth = 100;
+        CombatInfo.PlayerDamage = 50;
+        CombatInfo.TimePerBar = 10;
+        CombatInfo.Env = Environment.City;
+        CombatInfo.FightType = -1;
+        CombatInfo.ArrowCount = 3;
+        CombatInfo.EnemyName = "tutorial dude";
+        CombatInfo.EnemySprite= Resources.Load<Sprite>("EnemyBattle1");
+        CombatInfo.StaminaGain = 19;
+        CombatInfo.MaxStamina = 60;
+        CombatInfo.BufferTime = 0;
+        CombatInfo.CoinsToDrop = 1;
+        CombatInfo.HealthPotionCount = 3;
     }
 }

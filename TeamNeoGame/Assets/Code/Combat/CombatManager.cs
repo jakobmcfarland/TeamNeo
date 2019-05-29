@@ -15,18 +15,24 @@ public class CombatManager : MonoBehaviour
     public Animation[] startAnimations;
     public Animator[] startAnimators;
     private float startAnimTimer = 0;
+    public bool paused = false;
     public Animator spaceAnim;
     public Animator slashAnim;
+    public int[] tuts = {0,0,0,0,0,0};
     public FMODUnity.StudioEventEmitter hurtSound;
     // Start is called before the first frame update
     void Start()
     {
-        SetDefaultParameters();
+        //SetDefaultParameters();
     }
-
+    public void Pause(bool p){
+        paused = p;
+        am.paused = p;
+    }
     // Update is called once per frame
     void Update()
     {
+        if (!paused) {
         if (startTimer >= 0){
         startTimer += Time.deltaTime;
     }
@@ -36,7 +42,7 @@ public class CombatManager : MonoBehaviour
             for (int i = 0; i< startAnimations.Length; i++)
             {
                 startAnimations[i].enabled = true;
-               }
+            }
             for (int i = 0; i< startAnimators.Length; i++)
             {
                 startAnimators[i].enabled = true;
@@ -44,9 +50,18 @@ public class CombatManager : MonoBehaviour
         }
         if (startTimer >= startTime && startTimer >= 0)
         {
-            StartCombat();
-            startTimer = -1;
+            if (CombatInfo.FightType == -1 && tuts[0] == 0) {
+                print("tut1");
+                tuts[0] = 1;
+                string[] text = {"press space to advance","hit the arrows using arrow keys", "before the timer runs out"};
+                TextBox.DisplayText(text , 4);
+                Pause(true);
+            } else {
+                StartCombat();
+                startTimer = -1;
+            }
         }
+    }
     }
 
     void SetDefaultParameters()
@@ -66,6 +81,7 @@ public class CombatManager : MonoBehaviour
         CombatInfo.CoinsToDrop = 2;
         CombatInfo.HealthPotionCount = 3;
         CombatInfo.FightType = 0;
+        //CombatInfo.Tutorial = false;
     }
     void StartCombat()
     {

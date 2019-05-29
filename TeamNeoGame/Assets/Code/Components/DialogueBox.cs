@@ -19,7 +19,6 @@ public class DialogueBox : MonoBehaviour
     }
     void Update()
     {
-        dialogue[index] = dialogue[index].Trim();
         if (Input.GetKeyDown(nextKey))
         {
             if (!done)
@@ -36,6 +35,10 @@ public class DialogueBox : MonoBehaviour
                     if (mapPlayer != null)
                     {
                         mapPlayer.paused = false;
+                    }
+                    CombatManager cm = FindObjectOfType<CombatManager>();
+                    if (cm != null) {
+                        cm.Pause(false);
                     }
                     textBox.enabled = false;
                     textSprite.enabled = false;
