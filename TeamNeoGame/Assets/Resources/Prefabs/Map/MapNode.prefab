@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4359802040436250515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: 0, z: -5}
-  m_LocalScale: {x: 35, y: 35, z: 1}
+  m_LocalScale: {x: 25, y: 25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -113,12 +113,12 @@ MonoBehaviour:
   EnemyName: Enemy
   EnemySprite: {fileID: 21300000, guid: 6a7a17be898d002fe91d30e398a265b7, type: 3}
   PlayerDamage: 50
-  EnemyDamage: 10
-  StaminaGain: 10
-  MaxStamina: 100
-  EnemyHealth: 100
-  TimePerBar: 5
-  ArrowCount: 6
+  EnemyDamage: 5
+  StaminaGain: 1
+  MaxStamina: 10
+  EnemyHealth: 200
+  TimePerBar: 3
+  ArrowCount: 5
   BufferTimer: 0.1
 --- !u!114 &4359802040904368823
 MonoBehaviour:
