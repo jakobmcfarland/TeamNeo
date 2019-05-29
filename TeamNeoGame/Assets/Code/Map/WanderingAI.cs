@@ -10,6 +10,8 @@ public class WanderingAI : MonoBehaviour
     public float Runtime = 0.2f;
     public float RestTime = 0.1f;
 
+    public int type = 0;
+
     float timer;
     Vector3 start;
     Animator animator;
@@ -35,8 +37,16 @@ public class WanderingAI : MonoBehaviour
 
             if (timer > RestTime + Runtime)
             {
-                direction.x = Random.Range(1, 4);
-                direction.y = Random.Range(1, 2);
+                if (type == 0)
+                {
+                    direction.x = Random.Range(1, 4);
+                    direction.y = Random.Range(1, 2);
+                }
+                else if (type == 1)
+                {
+                    direction.x = Random.Range(1, 2);
+                    direction.y = Random.Range(1, 4);
+                }
 
                 if (transform.position.x > start.x)
                 {
@@ -51,6 +61,18 @@ public class WanderingAI : MonoBehaviour
                 if (transform.position.y > start.y)
                 {
                     direction.y = -direction.y;
+
+                    if(type == 1)
+                    {
+                        animator.Play("Civilian3Down");
+                    }
+                }
+                else
+                {
+                    if (type == 1)
+                    {
+                        animator.Play("Civilian3Up");
+                    }
                 }
 
                 timer = 0.0f;    
