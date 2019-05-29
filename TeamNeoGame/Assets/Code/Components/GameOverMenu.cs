@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+    Game Over Menu
+    William Siauw
+    This script contains the code for the game over menu
+******************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,14 +23,11 @@ public class GameOverMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(reloadKey))
         {
-                    SaveGameManager.LoadGame();
-                    GameState.GetInstance().ReadyToBattle = false;
-                    SceneManager.LoadScene("Map");
+            SaveGameManager.LoadGame();
+            GameState.GetInstance().ReadyToBattle = false;
+            SceneManager.LoadScene("Map");
         }
         else if (Input.GetKeyDown(quitKey))
-        {
-                    Application.Quit();
-
-        }
+           Application.Quit();
        }
 }

@@ -1,7 +1,7 @@
 ﻿/******************************************************************************
     Game Menu
     William Siauw
-    This script controls the navigation of the menu
+    This script controls the navigation of the in game menu
 ******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;

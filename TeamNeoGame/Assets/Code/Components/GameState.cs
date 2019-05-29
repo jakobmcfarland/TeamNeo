@@ -1,4 +1,9 @@
-﻿using Assets.Code.Map;
+﻿/******************************************************************************
+    Game State
+    William Siauw
+    This script contains the information that needs to be kept throughout the entire game
+******************************************************************************/
+using Assets.Code.Map;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,13 +29,5 @@ public class GameState : MonoBehaviour
             instance = this;
         DontDestroyOnLoad(this.gameObject);
         CombatInfo.MaxHealth = MaxHealth;
-    }
-    public void LoadGame()
-    {
-        for (int i = 0; i < CombatInfo.CombatsFinished; i++)
-        {
-            MapNodeList.nodes[i].nodeState = NodeState.Current;
-        }
-        print(CombatInfo.HealthPotionCount);
     }
 }
