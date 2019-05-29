@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+    Combat
+    William Siauw
+    This script contains all the information needed for a new encounter. Attach this script to a node to create a combat upon collision
+******************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

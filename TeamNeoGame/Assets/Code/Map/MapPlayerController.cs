@@ -42,6 +42,8 @@ public class MapPlayerController : MonoBehaviour
 
         movement = movement.normalized * mapPlayerWalkSpeed;
 
+        GameState.Player = transform.position;
+
         rigidbody_.velocity = movement;  
 
         if (movement.x > 0)
