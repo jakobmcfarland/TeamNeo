@@ -273,7 +273,7 @@ MonoBehaviour:
     PROGRAMMER - WILLIAM SIAUW
 
 
-    PROGRAMMER - BLAKE X2 COMBO
+    PROGRAMMER - BLAKELY NORTH
 
 
     PROGRAMMER- JAKOB MCFARLAND
@@ -348,10 +348,10 @@ MonoBehaviour:
   m_margin: {x: -649.8143, y: -192.97516, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 987738171}
-    characterCount: 267
+    characterCount: 266
     spriteCount: 0
-    spaceCount: 52
-    wordCount: 44
+    spaceCount: 51
+    wordCount: 43
     linkCount: 0
     lineCount: 19
     pageCount: 1

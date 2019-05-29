@@ -1518,7 +1518,6 @@ MonoBehaviour:
   - {fileID: 145473562274177500}
   spaceAnim: {fileID: 1091284933}
   slashAnim: {fileID: 31668751}
-  slashSprite: {fileID: 0}
   hurtSound: {fileID: 519420041}
 --- !u!4 &628801515
 Transform:
@@ -2494,7 +2493,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091284930}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -3414,7 +3413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1718280869
 SpriteRenderer:
   m_ObjectHideFlags: 0
