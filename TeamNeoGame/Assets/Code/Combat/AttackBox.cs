@@ -34,6 +34,7 @@ public class AttackBox : MonoBehaviour
     public void SetElement(Element el)
     {
         element = el;
+        print(anim);
         anim.SetInteger("State", 0);
         gameObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
         gameObject.transform.Rotate(0, 0, el.ToDegrees() + 90);
