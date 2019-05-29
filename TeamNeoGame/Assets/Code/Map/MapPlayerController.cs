@@ -23,6 +23,7 @@ public class MapPlayerController : MonoBehaviour
     Sprite currentIdle;
     public KeyCode inspectKey;
     public KeyCode storeKey;
+    public bool paused = false;
     private void Start()
     {
         rigidbody_ = GetComponent<Rigidbody2D>();
@@ -41,46 +42,48 @@ public class MapPlayerController : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         movement = movement.normalized * mapPlayerWalkSpeed;
-
-        GameState.Player = transform.position;
-
-        rigidbody_.velocity = movement;  
-
-        if (movement.x > 0)
+        if (!paused)
         {
-            currentIdle = idleRight;
-            animator.Play("MapPlayerRightAnimation");
-        }
-        else if (movement.x < 0)
-        {
-            currentIdle = idleLeft;
-            animator.Play("MapPlayerLeftAnimation");
-        }
-        else
-        {
-            if (movement.y > 0)
+            GameState.Player = transform.position;
+
+            rigidbody_.velocity = movement;
+
+            if (movement.x > 0)
             {
-                currentIdle = idleBack;
-                animator.Play("MapPlayerBackAnimation");
+                currentIdle = idleRight;
+                animator.Play("MapPlayerRightAnimation");
             }
-            else if (movement.y < 0)
+            else if (movement.x < 0)
             {
-                currentIdle = idleForward;
-                animator.Play("MapPlayerForwardAnimation");
+                currentIdle = idleLeft;
+                animator.Play("MapPlayerLeftAnimation");
             }
-        }
+            else
+            {
+                if (movement.y > 0)
+                {
+                    currentIdle = idleBack;
+                    animator.Play("MapPlayerBackAnimation");
+                }
+                else if (movement.y < 0)
+                {
+                    currentIdle = idleForward;
+                    animator.Play("MapPlayerForwardAnimation");
+                }
+            }
 
-        //has the player stopped? 
-        if ( movement.x == 0 && movement.y == 0 )
-        {
-            animator.Play("Idle");
-            spriteRenderer_.sprite = currentIdle;
-            //Debug.Log(spriteRenderer_.sprite);
-        }
+            //has the player stopped? 
+            if (movement.x == 0 && movement.y == 0)
+            {
+                animator.Play("Idle");
+                spriteRenderer_.sprite = currentIdle;
+                //Debug.Log(spriteRenderer_.sprite);
+            }
 
-        if (movement.x != 0 || movement.y != 0)
-        {
-            GameState.GetInstance().ReadyToBattle = true;
+            if (movement.x != 0 || movement.y != 0)
+            {
+                GameState.GetInstance().ReadyToBattle = true;
+            }
         }
     }
     void OnTriggerStay2D(Collider2D collider) 

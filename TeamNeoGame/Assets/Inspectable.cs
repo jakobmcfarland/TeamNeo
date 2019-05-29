@@ -5,6 +5,7 @@ using UnityEngine;
 public class Inspectable : MonoBehaviour
 {
     public string[] description;
+    public bool inspected = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +15,16 @@ public class Inspectable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void Inspect() {
-        TextBox.DisplayText(description, 2);
-        Debug.Log("ASIUDHASHD");
-    }
+        if (!inspected)
+        {
+            MapPlayerController player = FindObjectOfType<MapPlayerController>();
+            player.paused = true;
+            TextBox.DisplayText(description, 2);
+            Debug.Log("ASIUDHASHD");
+            inspected = true;
+            }
+        }
 }

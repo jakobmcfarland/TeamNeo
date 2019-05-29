@@ -19,7 +19,7 @@ public class DialogueBox : MonoBehaviour
     }
     void Update()
     {
-
+        dialogue[index] = dialogue[index].Trim();
         if (Input.GetKeyDown(nextKey))
         {
             if (!done)
@@ -30,8 +30,13 @@ public class DialogueBox : MonoBehaviour
             else
             {
                 index++;
-                if (index == dialogue.Length)
+                if (index >= dialogue.Length)
                 {
+                    MapPlayerController mapPlayer = FindObjectOfType<MapPlayerController>();
+                    if (mapPlayer != null)
+                    {
+                        mapPlayer.paused = false;
+                    }
                     textBox.enabled = false;
                     textSprite.enabled = false;
                     enabled = false;
