@@ -52,6 +52,9 @@ public class BasicEnemy : MonoBehaviour
         health += mod;
         healthText.text = health.ToString();
         hpBar.UpdateHP((float)health / (float)maxHealth);
+
+        GetComponent<Animator>().SetBool("Damaged", true);
+
         if (health <= 0)
         {
             print("Victory!");
