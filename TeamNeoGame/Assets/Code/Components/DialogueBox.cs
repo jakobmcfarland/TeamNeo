@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 public class DialogueBox : MonoBehaviour
 {
     public string[] dialogue;
@@ -9,7 +10,7 @@ public class DialogueBox : MonoBehaviour
     private int index = 0;
     public KeyCode nextKey;
     private TextMeshProUGUI textBox;
-    public SpriteRenderer textSprite;
+    public Image textSprite;
     public bool done;
     public float timer;
     void Start()

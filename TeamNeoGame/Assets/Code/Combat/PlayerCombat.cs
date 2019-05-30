@@ -58,7 +58,7 @@ public class PlayerCombat : MonoBehaviour
                 cm.tuts[3] = 1;
                 ModHealth(-50);
                 string[] d = {"press e to heal using ice cream", "health persists through battles", "so use them carefully", "but if you run out there's always the store!", "now slay your foe"};
-                TextBox.DisplayText(d, 5);
+                TextBox.DisplayText(d, 5,true);
                 cm.Pause(true);
             }
         }

@@ -19,6 +19,6 @@ public class Inspectable : MonoBehaviour
     public void Inspect() {
         MapPlayerController player = FindObjectOfType<MapPlayerController>();
         player.paused = true;
-        TextBox.DisplayText(description, 2);
+        TextBox.DisplayText(description, 2, false);
     }
 }
