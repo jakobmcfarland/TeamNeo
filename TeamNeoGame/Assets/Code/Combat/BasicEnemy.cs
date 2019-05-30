@@ -14,17 +14,38 @@ public class BasicEnemy : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI healthText;
     public HPBar hpBar;
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
-    { }
+    { 
+        anim = GetComponent<Animator>();
+    }
     // Update is called once per frame
     void Update()
     {
     }
     public void SetName(string nam)
     {
+        if (anim == null) {
+            anim = GetComponent<Animator>();
+        }
         ename = nam;
         nameText.text = nam.ToUpper();
+        switch(ename) {
+            case "Park":
+                anim.SetInteger("Enemy", 1);
+                break;
+            case "Car":
+                anim.SetInteger("Enemy", 2);
+                break;
+            case "Boss":
+                anim.SetInteger("Enemy", 3);
+                break;
+            default:   
+                anim.SetInteger("Enemy", 1);
+                break;
+
+        }
     }
     public void ModHealth(int mod)
     {

@@ -1216,7 +1216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &300160741
 Transform:
   m_ObjectHideFlags: 0
@@ -1233,6 +1233,7 @@ Transform:
   - {fileID: 414151180}
   - {fileID: 858672237}
   - {fileID: 73915513}
+  - {fileID: 1181578048}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1310,7 +1311,6 @@ GameObject:
   - component: {fileID: 519420038}
   - component: {fileID: 519420039}
   - component: {fileID: 519420040}
-  - component: {fileID: 519420042}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1516,19 +1516,6 @@ MonoBehaviour:
   time: 4
   timer: 0
   to: {fileID: 1902054048}
---- !u!114 &519420042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListenerNumber: 0
 --- !u!1 &532188613
 GameObject:
   m_ObjectHideFlags: 0
@@ -2941,6 +2928,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percent: 1
+--- !u!1 &1181578047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1181578048}
+  - component: {fileID: 1181578049}
+  m_Layer: 0
+  m_Name: TextSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1181578048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181578047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 300160741}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1181578049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181578047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Overworld/Dialogue/Player
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!114 &1218620554 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5208386833214094583, guid: 5b311563783c7484a8fcd9fe0f013fa1,
@@ -3691,8 +3732,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1718280870}
-  - component: {fileID: 1718280869}
   - component: {fileID: 1718280871}
+  - component: {fileID: 1718280869}
   m_Layer: 0
   m_Name: FadeIn
   m_TagString: Untagged
@@ -3772,9 +3813,10 @@ Animation:
   m_GameObject: {fileID: 1718280868}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: f52147b2fcb68ce4dbb1b5c2b34aa508, type: 2}
+  m_Animation: {fileID: 7400000, guid: 3c19a324b6267434dab3cd0d1be2020a, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: f52147b2fcb68ce4dbb1b5c2b34aa508, type: 2}
+  - {fileID: 7400000, guid: 3c19a324b6267434dab3cd0d1be2020a, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -4065,8 +4107,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902054047}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.35, y: -2.15, z: 1}
-  m_LocalScale: {x: 7, y: 7, z: 1}
+  m_LocalPosition: {x: 10.35, y: -3.95, z: 1}
+  m_LocalScale: {x: 9, y: 9, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -4318,7 +4360,7 @@ PrefabInstance:
     - target: {fileID: 1716868057977947445, guid: 5b311563783c7484a8fcd9fe0f013fa1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5208386833214094583, guid: 5b311563783c7484a8fcd9fe0f013fa1,
         type: 3}
