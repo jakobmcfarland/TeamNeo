@@ -54,7 +54,7 @@ public class CombatManager : MonoBehaviour
                 print("tut1");
                 tuts[0] = 1;
                 string[] text = {"press space to advance","hit the arrows using arrow keys", "before the timer runs out"};
-                TextBox.DisplayText(text , 4);
+                TextBox.DisplayText(text , 4, true);
                 Pause(true);
             } else {
                 StartCombat();

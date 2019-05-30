@@ -57,12 +57,12 @@ public class AttackManager : MonoBehaviour
             cm.tuts[1]  = 1;
             cm.Pause(true);
             string[] d = {"correctly hit arrows increase your stamina"};
-            TextBox.DisplayText(d, 5);
+            TextBox.DisplayText(d, 5,true);
         } else if (CombatInfo.FightType == -1 && cm.tuts[2] ==0 && cm.tuts[1] == 1) {
             cm.tuts[2]  = 1;
             cm.Pause(true);
             string[] d = {"when stamina is full hit space to attack"};
-            TextBox.DisplayText(d, 5);     
+            TextBox.DisplayText(d, 5,true);     
         }
         for (int i = hit; i < attackCount; i++)
         {
