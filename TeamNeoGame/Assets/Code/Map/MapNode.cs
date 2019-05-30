@@ -37,7 +37,7 @@ namespace Assets.Code.Map
             spriteRenderer = nodeObj.GetComponent<SpriteRenderer>();
 
             samuraiSprite = GameObject.Find(("Samurai" + (previusIndex + 2))).GetComponent<SpriteRenderer>();
-            Debug.Log(samuraiSprite);
+          //  Debug.Log(samuraiSprite);
 
         }
         public void CheckSp()
@@ -71,7 +71,6 @@ namespace Assets.Code.Map
             {
                 if (other.GetComponent<MapPlayerController>() != null && GameState.GetInstance().ReadyToBattle)
                 {
-                    Debug.Log("colliding with a node of " + nodeState);
                     if (nodeState == NodeState.Start
                     || (nodeState == NodeState.Incomplete
                     && MapNodeList.nodes[previusIndex].nodeState == NodeState.Current))
@@ -91,7 +90,22 @@ namespace Assets.Code.Map
                         Combat combat = spriteRenderer.gameObject.GetComponent<Combat>();
                         if (combat != null)
                         {
-                            GameObject.FindObjectOfType<FadeOut>().Fade();
+                            //node based fight info
+                            if(previusIndex == 1)
+                            {
+                                CombatInfo.FightType = 1;
+                            }
+
+                            if (previusIndex == -1)
+                            {
+                                CombatInfo.Env = Environment.Grass;
+                            }
+                            else
+                            {
+                                CombatInfo.Env = Environment.City;
+                            }
+
+                                GameObject.FindObjectOfType<FadeOut>().Fade();
                             combat.LoadCombat();
                         }
                     }

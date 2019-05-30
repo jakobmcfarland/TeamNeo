@@ -75,9 +75,12 @@ public class MapPlayerController : MonoBehaviour
             //has the player stopped? 
             if (movement.x == 0 && movement.y == 0)
             {
-                animator.Play("Idle");
+                animator.enabled = false;
                 spriteRenderer_.sprite = currentIdle;
-                //Debug.Log(spriteRenderer_.sprite);
+            }
+            else
+            {
+                animator.enabled = true;
             }
 
             if (movement.x != 0 || movement.y != 0)
