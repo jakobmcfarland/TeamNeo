@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/* File:    mapCameraFollow
+ * By:      Jakob McFarland
+ * Date:    5/30/2019
+ * Brief:
+ *      Controls camera following and bounds.
+ */ 
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

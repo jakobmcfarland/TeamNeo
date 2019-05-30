@@ -1,3 +1,10 @@
+/* File:    WanderingAI
+ * By:      Jakob McFarland
+ * Date:    5/30/2019
+ * Brief:
+ *      Controller for the wandering behavior of map civilian objects.
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

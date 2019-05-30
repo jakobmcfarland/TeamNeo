@@ -1,4 +1,9 @@
-﻿
+﻿/* File:    MapPlayerController
+ * By:      Jakob McFarland
+ * Date:    5/30/2019
+ * Brief:
+ *      Controller, movement and animation, for the map player object.
+ */
 
 using System.Collections;
 using System.Collections.Generic;
