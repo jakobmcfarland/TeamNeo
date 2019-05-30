@@ -21,7 +21,9 @@ public class CombatManager : MonoBehaviour
     public int[] tuts = {0,0,0,0,0,0};
     public FMODUnity.StudioEventEmitter hurtSound;
     // Start is called before the first frame update
-
+    void Awake() {
+        enemy.GetComponent<SpriteRenderer>().sprite = CombatInfo.EnemySprite;
+    }
     public void Pause(bool p){
         paused = p;
         am.paused = p;
@@ -50,7 +52,7 @@ public class CombatManager : MonoBehaviour
             if (CombatInfo.FightType == -1 && tuts[0] == 0) {
                 print("tut1");
                 tuts[0] = 1;
-                string[] text = {"press space to advance","hit the arrows using arrow keys", "before the timer runs out"};
+                string[] text = {"press enter to advance","hit the arrows using arrow keys", "before the timer runs out"};
                 TextBox.DisplayText(text , 4, true);
                 Pause(true);
             } else {
@@ -84,7 +86,6 @@ public class CombatManager : MonoBehaviour
     {
         print("start combat");
         enemy.SetName(CombatInfo.EnemyName);
-        enemy.GetComponent<SpriteRenderer>().sprite = CombatInfo.EnemySprite;
         player.damage = CombatInfo.PlayerDamage;
         enemy.attackManager.hpWrong = CombatInfo.EnemyDamage;
         enemy.attackManager.staminaRight = CombatInfo.StaminaGain;
@@ -99,6 +100,9 @@ public class CombatManager : MonoBehaviour
         player.enabled = true;
         enemy.enabled = true;
         am.Begin();
+    }
+    void EndCombat() {
+        
     }
     public void SelectEnvironment(Environment env)
     {
