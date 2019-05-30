@@ -10,7 +10,7 @@ namespace Assets.Code.Map
     class MapNodeComponent : MonoBehaviour
     {
         public int nodeIndex = -1;
-        MapNode mapNode;
+        public MapNode mapNode;
 
         void Start()
         {
@@ -26,6 +26,8 @@ namespace Assets.Code.Map
             if (mapNode != null)
             {
                 mapNode.ActivateNode(col.gameObject);
+            } else {
+                print("null");
             }
         }
     }

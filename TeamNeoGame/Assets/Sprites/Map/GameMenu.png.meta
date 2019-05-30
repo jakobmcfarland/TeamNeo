@@ -1,40 +1,43 @@
 fileFormatVersion: 2
-guid: ff9d3c013e0d308478be4e841b6235e3
+guid: 5dc1e78bf026a6e4b9ec9daa1607a11d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8215540191396373432
-    second: samurai_attack_0
+      213: -8175463726195138456
+    second: GameMenu_0
   - first:
-      213: -5783284300907867961
-    second: samurai_attack_1
+      213: 8483660523314389430
+    second: GameMenu_1
   - first:
-      213: -8693359341526951991
-    second: samurai_attack_2
+      213: -2873216615971037746
+    second: GameMenu_2
   - first:
-      213: 495465498726065323
-    second: samurai_attack_3
+      213: -2443597964824914025
+    second: GameMenu_3
   - first:
-      213: -7353695350614458469
-    second: samurai_attack_4
+      213: -2328307803275416662
+    second: GameMenu_4
   - first:
-      213: 546242586832932264
-    second: samurai_attack_5
+      213: 7838912302665539627
+    second: GameMenu_5
   - first:
-      213: -1277799441993653458
-    second: samurai_attack_6
+      213: 8115498434324725668
+    second: GameMenu_6
   - first:
-      213: -8272004313082795486
-    second: samurai_attack_7
+      213: -3805966726163561788
+    second: GameMenu_7
   - first:
-      213: 8951731007673315554
-    second: samurai_attack_8
+      213: -5036413738597799122
+    second: GameMenu_8
   - first:
-      213: 601150187526541170
-    second: samurai_attack_9
+      213: -1531316650287528528
+    second: GameMenu_9
   - first:
-      213: -1271359533986054930
-    second: samurai_attack_10
+      213: -2523912577634779160
+    second: GameMenu_10
+  - first:
+      213: 1082211125970204763
+    second: GameMenu_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -74,11 +77,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +120,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: samurai_attack_0
+      name: GameMenu_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 300
-        width: 133
-        height: 100
+        y: 214
+        width: 72
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73eca4f655738ae4997003ba1eedd1de
-      internalID: -8215540191396373432
+      spriteID: 9ba88aa61fddbb348819cf50371021b4
+      internalID: -8175463726195138456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samurai_attack_1
+      name: GameMenu_1
       rect:
         serializedVersion: 2
-        x: 133
-        y: 300
-        width: 133
-        height: 100
+        x: 72
+        y: 214
+        width: 72
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 192b46485a2a59448a4b50576e815e9a
-      internalID: -5783284300907867961
+      spriteID: 0322dfd871b076444b743538bbdde115
+      internalID: 8483660523314389430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samurai_attack_2
+      name: GameMenu_2
       rect:
         serializedVersion: 2
-        x: 266
-        y: 300
-        width: 133
-        height: 100
+        x: 144
+        y: 214
+        width: 72
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd48ea75298813140b852ff266ffa439
-      internalID: -8693359341526951991
+      spriteID: e400fb4e9119f1a4d891e2c54741b05c
+      internalID: -2873216615971037746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samurai_attack_3
+      name: GameMenu_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 200
-        width: 133
-        height: 100
+        x: 216
+        y: 214
+        width: 72
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,62 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc2c16a2c652e7c4bb52a27e23cc6538
-      internalID: 495465498726065323
+      spriteID: 756ee81951e2c28449553e2965ff5f1a
+      internalID: -2443597964824914025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samurai_attack_4
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 200
-        width: 133
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ae381e4c00fe8a4994d7b5f662d7214
-      internalID: -7353695350614458469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: samurai_attack_5
-      rect:
-        serializedVersion: 2
-        x: 266
-        y: 200
-        width: 133
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6b4ab7ad66774b48b6cd955d2131d20
-      internalID: 546242586832932264
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: samurai_attack_6
+      name: GameMenu_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
-        width: 133
-        height: 100
+        y: 107
+        width: 72
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb1453df9df2918418d75d2d3799354d
-      internalID: -1277799441993653458
+      spriteID: 97b6e363412832449991d6b4e369d0eb
+      internalID: -2328307803275416662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samurai_attack_7
+      name: GameMenu_5
       rect:
         serializedVersion: 2
-        x: 133
-        y: 100
-        width: 133
-        height: 100
+        x: 72
+        y: 107
+        width: 72
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cceb713ff00a2e43ab92d3cf1a62183
-      internalID: -8272004313082795486
+      spriteID: daf6bd3ce381a774d9a12c79f1d5e7c3
+      internalID: 7838912302665539627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samurai_attack_8
+      name: GameMenu_6
       rect:
         serializedVersion: 2
-        x: 266
-        y: 100
-        width: 133
-        height: 100
+        x: 144
+        y: 107
+        width: 72
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,20 +260,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80fbdd4905f17ef448f162c293d7b5ed
-      internalID: 8951731007673315554
+      spriteID: d1879ee710cd2004abc5823e1710d260
+      internalID: 8115498434324725668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samurai_attack_9
+      name: GameMenu_7
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 107
+        width: 72
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e696d321ad7241b4b835a4fbd6fb82a1
+      internalID: -3805966726163561788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameMenu_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 133
-        height: 100
+        width: 72
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,20 +302,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f42ee4a917754824397b4031ae4a40af
-      internalID: 601150187526541170
+      spriteID: 0ac07c79ae311d84d8728a99d6589607
+      internalID: -5036413738597799122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samurai_attack_10
+      name: GameMenu_9
       rect:
         serializedVersion: 2
-        x: 133
+        x: 72
         y: 0
-        width: 133
-        height: 100
+        width: 72
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,8 +323,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c60dc6f98bd31974b84a60b7b2ffd3c4
-      internalID: -1271359533986054930
+      spriteID: 16591f95894002e4b941df24bb62f475
+      internalID: -1531316650287528528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameMenu_10
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 72
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03828c3cec7b2b645b78570dfdf460a9
+      internalID: -2523912577634779160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameMenu_11
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 72
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0200e64e033591248a0f4aee69bc1e2d
+      internalID: 1082211125970204763
       vertices: []
       indices: 
       edges: []
@@ -350,7 +374,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 30b6c2e8b107f704e82f4e10f212afed
+    spriteID: 4b45239a15a631245a7ebc2eaa66c563
     internalID: 0
     vertices: []
     indices: 

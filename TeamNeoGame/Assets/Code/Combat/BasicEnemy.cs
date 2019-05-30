@@ -34,11 +34,17 @@ public class BasicEnemy : MonoBehaviour
         if (health <= 0)
         {
             print("Victory!");
+            if (CombatInfo.FightType != -1) {
             CombatInfo.CombatsFinished++;
+        }
+        if(CombatInfo.FightType == -1) {
+            CombatInfo.FightType = 0;
+        }
             SaveGameManager.SaveGame(new Vector3(0, 0, 0), CombatInfo.CombatsFinished);
             GameState.curHealth = cm.player.health;
             CombatInfo.CoinCount+= CombatInfo.CoinsToDrop;
             if (CombatInfo.FightType == 1) {
+
                 SceneManager.LoadScene("Credits");
             } else {
                SceneManager.LoadScene("Map");
