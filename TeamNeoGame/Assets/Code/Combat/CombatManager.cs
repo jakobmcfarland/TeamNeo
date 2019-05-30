@@ -21,10 +21,7 @@ public class CombatManager : MonoBehaviour
     public int[] tuts = {0,0,0,0,0,0};
     public FMODUnity.StudioEventEmitter hurtSound;
     // Start is called before the first frame update
-    void Start()
-    {
-        //SetDefaultParameters();
-    }
+
     public void Pause(bool p){
         paused = p;
         am.paused = p;
