@@ -91,7 +91,22 @@ namespace Assets.Code.Map
                         Combat combat = spriteRenderer.gameObject.GetComponent<Combat>();
                         if (combat != null)
                         {
-                            GameObject.FindObjectOfType<FadeOut>().Fade();
+                            //node based fight info
+                            if(previusIndex == 1)
+                            {
+                                CombatInfo.FightType = 1;
+                            }
+
+                            if (previusIndex == -1)
+                            {
+                                CombatInfo.Env = Environment.Grass;
+                            }
+                            else
+                            {
+                                CombatInfo.Env = Environment.City;
+                            }
+
+                                GameObject.FindObjectOfType<FadeOut>().Fade();
                             combat.LoadCombat();
                         }
                     }
