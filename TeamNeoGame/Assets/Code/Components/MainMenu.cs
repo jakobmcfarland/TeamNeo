@@ -15,8 +15,9 @@ public class MainMenu : MonoBehaviour
     public KeyCode downKey;
     public KeyCode pickKey;
     public int selected = 0;
-
-    // Start is called before the first frame update
+    public FMODUnity.StudioEventEmitter selectSound;
+    public FMODUnity.StudioEventEmitter pickSound;
+        // Start is called before the first frame update
     void Start()
     {
         options = this.gameObject.GetComponentsInChildren<TextMeshProUGUI>();
@@ -35,6 +36,7 @@ public class MainMenu : MonoBehaviour
             {
                 selected++;
             }
+            selectSound.Play();
         }
         else if (Input.GetKeyDown(downKey))
         {
@@ -46,9 +48,12 @@ public class MainMenu : MonoBehaviour
             {
                 selected--;
             }
+                        selectSound.Play();
+
         }
         if (Input.GetKeyDown(pickKey))
         {
+            pickSound.Play();
             switch (selected)
             {
                 //  New Game
@@ -56,7 +61,7 @@ public class MainMenu : MonoBehaviour
                     CombatInfo.HealthPotionCount = 3;
                     GameState.curHealth = 100;
                     GameState.Player = new Vector3(-22, -24.5f, 0);
-                    SceneManager.LoadScene("Map");
+                    SceneManager.LoadScene("Cinematic");
                     break;
                 //  Load Game
                 case 1:

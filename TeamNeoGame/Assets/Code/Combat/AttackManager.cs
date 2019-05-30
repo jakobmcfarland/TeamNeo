@@ -9,6 +9,7 @@ public class AttackManager : MonoBehaviour
     public int hit = 0;
     public AttackBox[] attacks;
     public PlayerCombat player;
+    public CombatManager cm;
     public float time = 5.0f;
     private float timer = 0;
     public KeyCode greenKey;
@@ -29,6 +30,8 @@ public class AttackManager : MonoBehaviour
     public float damageScale = 1.01f;
     public TextMeshProUGUI streakText;
     public SpriteRenderer spaceSprite;
+    public FMODUnity.StudioEventEmitter hitSound;
+    public bool paused = false;
     public void Begin()
     {
         print("begin");
@@ -51,6 +54,17 @@ public class AttackManager : MonoBehaviour
     }
     public void Finish()
     {
+        if (CombatInfo.FightType == -1 && cm.tuts[1] ==0 && cm.tuts[0] == 1) {
+            cm.tuts[1]  = 1;
+            cm.Pause(true);
+            string[] d = {"correctly hit arrows increase your stamina"};
+            TextBox.DisplayText(d, 5,true);
+        } else if (CombatInfo.FightType == -1 && cm.tuts[2] ==0 && cm.tuts[1] == 1) {
+            cm.tuts[2]  = 1;
+            cm.Pause(true);
+            string[] d = {"when stamina is full hit space to attack"};
+            TextBox.DisplayText(d, 5,true);     
+        }
         for (int i = hit; i < attackCount; i++)
         {
             attacks[i].SetDone(false);
@@ -60,8 +74,7 @@ public class AttackManager : MonoBehaviour
         bTimer = bufferTime;
         buffer = true;
         if(player.stamina >=player.maxStamina) {
-                    spaceSprite.enabled = true;
-
+            spaceSprite.enabled = true;
             for(int i = 0; i < attackCount; i++) {
                 attacks[i].Hide();   
             }
@@ -89,6 +102,13 @@ public class AttackManager : MonoBehaviour
     }
     void TryE(bool r)
     {
+        if (hit == attackCount) {
+            //hitSound.SetParameter("Missed", 0);
+            hitSound.Play();
+        } else {
+            //hitSound.SetParameter("Missed", 1);
+            hitSound.Play();
+        }
         if (r)
         {
             player.ModStamina(staminaRight);
@@ -104,6 +124,8 @@ public class AttackManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!paused){
+
         if (buffer)
         {
             bTimer -= Time.deltaTime;
@@ -203,5 +225,6 @@ public class AttackManager : MonoBehaviour
                 Finish();
             }
         }
+    }
     }
 }

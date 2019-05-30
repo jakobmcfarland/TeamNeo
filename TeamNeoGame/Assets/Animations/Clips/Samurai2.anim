@@ -8,7 +8,7 @@ AnimationClip:
   m_PrefabAsset: {fileID: 0}
   m_Name: Samurai2
   serializedVersion: 6
-  m_Legacy: 1
+  m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
@@ -62,14 +62,32 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
-    pptrCurveMapping: []
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: -8215540191396373432, guid: ff9d3c013e0d308478be4e841b6235e3, type: 3}
+    - {fileID: -5783284300907867961, guid: ff9d3c013e0d308478be4e841b6235e3, type: 3}
+    - {fileID: -8693359341526951991, guid: ff9d3c013e0d308478be4e841b6235e3, type: 3}
+    - {fileID: 495465498726065323, guid: ff9d3c013e0d308478be4e841b6235e3, type: 3}
+    - {fileID: -7353695350614458469, guid: ff9d3c013e0d308478be4e841b6235e3, type: 3}
+    - {fileID: 546242586832932264, guid: ff9d3c013e0d308478be4e841b6235e3, type: 3}
+    - {fileID: -1277799441993653458, guid: ff9d3c013e0d308478be4e841b6235e3, type: 3}
+    - {fileID: -8272004313082795486, guid: ff9d3c013e0d308478be4e841b6235e3, type: 3}
+    - {fileID: 8951731007673315554, guid: ff9d3c013e0d308478be4e841b6235e3, type: 3}
+    - {fileID: 601150187526541170, guid: ff9d3c013e0d308478be4e841b6235e3, type: 3}
+    - {fileID: -1271359533986054930, guid: ff9d3c013e0d308478be4e841b6235e3, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.9166666
+    m_StopTime: 0.9166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

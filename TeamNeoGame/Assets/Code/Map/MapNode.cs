@@ -57,6 +57,7 @@ namespace Assets.Code.Map
             {
                 if (other.GetComponent<MapPlayerController>() != null && GameState.GetInstance().ReadyToBattle)
                 {
+                    Debug.Log("colliding with a node of " + nodeState);
                     if (nodeState == NodeState.Start
                     || (nodeState == NodeState.Incomplete
                     && MapNodeList.nodes[previusIndex].nodeState == NodeState.Current))

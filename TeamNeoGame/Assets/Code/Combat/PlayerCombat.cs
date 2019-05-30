@@ -35,6 +35,8 @@ public class PlayerCombat : MonoBehaviour
     public float healPerPotion = 0.5f;
     public KeyCode healKey;
     public IceCream iceCream;
+    public FMODUnity.StudioEventEmitter hurtSound;
+    public FMODUnity.StudioEventEmitter healSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,10 +51,18 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         attackTimer -= Time.deltaTime;
-        if (Input.GetKeyDown(attackKey) && stamina >= maxStamina)
+        if (Input.GetKeyDown(attackKey) && stamina >= maxStamina && !attackManager.paused)
         {
             ModStamina(-stamina);
             cm.AttackEnemy(damage);
+            print(damage);
+            if (cm.tuts[2] == 1 && cm.tuts[3] == 0) {
+                cm.tuts[3] = 1;
+                ModHealth(-50);
+                string[] d = {"press e to heal using ice cream", "health persists through battles", "so use them carefully", "but if you run out there's always the store!", "now slay your foe"};
+                TextBox.DisplayText(d, 5,true);
+                cm.Pause(true);
+            }
         }
         if (staminaGauge.fillAmount >= 1 && attackManager.buffer)
         {
@@ -73,6 +83,9 @@ public class PlayerCombat : MonoBehaviour
     }
     public void ModHealth(int mod)
     {
+        if (mod < 0) {
+            hurtSound.Play();
+        }
         health += mod;
         if (health > maxHealth)
         {
@@ -96,6 +109,7 @@ public class PlayerCombat : MonoBehaviour
         staminaGauge.fillAmount = (float)stamina / (float)maxStamina;
     }
     public void UsePotion() {
+        healSound.Play();
         healthCount--;
         CombatInfo.HealthPotionCount--;
         iceCream.ModNum(healthCount);

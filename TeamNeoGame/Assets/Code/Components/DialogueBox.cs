@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 public class DialogueBox : MonoBehaviour
 {
     public string[] dialogue;
@@ -9,17 +10,18 @@ public class DialogueBox : MonoBehaviour
     private int index = 0;
     public KeyCode nextKey;
     private TextMeshProUGUI textBox;
-    public SpriteRenderer textSprite;
+    public Image textSprite;
     public bool done;
     public float timer;
+    private FMODUnity.StudioEventEmitter dialogueSound;
     void Start()
     {
         textBox = GetComponent<TextMeshProUGUI>();
         textSprite.enabled = enabled;
+        dialogueSound = GameObject.Find("TextSound").GetComponent<FMODUnity.StudioEventEmitter>();
     }
     void Update()
     {
-        dialogue[index] = dialogue[index].Trim();
         if (Input.GetKeyDown(nextKey))
         {
             if (!done)
@@ -36,6 +38,10 @@ public class DialogueBox : MonoBehaviour
                     if (mapPlayer != null)
                     {
                         mapPlayer.paused = false;
+                    }
+                    CombatManager cm = FindObjectOfType<CombatManager>();
+                    if (cm != null) {
+                        cm.Pause(false);
                     }
                     textBox.enabled = false;
                     textSprite.enabled = false;
@@ -54,6 +60,7 @@ public class DialogueBox : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
+                dialogueSound.Play();
                 textBox.text += dialogue[index][textBox.text.Length].ToString().ToUpper();
                 timer = timePerBox / dialogue[index].Length;
             }
