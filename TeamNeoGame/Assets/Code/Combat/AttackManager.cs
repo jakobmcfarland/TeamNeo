@@ -103,10 +103,10 @@ public class AttackManager : MonoBehaviour
     void TryE(bool r)
     {
         if (hit == attackCount) {
-            hitSound.SetParameter("Missed", 0);
+            //hitSound.SetParameter("Missed", 0);
             hitSound.Play();
         } else {
-            hitSound.SetParameter("Missed", 1);
+            //hitSound.SetParameter("Missed", 1);
             hitSound.Play();
         }
         if (r)

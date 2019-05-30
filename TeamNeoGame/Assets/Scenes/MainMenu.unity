@@ -231,8 +231,8 @@ MonoBehaviour:
   downKey: 273
   pickKey: 13
   selected: 0
-  selectSound: {fileID: 0}
-  pickSound: {fileID: 0}
+  selectSound: {fileID: 122899894}
+  pickSound: {fileID: 954574362}
 --- !u!1 &432316281
 GameObject:
   m_ObjectHideFlags: 0

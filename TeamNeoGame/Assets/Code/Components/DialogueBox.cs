@@ -13,10 +13,12 @@ public class DialogueBox : MonoBehaviour
     public Image textSprite;
     public bool done;
     public float timer;
+    private FMODUnity.StudioEventEmitter dialogueSound;
     void Start()
     {
         textBox = GetComponent<TextMeshProUGUI>();
         textSprite.enabled = enabled;
+        dialogueSound = GameObject.Find("TextSound").GetComponent<FMODUnity.StudioEventEmitter>();
     }
     void Update()
     {
@@ -58,6 +60,7 @@ public class DialogueBox : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
+                dialogueSound.Play();
                 textBox.text += dialogue[index][textBox.text.Length].ToString().ToUpper();
                 timer = timePerBox / dialogue[index].Length;
             }

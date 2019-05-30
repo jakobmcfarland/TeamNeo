@@ -36,6 +36,7 @@ public class PlayerCombat : MonoBehaviour
     public KeyCode healKey;
     public IceCream iceCream;
     public FMODUnity.StudioEventEmitter hurtSound;
+    public FMODUnity.StudioEventEmitter healSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -108,6 +109,7 @@ public class PlayerCombat : MonoBehaviour
         staminaGauge.fillAmount = (float)stamina / (float)maxStamina;
     }
     public void UsePotion() {
+        healSound.Play();
         healthCount--;
         CombatInfo.HealthPotionCount--;
         iceCream.ModNum(healthCount);
