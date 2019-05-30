@@ -15,9 +15,9 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\nicholas.hickman\Documents\TeamNeo\TeamNeoGame\samurai\samurai.fspro
-  SourceProjectPathUnformatted: samurai\samurai.fspro
-  SourceBankPathUnformatted: samurai\Build
+  sourceProjectPath: /home/nicohman/TeamNeo/TeamNeoGame/samurai/samurai.fspro
+  SourceProjectPathUnformatted: samurai/samurai.fspro
+  SourceBankPathUnformatted: samurai/Build
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0

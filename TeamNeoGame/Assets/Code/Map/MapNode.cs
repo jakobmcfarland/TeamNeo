@@ -77,8 +77,8 @@ namespace Assets.Code.Map
                         Combat combat = spriteRenderer.gameObject.GetComponent<Combat>();
                         if (combat != null)
                         {
+                            GameObject.FindObjectOfType<FadeOut>().Fade();
                             combat.LoadCombat();
-                            SceneManager.LoadScene("Combat");
                         }
                     }
                 }
