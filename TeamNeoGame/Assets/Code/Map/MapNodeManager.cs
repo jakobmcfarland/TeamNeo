@@ -20,8 +20,18 @@ public class MapNodeManager : MonoBehaviour
         //{ 
             for (int i = 0; i < CombatInfo.CombatsFinished; i++)
             {
-                MapNodeList.nodes[i].nodeState = NodeState.Current;
+            Debug.Log(MapNodeList.nodes[i].nodeName);
+                Debug.Log(MapNodeList.nodes[i].nodeState);
+                MapNodeList.nodes[i].nodeState = NodeState.Complete;
             }
+
+            Debug.Log(CombatInfo.CombatsFinished);
+        Debug.Log(MapNodeList.nodes[CombatInfo.CombatsFinished - 1].nodeName);
+
+        Debug.Log(MapNodeList.nodes[CombatInfo.CombatsFinished - 1].nodeState);
+        if (CombatInfo.CombatsFinished >=0)
+                MapNodeList.nodes[CombatInfo.CombatsFinished-1].nodeState = NodeState.Current;
+
         //}     
     }
 }

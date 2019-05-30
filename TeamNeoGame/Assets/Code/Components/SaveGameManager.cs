@@ -50,6 +50,7 @@ public static class SaveGameManager
                 GameState.GetInstance().Loaded = true;
                 GameState.curHealth = data.health;
                 Debug.Log("loaded successfully");
+                Debug.Log(CombatInfo.CombatsFinished);
                 stream.Close();
                 return true;
             }
