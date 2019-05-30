@@ -1,0 +1,77 @@
+// Numbered objects' ID's go top to bottom then left to right (if two obj's are on the same line, the one on the right will have a higher ID)
+broken car
+{
+
+}
+
+
+convenience store
+{
+
+}
+
+people running
+{
+    person running 1
+    {
+        Whew... that was a close one.
+        I was in my car and this *thing* fell
+        out of the sky and started bashing my roof!
+        I'd better call my insurance...
+    }
+
+    person running 2)
+    {
+        Did you see that?!
+        Those samurai are invading our city and there's nobody to stop them!
+        Wait a minute...
+        Is that a sword on your back?
+        You could save us!
+    }
+    person running 3
+    {
+        *Whistling*
+        It's a beautiful day in the neighborhood...
+        Wait, what's that thing over there?!
+        Is that a SAMURAI?!
+    }
+}
+
+
+traffic cones
+{
+    It's a traffic cone. Better not go over there.
+} 
+
+trash cans
+{
+    trash can 1
+    {
+
+    }
+
+    trash can 2
+    {
+
+    }
+
+    trash can 3
+    {
+
+    }
+
+    trash can 4
+    {
+
+    }
+
+    trash can 5
+    {
+}
+}
+
+
+trees
+{
+
+}
