@@ -23,9 +23,10 @@ public class MapNodeManager : MonoBehaviour
             Debug.Log(MapNodeList.nodes[i].nodeName);
                 Debug.Log(MapNodeList.nodes[i].nodeState);
                 MapNodeList.nodes[i].nodeState = NodeState.Complete;
-            }
+            MapNodeList.nodes[i].CheckSp();
+        }
 
-            Debug.Log(CombatInfo.CombatsFinished);
+        Debug.Log(CombatInfo.CombatsFinished);
         Debug.Log(MapNodeList.nodes[CombatInfo.CombatsFinished - 1].nodeName);
 
         Debug.Log(MapNodeList.nodes[CombatInfo.CombatsFinished - 1].nodeState);

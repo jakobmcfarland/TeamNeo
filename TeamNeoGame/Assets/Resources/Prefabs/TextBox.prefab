@@ -497,7 +497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: []
   timePerBox: 2
-  nextKey: 32
-  textSprite: {fileID: 8131309970986320121}
+  nextKey: 13
+  textSprite: {fileID: 0}
   done: 0
   timer: 0

@@ -18,7 +18,7 @@ namespace Assets.Code.Map
         public string nodeName;
         public int previusIndex;
         public NodeState nodeState = NodeState.Incomplete;
-
+        public SpriteRenderer samuraiSprite;
         Color incompleteNormalColor = new Color(1.0f, 0.0f, 0.0f, 0.5f);
         Color completeNormalColor = new Color(0.5f, 1.0f, 1.0f, 0.5f);
         Color currentNormalColor = new Color(0.0f, 0.5f, 0.5f, 0.5f);
@@ -36,18 +36,32 @@ namespace Assets.Code.Map
         {
             spriteRenderer = nodeObj.GetComponent<SpriteRenderer>();
 
-            if  (  nodeState == NodeState.Start
-                || nodeState == NodeState.Current
-                || nodeState == NodeState.Complete)
+            samuraiSprite = GameObject.Find(("Samurai" + (previusIndex + 2))).GetComponent<SpriteRenderer>();
+            Debug.Log(samuraiSprite);
+
+        }
+        public void CheckSp()
+        {
+            if (samuraiSprite == null)
             {
-                spriteRenderer.color = currentNormalColor;
+                samuraiSprite = GameObject.Find(("Samurai" + (previusIndex + 2))).GetComponent<SpriteRenderer>();
+                spriteRenderer = GameObject.Find(("Node" + (previusIndex + 2))).GetComponent<SpriteRenderer>();
+
+            }
+            if (nodeState == NodeState.Complete)
+            {
+                Debug.Log("hiding");
+                samuraiSprite.GetComponent<Animator>().enabled = false;
+                spriteRenderer.enabled = false;
+                samuraiSprite.enabled = false;
             }
             else
             {
-                spriteRenderer.color = incompleteNormalColor;
+                samuraiSprite.GetComponent<Animator>().enabled = true;
+                spriteRenderer.enabled = true;
+                samuraiSprite.enabled = true;
             }
         }
-
         public void ActivateNode(GameObject other)
         {
             MapNodeManager mapNodeManager = MapNodeManager.GetInstance();

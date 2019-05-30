@@ -285,7 +285,6 @@ GameObject:
   - component: {fileID: 498210165}
   - component: {fileID: 498210164}
   - component: {fileID: 498210167}
-  - component: {fileID: 498210168}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -371,19 +370,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListenerNumber: 0
---- !u!114 &498210168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498210163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListenerNumber: 0
 --- !u!1 &526178293
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +381,7 @@ GameObject:
   - component: {fileID: 526178295}
   - component: {fileID: 526178294}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Soundtrack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -416,7 +402,7 @@ MonoBehaviour:
   CollisionTag: 
   Event: event:/Menu/Music
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -431,12 +417,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526178293}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.206093, y: -6.219819, z: 20.232983}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.5625019, y: 28.593582, z: 33.783764}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 608729987}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &535571063
 GameObject:
@@ -692,7 +678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &608729987
 Transform:
   m_ObjectHideFlags: 0
@@ -706,8 +692,9 @@ Transform:
   m_Children:
   - {fileID: 122899893}
   - {fileID: 954574361}
+  - {fileID: 526178295}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &624436204
 GameObject:
