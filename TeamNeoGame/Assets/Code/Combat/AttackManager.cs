@@ -30,6 +30,7 @@ public class AttackManager : MonoBehaviour
     public float damageScale = 1.01f;
     public TextMeshProUGUI streakText;
     public SpriteRenderer spaceSprite;
+    public FMODUnity.StudioEventEmitter hitSound;
     public bool paused = false;
     public void Begin()
     {
@@ -101,6 +102,13 @@ public class AttackManager : MonoBehaviour
     }
     void TryE(bool r)
     {
+        if (hit == attackCount) {
+            hitSound.SetParameter("Missed", 0);
+            hitSound.Play();
+        } else {
+            hitSound.SetParameter("Missed", 1);
+            hitSound.Play();
+        }
         if (r)
         {
             player.ModStamina(staminaRight);

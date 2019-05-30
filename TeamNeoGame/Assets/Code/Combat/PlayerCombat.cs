@@ -35,6 +35,7 @@ public class PlayerCombat : MonoBehaviour
     public float healPerPotion = 0.5f;
     public KeyCode healKey;
     public IceCream iceCream;
+    public FMODUnity.StudioEventEmitter hurtSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -81,6 +82,9 @@ public class PlayerCombat : MonoBehaviour
     }
     public void ModHealth(int mod)
     {
+        if (mod < 0) {
+            hurtSound.Play();
+        }
         health += mod;
         if (health > maxHealth)
         {
