@@ -32,6 +32,7 @@ public class MapNodeManager : MonoBehaviour
         Debug.Log(MapNodeList.nodes[CombatInfo.CombatsFinished - 1].nodeState);
         if (CombatInfo.CombatsFinished >=0)
                 MapNodeList.nodes[CombatInfo.CombatsFinished-1].nodeState = NodeState.Current;
+        MapNodeList.nodes[CombatInfo.CombatsFinished].nodeState = NodeState.Incomplete;
 
         //}     
     }
