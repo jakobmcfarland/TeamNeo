@@ -31,6 +31,7 @@ public class AttackManager : MonoBehaviour
     public TextMeshProUGUI streakText;
     public SpriteRenderer spaceSprite;
     public FMODUnity.StudioEventEmitter hitSound;
+    public Animator blockAnim;
     public bool paused = false;
     public void Begin()
     {
@@ -111,6 +112,7 @@ public class AttackManager : MonoBehaviour
         }
         if (r)
         {
+            blockAnim.SetTrigger("Block");
             player.ModStamina(staminaRight);
             streak++;
         }
