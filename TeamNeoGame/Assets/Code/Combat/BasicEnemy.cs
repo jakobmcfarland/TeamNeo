@@ -15,14 +15,39 @@ public class BasicEnemy : MonoBehaviour
     public TextMeshProUGUI healthText;
     public HPBar hpBar;
     private Animator anim;
+    public float dieTime = 1;
+    private float dieTimer = -1;
     // Start is called before the first frame update
     void Start()
     { 
         anim = GetComponent<Animator>();
     }
+    public void Die()
+    {
+        dieTimer = 0;
+        anim.SetTrigger("Death");
+    }
     // Update is called once per frame
     void Update()
     {
+        if (dieTimer != -1)
+        {
+            dieTimer += Time.deltaTime;
+            if (dieTimer >= dieTime)
+            {
+
+
+                if (CombatInfo.FightType == 1)
+                {
+                    SaveGameManager.DeleteGame();
+                    SceneManager.LoadScene("Credits");
+                }
+                else
+                {
+                    SceneManager.LoadScene("Map");
+                }
+            }
+        }
     }
     public void SetName(string nam)
     {
@@ -42,7 +67,7 @@ public class BasicEnemy : MonoBehaviour
                 anim.SetInteger("Enemy", 3);
                 break;
             default:   
-                anim.SetInteger("Enemy", 1);
+                anim.SetInteger("Enemy", 0);
                 break;
 
         }
@@ -67,12 +92,8 @@ public class BasicEnemy : MonoBehaviour
             SaveGameManager.SaveGame(new Vector3(0, 0, 0), CombatInfo.CombatsFinished);
             GameState.curHealth = cm.player.health;
             CombatInfo.CoinCount+= CombatInfo.CoinsToDrop;
-            if (CombatInfo.FightType == 1) {
-                SaveGameManager.DeleteGame();
-                SceneManager.LoadScene("Credits");
-            } else {
-               SceneManager.LoadScene("Map");
-            }
+            Die();
+
         }
     }
 }

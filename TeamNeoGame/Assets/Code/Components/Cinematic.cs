@@ -63,5 +63,6 @@ public class Cinematic : MonoBehaviour
         CombatInfo.BufferTime = 0;
         CombatInfo.CoinsToDrop = 1;
         CombatInfo.HealthPotionCount = 3;
+        CombatInfo.TutorialText = true;
     }
 }

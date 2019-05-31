@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 49e0fe903d904e346a84e7d050136a67
+guid: 79b26211154bba6b7ab1cb2fa43ea99d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -463956979064600515
-    second: PulsarShopMenu_0
+      213: 7886328693970749932
+    second: RedSamuraiIdle_0
   - first:
-      213: 4591226421749776113
-    second: PulsarShopMenu_1
+      213: -6843465907986555122
+    second: RedSamuraiIdle_1
   - first:
-      213: 6051117406924249228
-    second: PulsarShopMenu_2
+      213: 4277842426479131207
+    second: RedSamuraiIdle_2
   - first:
-      213: 1851438324554521839
-    second: PulsarShopMenu_3
+      213: 8366253876772334333
+    second: RedSamuraiIdle_3
+  - first:
+      213: 8684188363519168724
+    second: RedSamuraiIdle_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -96,13 +99,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PulsarShopMenu_0
+      name: RedSamuraiIdle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 140
-        width: 200
-        height: 140
+        y: 98
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,20 +113,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9415b231501afef31aa82661dedc2309
-      internalID: -463956979064600515
+      spriteID: fd8c4e68eacde42f59c2ba6523506c27
+      internalID: 7886328693970749932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PulsarShopMenu_1
+      name: RedSamuraiIdle_1
       rect:
         serializedVersion: 2
-        x: 200
-        y: 140
-        width: 200
-        height: 140
+        x: 44
+        y: 98
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +134,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb76ad9dc021f7b9086b849916d531f9
-      internalID: 4591226421749776113
+      spriteID: 58994c2dfd48be65395cb295194b68b1
+      internalID: -6843465907986555122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PulsarShopMenu_2
+      name: RedSamuraiIdle_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 98
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de087de9d2afb7e0a0ebb0ead2e7bec
+      internalID: 4277842426479131207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedSamuraiIdle_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 200
-        height: 140
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7861ef596499276feb9c65a20416baf2
-      internalID: 6051117406924249228
+      spriteID: f735493eebc8729fa9bc0a6c6204077b
+      internalID: 8366253876772334333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PulsarShopMenu_3
+      name: RedSamuraiIdle_4
       rect:
         serializedVersion: 2
-        x: 200
+        x: 44
         y: 0
-        width: 200
-        height: 140
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,8 +197,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c10048a43a81e582fab3dd4b51de800c
-      internalID: 1851438324554521839
+      spriteID: c12fe36f912d9b33fa73183f94825c6c
+      internalID: 8684188363519168724
       vertices: []
       indices: 
       edges: []
@@ -182,7 +206,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 14e75cf53d1c1404eb22c499333234b9
+    spriteID: 021a6d3075cb33c4eb4cda5b7918560f
     internalID: 0
     vertices: []
     indices: 

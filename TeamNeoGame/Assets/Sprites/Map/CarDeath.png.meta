@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 49e0fe903d904e346a84e7d050136a67
+guid: 917cd4f452b541364897adf3db7dc959
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -463956979064600515
-    second: PulsarShopMenu_0
+      213: 1154910248084066500
+    second: CarDeath_0
   - first:
-      213: 4591226421749776113
-    second: PulsarShopMenu_1
+      213: -293026191223934496
+    second: CarDeath_1
   - first:
-      213: 6051117406924249228
-    second: PulsarShopMenu_2
+      213: -8182345675272368179
+    second: CarDeath_2
   - first:
-      213: 1851438324554521839
-    second: PulsarShopMenu_3
+      213: 4444016051738562298
+    second: CarDeath_3
+  - first:
+      213: -8635336082800353957
+    second: CarDeath_4
+  - first:
+      213: 8540801676255139357
+    second: CarDeath_5
+  - first:
+      213: 8231405453566935116
+    second: CarDeath_6
+  - first:
+      213: 6087751097893781259
+    second: CarDeath_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -96,13 +108,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PulsarShopMenu_0
+      name: CarDeath_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 140
-        width: 200
-        height: 140
+        y: 98
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,20 +122,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9415b231501afef31aa82661dedc2309
-      internalID: -463956979064600515
+      spriteID: 526c3ed912ac46db3932ed2148b8169b
+      internalID: 1154910248084066500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PulsarShopMenu_1
+      name: CarDeath_1
       rect:
         serializedVersion: 2
-        x: 200
-        y: 140
-        width: 200
-        height: 140
+        x: 44
+        y: 98
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +143,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb76ad9dc021f7b9086b849916d531f9
-      internalID: 4591226421749776113
+      spriteID: 360a03a36c05e91ad9f3db245e1a537f
+      internalID: -293026191223934496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PulsarShopMenu_2
+      name: CarDeath_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 98
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d439b8496542fb1d90d810b235787ae
+      internalID: -8182345675272368179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarDeath_3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 98
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15386eb694a56b2eab4ea549622c2adb
+      internalID: 4444016051738562298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarDeath_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 200
-        height: 140
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7861ef596499276feb9c65a20416baf2
-      internalID: 6051117406924249228
+      spriteID: 8c22102e3d84532bb931f01fe2c471a5
+      internalID: -8635336082800353957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PulsarShopMenu_3
+      name: CarDeath_5
       rect:
         serializedVersion: 2
-        x: 200
+        x: 44
         y: 0
-        width: 200
-        height: 140
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,8 +227,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c10048a43a81e582fab3dd4b51de800c
-      internalID: 1851438324554521839
+      spriteID: 6c23be1b8f78089a898c89029d68e00c
+      internalID: 8540801676255139357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarDeath_6
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11eb9820bc1985819ad1b36030ad37d
+      internalID: 8231405453566935116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarDeath_7
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac829502decd8fde194f2700fc8e47a3
+      internalID: 6087751097893781259
       vertices: []
       indices: 
       edges: []
@@ -182,7 +278,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 14e75cf53d1c1404eb22c499333234b9
+    spriteID: f77d85c8a6f6b5e84869f1b8199589b8
     internalID: 0
     vertices: []
     indices: 

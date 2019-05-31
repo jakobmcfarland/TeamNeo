@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 49e0fe903d904e346a84e7d050136a67
+guid: 81fb8c4b7d714c572b65e39971b5c6ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -463956979064600515
-    second: PulsarShopMenu_0
+      213: -6189376550359675925
+    second: ParkSamuraiDeath_0
   - first:
-      213: 4591226421749776113
-    second: PulsarShopMenu_1
+      213: 873965321082382383
+    second: ParkSamuraiDeath_1
   - first:
-      213: 6051117406924249228
-    second: PulsarShopMenu_2
+      213: -5967081667855939082
+    second: ParkSamuraiDeath_2
   - first:
-      213: 1851438324554521839
-    second: PulsarShopMenu_3
+      213: 8036039710037430549
+    second: ParkSamuraiDeath_3
+  - first:
+      213: 2014221098330722105
+    second: ParkSamuraiDeath_4
+  - first:
+      213: 4395052140539861586
+    second: ParkSamuraiDeath_5
+  - first:
+      213: 6523023424406273434
+    second: ParkSamuraiDeath_6
+  - first:
+      213: -3713027734164155420
+    second: ParkSamuraiDeath_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -96,13 +108,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PulsarShopMenu_0
+      name: ParkSamuraiDeath_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 140
-        width: 200
-        height: 140
+        y: 98
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,20 +122,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9415b231501afef31aa82661dedc2309
-      internalID: -463956979064600515
+      spriteID: a58bc8e216b5f9dcd9f227c6ad7fdb5c
+      internalID: -6189376550359675925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PulsarShopMenu_1
+      name: ParkSamuraiDeath_1
       rect:
         serializedVersion: 2
-        x: 200
-        y: 140
-        width: 200
-        height: 140
+        x: 44
+        y: 98
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +143,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb76ad9dc021f7b9086b849916d531f9
-      internalID: 4591226421749776113
+      spriteID: f59c8be8abfcbc9b9931a3443ef331e6
+      internalID: 873965321082382383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PulsarShopMenu_2
+      name: ParkSamuraiDeath_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 98
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f41f9a62f3c58f1c2893ac55f38f1d2a
+      internalID: -5967081667855939082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParkSamuraiDeath_3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 98
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a64b9bcb42e188c0b2d58ccf9bd8b1e
+      internalID: 8036039710037430549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParkSamuraiDeath_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 200
-        height: 140
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7861ef596499276feb9c65a20416baf2
-      internalID: 6051117406924249228
+      spriteID: 5573700f4a003573ca045a5d42d16e2f
+      internalID: 2014221098330722105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PulsarShopMenu_3
+      name: ParkSamuraiDeath_5
       rect:
         serializedVersion: 2
-        x: 200
+        x: 44
         y: 0
-        width: 200
-        height: 140
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,8 +227,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c10048a43a81e582fab3dd4b51de800c
-      internalID: 1851438324554521839
+      spriteID: 2b1229b34405b649586c03b6ab9fdf9a
+      internalID: 4395052140539861586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParkSamuraiDeath_6
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682c8c30bcb5fedcd9aa4002ec7b2766
+      internalID: 6523023424406273434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ParkSamuraiDeath_7
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4759be321c3ad649395ae319d7cb1026
+      internalID: -3713027734164155420
       vertices: []
       indices: 
       edges: []
@@ -182,7 +278,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 14e75cf53d1c1404eb22c499333234b9
+    spriteID: 20916b1469960d0259c495e850993d52
     internalID: 0
     vertices: []
     indices: 

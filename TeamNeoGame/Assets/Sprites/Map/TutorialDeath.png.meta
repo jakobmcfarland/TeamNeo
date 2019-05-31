@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 49e0fe903d904e346a84e7d050136a67
+guid: d390dab103fd28e449b92652cc8ce5da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -463956979064600515
-    second: PulsarShopMenu_0
+      213: 7429008787762915880
+    second: TutorialDeath_0
   - first:
-      213: 4591226421749776113
-    second: PulsarShopMenu_1
+      213: -7329958908018452180
+    second: TutorialDeath_1
   - first:
-      213: 6051117406924249228
-    second: PulsarShopMenu_2
+      213: -6363534013360455960
+    second: TutorialDeath_2
   - first:
-      213: 1851438324554521839
-    second: PulsarShopMenu_3
+      213: -8965617764210765138
+    second: TutorialDeath_3
+  - first:
+      213: -950924245767790905
+    second: TutorialDeath_4
+  - first:
+      213: -5802859498563506688
+    second: TutorialDeath_5
+  - first:
+      213: 3428450893518957239
+    second: TutorialDeath_6
+  - first:
+      213: 3675530825767650783
+    second: TutorialDeath_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -96,13 +108,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PulsarShopMenu_0
+      name: TutorialDeath_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 140
-        width: 200
-        height: 140
+        y: 98
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,20 +122,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9415b231501afef31aa82661dedc2309
-      internalID: -463956979064600515
+      spriteID: 2d8fce5220af4efb2a1daa19f7cd6c4d
+      internalID: 7429008787762915880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PulsarShopMenu_1
+      name: TutorialDeath_1
       rect:
         serializedVersion: 2
-        x: 200
-        y: 140
-        width: 200
-        height: 140
+        x: 44
+        y: 98
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +143,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb76ad9dc021f7b9086b849916d531f9
-      internalID: 4591226421749776113
+      spriteID: d548ea69068420e038da0e9c4e5b72b2
+      internalID: -7329958908018452180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PulsarShopMenu_2
+      name: TutorialDeath_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 98
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b05949c0b04415d4a364591f7d7acf0
+      internalID: -6363534013360455960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutorialDeath_3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 98
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8658c8f08a3ebf499b4114cc5196d1
+      internalID: -8965617764210765138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutorialDeath_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 200
-        height: 140
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7861ef596499276feb9c65a20416baf2
-      internalID: 6051117406924249228
+      spriteID: e94cc0ab000a94c548e6178b33bc3ede
+      internalID: -950924245767790905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PulsarShopMenu_3
+      name: TutorialDeath_5
       rect:
         serializedVersion: 2
-        x: 200
+        x: 44
         y: 0
-        width: 200
-        height: 140
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,8 +227,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c10048a43a81e582fab3dd4b51de800c
-      internalID: 1851438324554521839
+      spriteID: 52ac71137a52f4024aa69731b618030e
+      internalID: -5802859498563506688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutorialDeath_6
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa939ff6feb42c6399d203eed62df6a8
+      internalID: 3428450893518957239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutorialDeath_7
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee9dfc20a53448049983776d63cb739
+      internalID: 3675530825767650783
       vertices: []
       indices: 
       edges: []
@@ -182,7 +278,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 14e75cf53d1c1404eb22c499333234b9
+    spriteID: dcbc11eff52627f00b79a4ecc9293dbf
     internalID: 0
     vertices: []
     indices: 

@@ -17,7 +17,7 @@ public class DialogueBox : MonoBehaviour
     void Start()
     {
         textBox = GetComponent<TextMeshProUGUI>();
-            dialogueSound = GameObject.Find("TextSound").GetComponent<FMODUnity.StudioEventEmitter>();
+        //dialogueSound = GameObject.Find("TextSound").GetComponent<FMODUnity.StudioEventEmitter>();
         //print(dialogueSound);
     }
     void Update()
@@ -59,12 +59,12 @@ public class DialogueBox : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
-                dialogueSound.Play();
+                //dialogueSound.Play();
                 textBox.text += dialogue[index][textBox.text.Length].ToString().ToUpper();
                 timer = timePerBox / dialogue[index].Length;
             }
         } else if (done) {
-            dialogueSound.Stop();
+            //dialogueSound.Stop();
         }
     }
 }

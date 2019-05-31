@@ -66,6 +66,10 @@ public class AttackManager : MonoBehaviour
             string[] d = {"when stamina is full hit space to attack"};
             TextBox.DisplayText(d, 5,true);     
         }
+        if (right == attackCount)
+        {
+            blockAnim.SetTrigger("Block");
+        }
         for (int i = hit; i < attackCount; i++)
         {
             attacks[i].SetDone(false);
@@ -112,7 +116,6 @@ public class AttackManager : MonoBehaviour
         }
         if (r)
         {
-            blockAnim.SetTrigger("Block");
             player.ModStamina(staminaRight);
             streak++;
         }
