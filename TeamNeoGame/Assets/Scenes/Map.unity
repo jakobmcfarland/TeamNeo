@@ -5933,7 +5933,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 4}
+  m_Size: {x: 3.5, y: 6}
   m_EdgeRadius: 0
 --- !u!212 &967959759
 SpriteRenderer:
@@ -5991,7 +5991,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967959757}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.658, y: -0.47800007, z: 0}
+  m_LocalPosition: {x: 8.63, y: -0.223, z: 0}
   m_LocalScale: {x: 0.8, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 1335664054}
@@ -6730,7 +6730,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 4, y: 6}
   m_EdgeRadius: 0
 --- !u!212 &1092019004
 SpriteRenderer:
@@ -6788,7 +6788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092019002}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.498, y: -0.46800002, z: 0}
+  m_LocalPosition: {x: 5.477, y: -0.217, z: 0}
   m_LocalScale: {x: 0.5, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 1335664054}
@@ -8922,7 +8922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370921341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.8, y: 4.88, z: 0}
+  m_LocalPosition: {x: 10.8, y: 4.83, z: 0}
   m_LocalScale: {x: 1, y: 3.22, z: 1}
   m_Children: []
   m_Father: {fileID: 1335664054}
@@ -14825,8 +14825,31 @@ PrefabInstance:
       propertyPath: EnemyDamage
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4359802040904368821, guid: a42502b5f9eccde4385742a141baf7b7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a42502b5f9eccde4385742a141baf7b7, type: 3}
+--- !u!1 &4359802040904368820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4359802040436250515, guid: a42502b5f9eccde4385742a141baf7b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4359802040904368819}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &4359802040904368821
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359802040904368820}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.8, y: 1}
+  m_Direction: 0
 --- !u!1001 &4556979567338389474
 PrefabInstance:
   m_ObjectHideFlags: 0
