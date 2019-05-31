@@ -30,8 +30,12 @@ public class FadeOut : MonoBehaviour
     public void Fade(Combat c)
     {
         combat = c;
-        GetComponent<Animator>().enabled = true;
-        timer = 0;
-        
+        GetComponent<Animator>().Play("FadeOut");
+        timer = 0;      
+    }
+
+    public void FadeIn()
+    {
+        GetComponent<Animator>().Play("FadeIn");
     }
 }
