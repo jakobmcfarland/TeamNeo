@@ -39,10 +39,12 @@ public class MapPlayerController : MonoBehaviour
         if (CombatInfo.TutorialText)
         {
             paused = true;
-            string[] d= { "you can press enter to open the store" };
+            string[] d= { "you can press enter to open the store", "and escape to open the game menu" };
             TextBox.DisplayText(d, 5, false);
             CombatInfo.TutorialText = false;
         }
+
+        GameObject.FindObjectOfType<FadeOut>().FadeIn();
     }
 
     // Update is called once per frame

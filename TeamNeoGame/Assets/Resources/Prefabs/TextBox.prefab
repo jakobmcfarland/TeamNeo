@@ -233,7 +233,7 @@ Transform:
   m_GameObject: {fileID: 8131309970986320123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.56, z: 0}
-  m_LocalScale: {x: 14, y: 14, z: 1}
+  m_LocalScale: {x: 17, y: 14, z: 1}
   m_Children: []
   m_Father: {fileID: 180275008529613696}
   m_RootOrder: 0
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.0000009536743, w: 0}
+  m_margin: {x: -5.5896196, y: 0, z: -5.822524, w: 0}
   m_textInfo:
     textComponent: {fileID: 8131309971740995258}
     characterCount: 0
@@ -499,5 +499,6 @@ MonoBehaviour:
   timePerBox: 2
   nextKey: 13
   textSprite: {fileID: 8131309970986320121}
+  textImage: {fileID: 0}
   done: 0
   timer: 0

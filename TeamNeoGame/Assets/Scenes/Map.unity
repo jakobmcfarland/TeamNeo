@@ -9381,8 +9381,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: -3006153927459909789, guid: 8ea26465b79da3e0cb84b5af5e21adc2,
-    type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9390,7 +9389,7 @@ SpriteRenderer:
   m_Size: {x: 2.222222, y: 1.4814814}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1456100210
@@ -9401,7 +9400,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456100207}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6ab799f499e4658dd87efaced4789d86, type: 2}
   m_CullingMode: 0
@@ -11592,7 +11591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyName: Car
-  EnemySprite: {fileID: 4250926123117471553, guid: d06081c61d8e2b448855f1e654ae1e38,
+  EnemySprite: {fileID: 7886328693970749932, guid: 79b26211154bba6b7ab1cb2fa43ea99d,
     type: 3}
   PlayerDamage: 50
   EnemyDamage: 15

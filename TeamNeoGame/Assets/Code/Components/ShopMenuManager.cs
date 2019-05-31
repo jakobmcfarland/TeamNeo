@@ -21,6 +21,7 @@ public class ShopMenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //print(colliding);
         if (colliding)
         {
             if (Input.GetKeyDown(enableKey) && !menuObj.activeSelf)
@@ -44,11 +45,22 @@ public class ShopMenuManager : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         colliding = true;
+        if (Input.GetKeyDown(enableKey) && !menuObj.activeSelf)
+        {
+            menuObj.SetActive(!menuObj.activeSelf);
+        }
+
+        if (menuObj.activeSelf || player.GetComponent<MapPlayerController>().storeMenu.activeSelf)
+        {
+            player.GetComponent<MapPlayerController>().enabled = false;
+            player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+            player.GetComponent<Animator>().Play("Idle");
+        }
+        else
+            player.GetComponent<MapPlayerController>().enabled = true;
     }
     void OnTriggerExit2D(Collider2D col)
     {
         colliding = false;
-        
-
     }
 }

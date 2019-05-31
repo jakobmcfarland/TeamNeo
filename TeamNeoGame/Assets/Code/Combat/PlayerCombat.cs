@@ -37,6 +37,7 @@ public class PlayerCombat : MonoBehaviour
     public IceCream iceCream;
     public FMODUnity.StudioEventEmitter hurtSound;
     public FMODUnity.StudioEventEmitter healSound;
+    public Animator damageAnim;
     public Animator healAnim;
     // Start is called before the first frame update
     void Start()
@@ -60,7 +61,7 @@ public class PlayerCombat : MonoBehaviour
             if (cm.tuts[2] == 1 && cm.tuts[3] == 0) {
                 cm.tuts[3] = 1;
                 ModHealth(-50);
-                string[] d = {"", "press e to heal using ice cream", "health persists through battles", "so use them carefully", "but if you run out there's always the store!", "now slay your foe"};
+                string[] d = {"you take damage when you miss arrows", "press e to heal using ice cream", "health persists through battles", "so use them carefully", "but if you run out there's always the store!", "now slay your foe"};
                 TextBox.DisplayText(d, 5,true);
                 cm.Pause(true);
             }
@@ -87,6 +88,7 @@ public class PlayerCombat : MonoBehaviour
         GameState.curHealth = health;
         if (mod < 0) {
             hurtSound.Play();
+            damageAnim.SetTrigger("Damage");
         }
         health += mod;
         if (health > maxHealth)

@@ -13,7 +13,9 @@ public class GameMenu : MonoBehaviour
     public TextMeshProUGUI[] options;
     public GameObject Player;
     public KeyCode upKey;
+    public KeyCode upKey2 = KeyCode.W;
     public KeyCode downKey;
+    public KeyCode downKey2 = KeyCode.S;
     public KeyCode pickKey;
     public int selected = 0;
     public bool store = false;
@@ -27,7 +29,7 @@ public class GameMenu : MonoBehaviour
     void Update()
     {
         if (transform.parent.gameObject.activeSelf) {
-        if (Input.GetKeyDown(downKey))
+        if (Input.GetKeyDown(downKey)|| Input.GetKeyDown(downKey2))
         {
             if (selected == options.Length - 1)
             {
@@ -38,7 +40,7 @@ public class GameMenu : MonoBehaviour
                 selected++;
             }
         }
-        else if (Input.GetKeyDown(upKey))
+        else if (Input.GetKeyDown(upKey) || Input.GetKeyDown(upKey2))
         {
             if (selected == 0)
             {
@@ -53,7 +55,7 @@ public class GameMenu : MonoBehaviour
         {
             if (store)
             {
-                print(selected);
+                //print(selected);
                 switch(selected)
                 {
                     case 0:
