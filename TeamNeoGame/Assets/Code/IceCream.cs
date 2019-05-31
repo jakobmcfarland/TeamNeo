@@ -22,5 +22,4 @@ public class IceCream : MonoBehaviour
     	count = num;
     	anim.SetInteger("Num", count);
     }
-
 }
