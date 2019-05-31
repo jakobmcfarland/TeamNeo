@@ -51,7 +51,7 @@ public class Cinematic : MonoBehaviour
         CombatInfo.FightType = -1;
         CombatInfo.ArrowCount = 3;
         CombatInfo.EnemyName = "tutorial dude";
-        CombatInfo.EnemySprite= Resources.Load<Sprite>("EnemyBattle1");
+        CombatInfo.EnemySprite= Resources.Load<Sprite>("EnemyIdle_0");
         CombatInfo.StaminaGain = 19;
         CombatInfo.MaxStamina = 60;
         CombatInfo.BufferTime = 0;
