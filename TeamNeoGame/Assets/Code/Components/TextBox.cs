@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/******************************
+ * Author: Nico
+ * Date Last Edited: 5-28-2019
+ * Description: Generates textboxes
+ ******************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;

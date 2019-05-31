@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/******************************
+ * Author: Nico
+ * Date Last Edited: 5-30-2019
+ * Description: Fades the menu out
+ ******************************/
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
