@@ -54,7 +54,7 @@ public class CheatCodeManager : MonoBehaviour
                     MapNodeList.nodes[0].nodeState = NodeState.Complete;
                     MapNodeList.nodes[1].nodeState = NodeState.Current;
                     Debug.Log("Skip to Boss Cheat");
-
+                    CombatInfo.CombatsFinished = 2;
                     //  If we are already on the map, save and then load the scene to have the nodes update visually
                     if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Map"))
                     {

@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/******************************************************************************
+    Shop Menu Manager
+    William Siauw
+    This script controls the activation and deactivation of the shop menu
+******************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,7 +25,6 @@ public class ShopMenuManager : MonoBehaviour
         {
             if (Input.GetKeyDown(enableKey))
             {
-                Debug.Log("herasde");
                 menuObj.SetActive(!menuObj.activeSelf);
             }
 

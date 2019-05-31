@@ -1,13 +1,13 @@
 // Numbered objects' ID's go top to bottom then left to right (if two obj's are on the same line, the one on the right will have a higher ID)
 broken car
 {
-
+    Oh no! That man's car is being bashed by that samurai. 
+    You'd better help him.
 }
-
 
 convenience store
 {
-
+    Hey look! It's the convenience store that you got your ice cream from.  You can buy things to help you along your journey here
 }
 
 people running
@@ -20,7 +20,7 @@ people running
         I'd better call my insurance...
     }
 
-    person running 2)
+    person running 2
     {
         Did you see that?!
         Those samurai are invading our city and there's nobody to stop them!
@@ -37,41 +37,40 @@ people running
     }
 }
 
-
 traffic cones
 {
     It's a traffic cone. Better not go over there.
 } 
 
-trash cans
+trash can (changes(?))
 {
     trash can 1
     {
-
+        It's a trash can
     }
 
     trash can 2
     {
-
+        Wow. A trash can
     }
 
     trash can 3
     {
-
+        That's a trash can. What'd you expect?
     }
 
     trash can 4
     {
-
+        Why are you so obsessed with trash cans?
     }
 
     trash can 5
     {
+        Stop looking at trash cans and go play the game.
+    }
 }
-}
-
 
 trees
 {
-
+    It's a deciduous tree. Tall and magnificent.
 }

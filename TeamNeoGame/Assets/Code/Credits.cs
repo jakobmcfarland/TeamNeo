@@ -16,7 +16,10 @@ public class Credits : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
     }
     void End() {
-    	SceneManager.LoadScene("MainMenu");
+        CombatInfo.CombatsFinished = 0;
+            MapNodeManager.ResetGame();
+        Debug.Log(CombatInfo.CombatsFinished);
+            SceneManager.LoadScene("MainMenu");
     }
     // Update is called once per frame
     void Update()
