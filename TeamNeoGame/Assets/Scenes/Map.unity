@@ -299,7 +299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15665692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.5, y: 23.7, z: 0}
+  m_LocalPosition: {x: 26.14, y: 23.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -427,6 +427,7 @@ GameObject:
   - component: {fileID: 56425891}
   - component: {fileID: 56425890}
   - component: {fileID: 56425889}
+  - component: {fileID: 56425892}
   m_Layer: 0
   m_Name: Bench (5)
   m_TagString: Untagged
@@ -445,7 +446,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.1, y: 0.1}
   m_SpriteTilingProperty:
@@ -522,6 +523,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &56425892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56425888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31150cc4aa38f5d41879f232df27f6e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description:
+  - A BENCH
 --- !u!1 &79509736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,7 +1547,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215748864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8, y: 33.2, z: 0}
+  m_LocalPosition: {x: 1.7, y: 24.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4955,6 +4970,7 @@ GameObject:
   - component: {fileID: 670291701}
   - component: {fileID: 670291700}
   - component: {fileID: 670291699}
+  - component: {fileID: 670291702}
   m_Layer: 0
   m_Name: Trashcan (5)
   m_TagString: Untagged
@@ -4973,7 +4989,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.2}
   m_SpriteTilingProperty:
@@ -5050,6 +5066,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &670291702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670291698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31150cc4aa38f5d41879f232df27f6e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description:
+  - A BEATEN UP TRASH CAN
 --- !u!1 &677018689
 GameObject:
   m_ObjectHideFlags: 0
@@ -6627,6 +6657,8 @@ GameObject:
   - component: {fileID: 1063159764}
   - component: {fileID: 1063159763}
   - component: {fileID: 1063159762}
+  - component: {fileID: 1063159766}
+  - component: {fileID: 1063159765}
   m_Layer: 0
   m_Name: PulsarBrokenCarMapSprite (1)
   m_TagString: Untagged
@@ -6722,6 +6754,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1063159765
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063159761}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.92132616, y: -0.032905817}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.7, y: 4.7}
+    newSize: {x: 8.7, y: 4.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.542653, y: 6.608463}
+  m_EdgeRadius: 0
+--- !u!114 &1063159766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063159761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31150cc4aa38f5d41879f232df27f6e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description:
+  - A CAR
 --- !u!1 &1064169890
 GameObject:
   m_ObjectHideFlags: 0
@@ -7321,7 +7393,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165315150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.4, y: 11.2, z: 0}
+  m_LocalPosition: {x: 26.33, y: 11.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7901,7 +7973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236784784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.62, y: -11.4, z: -1}
+  m_LocalPosition: {x: -33.91, y: -13.6, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8226,11 +8298,11 @@ MonoBehaviour:
   EnemySprite: {fileID: -2240994688644343673, guid: a0dfd57685165fc40bbf51cbf385f375,
     type: 3}
   PlayerDamage: 50
-  EnemyDamage: 25
+  EnemyDamage: 20
   StaminaGain: 1
-  MaxStamina: 50
-  EnemyHealth: 1000
-  TimePerBar: 5
+  MaxStamina: 25
+  EnemyHealth: 200
+  TimePerBar: 4
   ArrowCount: 5
   BufferTimer: 0.1
 --- !u!95 &1279100132
@@ -11654,13 +11726,13 @@ MonoBehaviour:
   EnemySprite: {fileID: 4250926123117471553, guid: d06081c61d8e2b448855f1e654ae1e38,
     type: 3}
   PlayerDamage: 50
-  EnemyDamage: 10
+  EnemyDamage: 15
   StaminaGain: 1
-  MaxStamina: 20
-  EnemyHealth: 400
+  MaxStamina: 15
+  EnemyHealth: 150
   TimePerBar: 3
   ArrowCount: 3
-  BufferTimer: 0.1
+  BufferTimer: 0.2
 --- !u!95 &1714195331
 Animator:
   serializedVersion: 3
@@ -12645,6 +12717,7 @@ GameObject:
   - component: {fileID: 1864224721}
   - component: {fileID: 1864224720}
   - component: {fileID: 1864224723}
+  - component: {fileID: 1864224724}
   m_Layer: 0
   m_Name: Trashcan
   m_TagString: Untagged
@@ -12753,8 +12826,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description:
-  - 
-  - 
+  - A PERFECT MIRROR OF MYSELF
+--- !u!61 &1864224724
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864224719}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.3, y: 2}
+    newSize: {x: 1.3, y: 1.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3, y: 2}
+  m_EdgeRadius: 0
 --- !u!1 &1880457629
 GameObject:
   m_ObjectHideFlags: 0
@@ -14250,6 +14348,7 @@ GameObject:
   - component: {fileID: 2102721244}
   - component: {fileID: 2102721243}
   - component: {fileID: 2102721242}
+  - component: {fileID: 2102721245}
   m_Layer: 0
   m_Name: Bench (3)
   m_TagString: Untagged
@@ -14268,7 +14367,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: -0.2, y: 0.3}
   m_SpriteTilingProperty:
@@ -14345,6 +14444,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2102721245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102721241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31150cc4aa38f5d41879f232df27f6e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description:
+  - A BENCH
 --- !u!1 &2111048034
 GameObject:
   m_ObjectHideFlags: 0
@@ -14810,12 +14923,37 @@ PrefabInstance:
     - target: {fileID: 4359802040904368822, guid: a42502b5f9eccde4385742a141baf7b7,
         type: 3}
       propertyPath: PlayerDamage
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4359802040904368822, guid: a42502b5f9eccde4385742a141baf7b7,
         type: 3}
       propertyPath: EnemyHealth
-      value: 1000
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359802040904368822, guid: a42502b5f9eccde4385742a141baf7b7,
+        type: 3}
+      propertyPath: ArrowCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359802040904368822, guid: a42502b5f9eccde4385742a141baf7b7,
+        type: 3}
+      propertyPath: TimePerBar
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359802040904368822, guid: a42502b5f9eccde4385742a141baf7b7,
+        type: 3}
+      propertyPath: MaxStamina
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359802040904368822, guid: a42502b5f9eccde4385742a141baf7b7,
+        type: 3}
+      propertyPath: BufferTimer
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359802040904368822, guid: a42502b5f9eccde4385742a141baf7b7,
+        type: 3}
+      propertyPath: EnemyDamage
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a42502b5f9eccde4385742a141baf7b7, type: 3}
