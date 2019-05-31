@@ -84,6 +84,7 @@ public class PlayerCombat : MonoBehaviour
     }
     public void ModHealth(int mod)
     {
+        GameState.curHealth = health;
         if (mod < 0) {
             hurtSound.Play();
         }

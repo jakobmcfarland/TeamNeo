@@ -498,6 +498,6 @@ MonoBehaviour:
   dialogue: []
   timePerBox: 2
   nextKey: 13
-  textSprite: {fileID: 0}
+  textSprite: {fileID: 8131309970986320121}
   done: 0
   timer: 0

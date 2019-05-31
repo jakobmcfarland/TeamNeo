@@ -61,7 +61,8 @@ public class Cinematic : MonoBehaviour
         CombatInfo.StaminaGain = 19;
         CombatInfo.MaxStamina = 60;
         CombatInfo.BufferTime = 0;
-        CombatInfo.CoinsToDrop = 1;
+        CombatInfo.CoinsToDrop = 0;
+        CombatInfo.CoinCount = 1;
         CombatInfo.HealthPotionCount = 3;
         CombatInfo.TutorialText = true;
     }

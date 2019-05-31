@@ -2587,7 +2587,7 @@ RectTransform:
   - {fileID: 2002057818}
   - {fileID: 1964349700}
   m_Father: {fileID: 753581010}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5139,9 +5139,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 756902655}
   - {fileID: 373583547}
   - {fileID: 1276986328}
-  - {fileID: 756902655}
   m_Father: {fileID: 1376832698}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5220,11 +5220,11 @@ RectTransform:
   m_Children:
   - {fileID: 1327342199}
   m_Father: {fileID: 753581010}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 161, y: -4}
+  m_AnchoredPosition: {x: 194, y: -4.000004}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &756902656
@@ -6388,7 +6388,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.6, y: -0.2}
+  m_Offset: {x: -0.5999999, y: -0.065060735}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6399,7 +6399,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.5, y: 4}
+  m_Size: {x: 7.5, y: 3.7301214}
   m_EdgeRadius: 0
 --- !u!212 &1063159763
 SpriteRenderer:
@@ -6470,7 +6470,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063159761}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -6496,7 +6496,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063159761}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31150cc4aa38f5d41879f232df27f6e4, type: 3}
   m_Name: 
@@ -7907,7 +7907,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 753581010}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8099,6 +8099,7 @@ MonoBehaviour:
   TimePerBar: 4
   ArrowCount: 5
   BufferTimer: 0.1
+  CoinsToDrop: 2
 --- !u!95 &1279100132
 Animator:
   serializedVersion: 3
@@ -10939,7 +10940,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19285488, y: -1.1525269}
+  m_Offset: {x: 0.19285488, y: -0.70606756}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10950,7 +10951,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.493151, y: 10.705053}
+  m_Size: {x: 11.493151, y: 9.812135}
   m_EdgeRadius: 0
 --- !u!114 &1684054336
 MonoBehaviour:
@@ -11601,6 +11602,7 @@ MonoBehaviour:
   TimePerBar: 3
   ArrowCount: 3
   BufferTimer: 0.2
+  CoinsToDrop: 2
 --- !u!95 &1714195331
 Animator:
   serializedVersion: 3
@@ -13204,7 +13206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: -0.3}
+  m_AnchoredPosition: {x: 220, y: 10.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1964349701
@@ -13549,7 +13551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 201, y: 33.2}
+  m_AnchoredPosition: {x: 220, y: 51.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002057819
@@ -14845,7 +14847,7 @@ PrefabInstance:
     - target: {fileID: 4556979567103301766, guid: abe11816efd77a740a8823479691d84c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -24.5
+      value: -29.87
       objectReference: {fileID: 0}
     - target: {fileID: 4556979567103301766, guid: abe11816efd77a740a8823479691d84c,
         type: 3}
@@ -14900,7 +14902,7 @@ PrefabInstance:
     - target: {fileID: 4556979567103301760, guid: abe11816efd77a740a8823479691d84c,
         type: 3}
       propertyPath: inspectKey
-      value: 13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4556979567103301760, guid: abe11816efd77a740a8823479691d84c,
         type: 3}

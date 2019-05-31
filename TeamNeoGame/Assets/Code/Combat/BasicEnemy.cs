@@ -28,6 +28,8 @@ public class BasicEnemy : MonoBehaviour
         if (anim == null) {
             anim = GetComponent<Animator>(); 
         }
+        attackManager.enabled = false;
+        cm.Pause(true);
         anim.SetTrigger("Death");
     }
     // Update is called once per frame
@@ -58,6 +60,7 @@ public class BasicEnemy : MonoBehaviour
             anim = GetComponent<Animator>();
         }
         ename = nam;
+        print(ename);
         nameText.text = nam.ToUpper();
         switch(ename) {
             case "Park":
