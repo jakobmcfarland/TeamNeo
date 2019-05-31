@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MenuFade : MonoBehaviour
@@ -7,10 +8,13 @@ public class MenuFade : MonoBehaviour
 	public int to = -1;
 	public float time = 1;
 	public float timer = -1;
+    bool saveFileFound = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        string filePath = Application.persistentDataPath + "/GameData.test";
+        if (File.Exists(filePath))
+            saveFileFound = true;
     }
 
     // Update is called once per frame
@@ -24,15 +28,15 @@ public class MenuFade : MonoBehaviour
                 case 0:
                     CombatInfo.HealthPotionCount = 3;
                     GameState.curHealth = 100;
-                    GameState.Player = new Vector3(-22, -24.5f, 0);
+                    GameState.Player = new Vector3(-22, -29.87f, 0);
                     SceneManager.LoadScene("Cinematic");
                     break;
                 //  Load Game
                 case 1:
                     bool state = SaveGameManager.LoadGame();
-                    if(state)
-                        SceneManager.LoadScene("Map");
-                    break;
+                        if (state && saveFileFound)
+                            SceneManager.LoadScene("Map");
+                        break;
                 //  Credits
                 case 2:
                     SceneManager.LoadScene("Credits");

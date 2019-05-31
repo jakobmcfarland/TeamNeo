@@ -60,7 +60,6 @@ public class BasicEnemy : MonoBehaviour
             anim = GetComponent<Animator>();
         }
         ename = nam;
-        print(ename);
         nameText.text = nam.ToUpper();
         switch(ename) {
             case "Park":

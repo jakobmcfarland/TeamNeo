@@ -15,9 +15,9 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\nicholas.hickman\Documents\TeamNeo\TeamNeoGame\samurai\samurai.fspro
-  SourceProjectPathUnformatted: samurai\samurai.fspro
-  SourceBankPathUnformatted: samurai\Build
+  sourceProjectPath: 
+  SourceProjectPathUnformatted: 
+  SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0
@@ -58,9 +58,7 @@ MonoBehaviour:
     Value: 0
   - Platform: 20
     Value: 0
-  BankDirectorySettings:
-  - Platform: 2
-    Value: Desktop
+  BankDirectorySettings: []
   VirtualChannelSettings:
   - Platform: 1
     Value: 1024
@@ -76,8 +74,7 @@ MonoBehaviour:
   - Platform: 20
     Value: 32
   Plugins: []
-  MasterBanks:
-  - Master
+  MasterBanks: []
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
