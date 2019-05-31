@@ -91,6 +91,8 @@ public class BasicEnemy : MonoBehaviour
             print("Victory!");
             if (CombatInfo.FightType != -1) {
             CombatInfo.CombatsFinished++;
+        } else {
+            CombatInfo.HealthPotionCount = 3;
         }
         if(CombatInfo.FightType == -1) {
             CombatInfo.FightType = 0;
