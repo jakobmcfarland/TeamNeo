@@ -17,8 +17,8 @@ public class DialogueBox : MonoBehaviour
     void Start()
     {
         textBox = GetComponent<TextMeshProUGUI>();
-        //dialogueSound = GameObject.Find("TextSound").GetComponent<FMODUnity.StudioEventEmitter>();
-        //print(dialogueSound);
+        dialogueSound = GameObject.Find("TextSound").GetComponent<FMODUnity.StudioEventEmitter>();
+        print(dialogueSound);
     }
     void Update()
     {

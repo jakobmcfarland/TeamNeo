@@ -25,6 +25,9 @@ public class BasicEnemy : MonoBehaviour
     public void Die()
     {
         dieTimer = 0;
+        if (anim == null) {
+            anim = GetComponent<Animator>(); 
+        }
         anim.SetTrigger("Death");
     }
     // Update is called once per frame

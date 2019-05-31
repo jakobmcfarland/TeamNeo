@@ -36,7 +36,7 @@ public class MapPlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         currentIdle = idleForward;
         gameObject.transform.position = GameState.Player;
-        if (/*CombatInfo.TutorialText*/true)
+        if (CombatInfo.TutorialText)
         {
             string[] d= { "you can press enter to open the store" };
             TextBox.DisplayText(d, 5, false);
