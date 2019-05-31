@@ -43,6 +43,8 @@ public class MapPlayerController : MonoBehaviour
             TextBox.DisplayText(d, 5, false);
             CombatInfo.TutorialText = false;
         }
+
+        GameObject.FindObjectOfType<FadeOut>().FadeIn();
     }
 
     // Update is called once per frame
