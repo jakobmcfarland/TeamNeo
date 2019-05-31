@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/******************************
+ * Author: Nico
+ * Date Last Edited: 5-29-2019
+ * Description: pops in a sprite after a certain amount of time
+ ******************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
