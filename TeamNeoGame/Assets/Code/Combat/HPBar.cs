@@ -30,7 +30,6 @@ public class HPBar : MonoBehaviour
         alphaKey[1].alpha = 1.0f;
         alphaKey[1].time = 1.0f;
         gradient.SetKeys(colorKey, alphaKey);
-        UpdateHP(1.0f);
     }
 
     // Update is called once per frame
