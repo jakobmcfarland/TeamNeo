@@ -1311,6 +1311,7 @@ GameObject:
   - component: {fileID: 519420038}
   - component: {fileID: 519420039}
   - component: {fileID: 519420040}
+  - component: {fileID: 519420041}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1516,6 +1517,21 @@ MonoBehaviour:
   time: 4
   timer: 0
   to: {fileID: 1902054048}
+--- !u!114 &519420041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201a40a89098f6345ba54fce36eddaf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 1.2
+  timer: 0
+  to: {fileID: 1716868059641579826}
 --- !u!1 &532188613
 GameObject:
   m_ObjectHideFlags: 0
@@ -4510,6 +4526,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b311563783c7484a8fcd9fe0f013fa1, type: 3}
+--- !u!212 &1716868059641579826 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1716868057977947444, guid: 5b311563783c7484a8fcd9fe0f013fa1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1716868059641579825}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2122009135274884300
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2755,7 +2755,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357839512}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -4259,7 +4259,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538152294}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -5858,7 +5858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description:
-  - "A TRASH CAN\x13"
+  - TRASH CAN
 --- !u!1 &853909778
 GameObject:
   m_ObjectHideFlags: 0
@@ -8342,8 +8342,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5170769fa06ddf544b438b380ce467bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyName: 3
-  EnemySprite: {fileID: 0}
+  EnemyName: Boss
+  EnemySprite: {fileID: -2240994688644343673, guid: a0dfd57685165fc40bbf51cbf385f375,
+    type: 3}
   PlayerDamage: 50
   EnemyDamage: 25
   StaminaGain: 1
@@ -9516,7 +9517,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456100207}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 6.75, y: 6.75, z: 1}
   m_Children: []
   m_Father: {fileID: 595855604}
@@ -10804,7 +10805,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612610422}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -11097,6 +11098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1684054337}
   - component: {fileID: 1684054335}
+  - component: {fileID: 1684054336}
   m_Layer: 0
   m_Name: Store
   m_TagString: Store
@@ -11130,6 +11132,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.482557, y: 10.705053}
   m_EdgeRadius: 0
+--- !u!114 &1684054336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684054334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07beacf5729cf954aa34af55f7bb4f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableKey: 13
+  menuObj: {fileID: 753581009}
+  player: {fileID: 2114791264}
 --- !u!4 &1684054337
 Transform:
   m_ObjectHideFlags: 0
@@ -11752,14 +11769,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5170769fa06ddf544b438b380ce467bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyName: 2
-  EnemySprite: {fileID: 21300000, guid: b4d378d5a0853ea4a90e7480aa9fa497, type: 3}
+  EnemyName: Car
+  EnemySprite: {fileID: 4250926123117471553, guid: d06081c61d8e2b448855f1e654ae1e38,
+    type: 3}
   PlayerDamage: 50
   EnemyDamage: 10
   StaminaGain: 1
   MaxStamina: 20
   EnemyHealth: 400
-  TimePerBar: 2
+  TimePerBar: 3
   ArrowCount: 3
   BufferTimer: 0.1
 --- !u!95 &1714195331
@@ -14918,6 +14936,17 @@ PrefabInstance:
       propertyPath: nodeIndex
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4359802040904368822, guid: a42502b5f9eccde4385742a141baf7b7,
+        type: 3}
+      propertyPath: EnemyName
+      value: Park
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359802040904368822, guid: a42502b5f9eccde4385742a141baf7b7,
+        type: 3}
+      propertyPath: EnemySprite
+      value: 
+      objectReference: {fileID: 758555800442451371, guid: f4c9d3d1061502a49aa95879d090e7ac,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a42502b5f9eccde4385742a141baf7b7, type: 3}
 --- !u!1 &4359802040904368820 stripped

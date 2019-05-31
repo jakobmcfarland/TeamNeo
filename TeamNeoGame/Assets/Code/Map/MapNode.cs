@@ -105,8 +105,7 @@ namespace Assets.Code.Map
                                 CombatInfo.Env = Environment.City;
                             }
 
-                                GameObject.FindObjectOfType<FadeOut>().Fade();
-                            combat.LoadCombat();
+                            GameObject.FindObjectOfType<FadeOut>().Fade(combat);
                         }
                     }
                 }

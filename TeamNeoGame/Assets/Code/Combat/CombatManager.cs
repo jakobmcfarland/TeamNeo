@@ -22,6 +22,7 @@ public class CombatManager : MonoBehaviour
     public FMODUnity.StudioEventEmitter hurtSound;
     // Start is called before the first frame update
     void Awake() {
+        SelectEnvironment(CombatInfo.Env);
         enemy.GetComponent<SpriteRenderer>().sprite = CombatInfo.EnemySprite;
     }
     public void Pause(bool p){
@@ -96,13 +97,13 @@ public class CombatManager : MonoBehaviour
         enemy.attackManager.attackCount = CombatInfo.ArrowCount;
         enemy.attackManager.bufferTime = CombatInfo.BufferTime;
         player.healthCount = CombatInfo.HealthPotionCount;
-        SelectEnvironment(CombatInfo.Env);
         player.enabled = true;
         enemy.enabled = true;
         am.Begin();
     }
     void EndCombat() {
-        
+        print("end combat");
+
     }
     public void SelectEnvironment(Environment env)
     {
