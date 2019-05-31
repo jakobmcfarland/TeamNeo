@@ -19,6 +19,7 @@ public class Combat : MonoBehaviour
     public float TimePerBar = 5.0f;
     public int ArrowCount = 6;
     public float BufferTimer = 0.1f;
+    public int CoinsToDrop = 2;
     public void LoadCombat()
     {
         CombatInfo.EnemyName = EnemyName;
@@ -31,6 +32,7 @@ public class Combat : MonoBehaviour
         CombatInfo.EnemyHealth = EnemyHealth;
         CombatInfo.TimePerBar = TimePerBar;
         CombatInfo.ArrowCount = ArrowCount;
+        CombatInfo.CoinsToDrop = CoinsToDrop;
         CombatInfo.BufferTime = BufferTimer;
     }
 }

@@ -11,7 +11,6 @@ public class IceCream : MonoBehaviour
     void Start()
     {
     	anim = GetComponent<Animator>();
-        ModNum(3);
     }
 
     // Update is called once per frame

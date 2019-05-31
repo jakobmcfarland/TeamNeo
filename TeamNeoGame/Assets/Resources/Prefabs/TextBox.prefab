@@ -124,7 +124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8131309970549568556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 1}
+  m_LocalPosition: {x: 0, y: -2, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 24.45}
   m_Children:
   - {fileID: 180275008529613696}
@@ -498,6 +498,6 @@ MonoBehaviour:
   dialogue: []
   timePerBox: 2
   nextKey: 13
-  textSprite: {fileID: 0}
+  textSprite: {fileID: 8131309970986320121}
   done: 0
   timer: 0

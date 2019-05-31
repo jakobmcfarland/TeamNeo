@@ -7,7 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameMenu : MonoBehaviour
 {
     public TextMeshProUGUI[] options;
@@ -26,6 +26,7 @@ public class GameMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.parent.gameObject.activeSelf) {
         if (Input.GetKeyDown(downKey))
         {
             if (selected == options.Length - 1)
@@ -52,6 +53,7 @@ public class GameMenu : MonoBehaviour
         {
             if (store)
             {
+                print(selected);
                 switch(selected)
                 {
                     case 0:
@@ -79,7 +81,7 @@ public class GameMenu : MonoBehaviour
                         SaveGameManager.SaveGame(Player.transform.position, CombatInfo.CombatsFinished);
                         break;
                     case 2:
-                        Application.Quit();
+                        SceneManager.LoadScene("MainMenu");
                         break;
                 }
             }
@@ -96,4 +98,5 @@ public class GameMenu : MonoBehaviour
             }
         }
     }
+}
 }

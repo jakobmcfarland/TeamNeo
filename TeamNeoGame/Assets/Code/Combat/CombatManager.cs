@@ -19,11 +19,19 @@ public class CombatManager : MonoBehaviour
     public Animator spaceAnim;
     public Animator slashAnim;
     public int[] tuts = {0,0,0,0,0,0};
+    public FMODUnity.StudioEventEmitter battleSound;
     public FMODUnity.StudioEventEmitter hurtSound;
+    public FMODUnity.StudioEventEmitter bossMusic;
     // Start is called before the first frame update
     void Awake() {
+        if (CombatInfo.FightType != 1) {
+            bossMusic.Stop();
+            battleSound.Play();
+            } else {
+                bossMusic.Play();
+                battleSound.Stop();
+            }
         SelectEnvironment(CombatInfo.Env);
-        enemy.GetComponent<SpriteRenderer>().sprite = CombatInfo.EnemySprite;
     }
     public void Pause(bool p){
         paused = p;
@@ -47,6 +55,9 @@ public class CombatManager : MonoBehaviour
             {
                 startAnimators[i].enabled = true;
             }
+                    enemy.GetComponent<SpriteRenderer>().sprite = CombatInfo.EnemySprite;
+
+            enemy.SetName(CombatInfo.EnemyName);
         }
         if (startTimer >= startTime && startTimer >= 0)
         {
@@ -86,24 +97,24 @@ public class CombatManager : MonoBehaviour
     void StartCombat()
     {
         print("start combat");
-        enemy.SetName(CombatInfo.EnemyName);
         player.damage = CombatInfo.PlayerDamage;
         enemy.attackManager.hpWrong = CombatInfo.EnemyDamage;
         enemy.attackManager.staminaRight = CombatInfo.StaminaGain;
         player.maxStamina = CombatInfo.MaxStamina;
         player.maxHealth = CombatInfo.MaxHealth;
         enemy.maxHealth = CombatInfo.EnemyHealth;
+        enemy.health = CombatInfo.EnemyHealth; 
         enemy.attackManager.time = CombatInfo.TimePerBar;
         enemy.attackManager.attackCount = CombatInfo.ArrowCount;
         enemy.attackManager.bufferTime = CombatInfo.BufferTime;
         player.healthCount = CombatInfo.HealthPotionCount;
+        player.iceCream.ModNum(CombatInfo.HealthPotionCount);
         player.enabled = true;
         enemy.enabled = true;
         am.Begin();
     }
     void EndCombat() {
         print("end combat");
-
     }
     public void SelectEnvironment(Environment env)
     {
@@ -118,7 +129,7 @@ public class CombatManager : MonoBehaviour
         //hurtSound.Play();
         slashAnim.SetTrigger("Slash");
         spaceAnim.SetTrigger("Pressed");
-        enemy.ModHealth((int)(-damage * Mathf.Pow(am.damageScale, (float)am.streak)));
+        enemy.ModHealth(-damage);
     }
     public void HurtPlayer(int damage)
     {

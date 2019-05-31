@@ -27,7 +27,10 @@ public static class SaveGameManager
         Debug.Log("saved successfully");
         stream.Close();
     }
-
+    public static void DeleteGame() {
+        string filePath = Application.persistentDataPath + "/GameData.test";
+        File.Delete(filePath);
+    }
     public static bool LoadGame()
     {
         string filePath = Application.persistentDataPath + "/GameData.test";
@@ -46,6 +49,8 @@ public static class SaveGameManager
             {
                 //  Properly set the needed information to the data kiaded
                 CombatInfo.CombatsFinished = data.CombatsFinished;
+                CombatInfo.HealthPotionCount = data.healthPotions;
+                CombatInfo.CoinCount = data.coins;
                 GameState.Player = new Vector3(data.mapPos[0], data.mapPos[1], data.mapPos[2]);
                 GameState.GetInstance().Loaded = true;
                 GameState.curHealth = data.health;

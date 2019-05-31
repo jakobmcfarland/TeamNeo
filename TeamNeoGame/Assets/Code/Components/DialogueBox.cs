@@ -10,15 +10,16 @@ public class DialogueBox : MonoBehaviour
     private int index = 0;
     public KeyCode nextKey;
     private TextMeshProUGUI textBox;
-    public Image textSprite;
+    public SpriteRenderer textSprite;
+    public Image textImage;
     public bool done;
     public float timer;
     private FMODUnity.StudioEventEmitter dialogueSound;
     void Start()
     {
         textBox = GetComponent<TextMeshProUGUI>();
-            dialogueSound = GameObject.Find("TextSound").GetComponent<FMODUnity.StudioEventEmitter>();
-        //print(dialogueSound);
+        dialogueSound = GameObject.Find("TextSound").GetComponent<FMODUnity.StudioEventEmitter>();
+        print(dialogueSound);
     }
     void Update()
     {
@@ -43,9 +44,13 @@ public class DialogueBox : MonoBehaviour
                     if (cm != null) {
                         cm.Pause(false);
                     }
-                    textBox.enabled = false;
+                if(textSprite == null) {
+                    textImage.enabled = false;
+                } else {
                     textSprite.enabled = false;
-                    enabled = false;
+                }
+                    textBox.enabled = false;
+                    enabled = false;  
                 }
                 done = false;
                 textBox.text = "";
@@ -53,6 +58,16 @@ public class DialogueBox : MonoBehaviour
         }
         if (!done)
         {
+            if (dialogue.Length == 0) {
+                done = true;
+                if(textSprite == null) {
+                    textImage.enabled = false;
+                } else {
+                    textSprite.enabled = false;
+                }
+                    textBox.enabled = false;
+                    enabled = false;       
+            } else {
             if (textBox.text.Length >= dialogue[index].Length)
             {
                 done = true;
@@ -64,6 +79,7 @@ public class DialogueBox : MonoBehaviour
                 textBox.text += dialogue[index][textBox.text.Length].ToString().ToUpper();
                 timer = timePerBox / dialogue[index].Length;
             }
+        }
         } else if (done) {
             dialogueSound.Stop();
         }

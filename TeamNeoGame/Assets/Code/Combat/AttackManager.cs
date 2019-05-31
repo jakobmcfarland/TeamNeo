@@ -58,13 +58,17 @@ public class AttackManager : MonoBehaviour
         if (CombatInfo.FightType == -1 && cm.tuts[1] ==0 && cm.tuts[0] == 1) {
             cm.tuts[1]  = 1;
             cm.Pause(true);
-            string[] d = {"correctly hit arrows increase your stamina"};
+            string[] d = {"correctly hit arrows to increase your stamina"};
             TextBox.DisplayText(d, 5,true);
         } else if (CombatInfo.FightType == -1 && cm.tuts[2] ==0 && cm.tuts[1] == 1) {
             cm.tuts[2]  = 1;
             cm.Pause(true);
-            string[] d = {"when stamina is full hit space to attack"};
+            string[] d = {"when stamina is full, hit space to attack"};
             TextBox.DisplayText(d, 5,true);     
+        }
+        if (right == attackCount)
+        {
+            blockAnim.SetTrigger("Block");
         }
         for (int i = hit; i < attackCount; i++)
         {
@@ -112,7 +116,6 @@ public class AttackManager : MonoBehaviour
         }
         if (r)
         {
-            blockAnim.SetTrigger("Block");
             player.ModStamina(staminaRight);
             streak++;
         }
