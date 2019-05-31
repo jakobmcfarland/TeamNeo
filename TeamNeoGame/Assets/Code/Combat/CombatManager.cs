@@ -19,9 +19,11 @@ public class CombatManager : MonoBehaviour
     public Animator spaceAnim;
     public Animator slashAnim;
     public int[] tuts = {0,0,0,0,0,0};
+    public FMODUnity.StudioEventEmitter battleSound;
     public FMODUnity.StudioEventEmitter hurtSound;
     // Start is called before the first frame update
     void Awake() {
+        battleSound.Play();
         SelectEnvironment(CombatInfo.Env);
         enemy.GetComponent<SpriteRenderer>().sprite = CombatInfo.EnemySprite;
     }
@@ -93,7 +95,7 @@ public class CombatManager : MonoBehaviour
         player.maxStamina = CombatInfo.MaxStamina;
         player.maxHealth = CombatInfo.MaxHealth;
         enemy.maxHealth = CombatInfo.EnemyHealth;
-        enemy.health = CombatInfo.EnemyHealth;
+        enemy.health = CombatInfo.EnemyHealth; 
         enemy.attackManager.time = CombatInfo.TimePerBar;
         enemy.attackManager.attackCount = CombatInfo.ArrowCount;
         enemy.attackManager.bufferTime = CombatInfo.BufferTime;
@@ -104,7 +106,6 @@ public class CombatManager : MonoBehaviour
     }
     void EndCombat() {
         print("end combat");
-
     }
     public void SelectEnvironment(Environment env)
     {

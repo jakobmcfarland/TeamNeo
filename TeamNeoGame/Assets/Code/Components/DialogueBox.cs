@@ -44,7 +44,6 @@ public class DialogueBox : MonoBehaviour
                         cm.Pause(false);
                     }
                     textBox.enabled = false;
-                    textSprite.enabled = false;
                     enabled = false;
                 }
                 done = false;

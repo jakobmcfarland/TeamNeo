@@ -1381,8 +1381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/Battle/Music
-  PlayEvent: 1
+  Event: event:/Battle/Music/Normal
+  PlayEvent: 0
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
@@ -1894,6 +1894,7 @@ MonoBehaviour:
   spaceAnim: {fileID: 1091284933}
   slashAnim: {fileID: 31668751}
   tuts: 000000000000000000000000000000000000000000000000
+  battleSound: {fileID: 414151181}
   hurtSound: {fileID: 744991183}
 --- !u!4 &628801515
 Transform:
@@ -4850,7 +4851,7 @@ PrefabInstance:
     - target: {fileID: 1716868057977947445, guid: 5b311563783c7484a8fcd9fe0f013fa1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5208386833214094583, guid: 5b311563783c7484a8fcd9fe0f013fa1,
         type: 3}

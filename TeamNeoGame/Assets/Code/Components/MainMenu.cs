@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
     public int selected = 0;
     public FMODUnity.StudioEventEmitter selectSound;
     public FMODUnity.StudioEventEmitter pickSound;
+    public MenuFade fade;
         // Start is called before the first frame update
     void Start()
     {
@@ -54,34 +55,7 @@ public class MainMenu : MonoBehaviour
         if (Input.GetKeyDown(pickKey))
         {
             pickSound.Play();
-            switch (selected)
-            {
-                //  New Game
-                case 0:
-                    CombatInfo.HealthPotionCount = 3;
-                    GameState.curHealth = 100;
-                    GameState.Player = new Vector3(-22, -24.5f, 0);
-                    SceneManager.LoadScene("Cinematic");
-                    break;
-                //  Load Game
-                case 1:
-                    bool state = SaveGameManager.LoadGame();
-                    if(state)
-                        SceneManager.LoadScene("Map");
-                    break;
-                //  Credits
-                case 2:
-                    SceneManager.LoadScene("Credits");
-                    break;
-                //  Quit Game
-                case 3:
-                    Application.Quit();
-                    break;
-                //  WTF?
-                default:
-                    print("This really shouldn't be happening");
-                    break;
-            }
+            fade.FadeTo(selected);
         }
         for (int i = 0; i < options.Length; i++)
         {

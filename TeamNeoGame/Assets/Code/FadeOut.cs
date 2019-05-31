@@ -32,5 +32,6 @@ public class FadeOut : MonoBehaviour
         combat = c;
         GetComponent<Animator>().enabled = true;
         timer = 0;
+        
     }
 }
