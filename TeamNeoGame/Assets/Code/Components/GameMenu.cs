@@ -7,7 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameMenu : MonoBehaviour
 {
     public TextMeshProUGUI[] options;
@@ -79,7 +79,7 @@ public class GameMenu : MonoBehaviour
                         SaveGameManager.SaveGame(Player.transform.position, CombatInfo.CombatsFinished);
                         break;
                     case 2:
-                        Application.Quit();
+                        SceneManager.LoadScene("MainMenu");
                         break;
                 }
             }

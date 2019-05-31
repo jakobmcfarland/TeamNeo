@@ -612,7 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skipkey: 32
-  timeToEnd: 10
+  timeToEnd: 45
   waitEnd: 3
 --- !u!50 &1189636442
 Rigidbody2D:

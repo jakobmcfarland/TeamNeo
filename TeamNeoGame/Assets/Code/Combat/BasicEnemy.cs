@@ -52,9 +52,10 @@ public class BasicEnemy : MonoBehaviour
         health += mod;
         healthText.text = health.ToString();
         hpBar.UpdateHP((float)health / (float)maxHealth);
+        GetComponent<Animator>().SetTrigger("Damage");
+        if (mod < 0) {
 
-        GetComponent<Animator>().SetBool("Damaged", true);
-
+        }
         if (health <= 0)
         {
             print("Victory!");
@@ -68,7 +69,6 @@ public class BasicEnemy : MonoBehaviour
             GameState.curHealth = cm.player.health;
             CombatInfo.CoinCount+= CombatInfo.CoinsToDrop;
             if (CombatInfo.FightType == 1) {
-
                 SceneManager.LoadScene("Credits");
             } else {
                SceneManager.LoadScene("Map");

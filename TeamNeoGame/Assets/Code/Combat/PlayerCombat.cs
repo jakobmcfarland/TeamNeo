@@ -37,6 +37,7 @@ public class PlayerCombat : MonoBehaviour
     public IceCream iceCream;
     public FMODUnity.StudioEventEmitter hurtSound;
     public FMODUnity.StudioEventEmitter healSound;
+    public Animator healAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -109,8 +110,10 @@ public class PlayerCombat : MonoBehaviour
         staminaGauge.fillAmount = (float)stamina / (float)maxStamina;
     }
     public void UsePotion() {
+        print("heal");
         healSound.Play();
         healthCount--;
+        healAnim.SetTrigger("Heal");
         CombatInfo.HealthPotionCount--;
         iceCream.ModNum(healthCount);
         ModHealth((int)(healPerPotion * (float)maxHealth));
