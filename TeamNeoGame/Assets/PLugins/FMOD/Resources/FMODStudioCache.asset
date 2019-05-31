@@ -57,6 +57,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 1
+--- !u!114 &-9113736765146598443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Enemy/Finished
+  m_EditorClassIdentifier: 
+  Name: Finished
+  Min: 0
+  Max: 2
+  Default: 1
+  Exists: 1
 --- !u!114 &-9018627727907841410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +160,29 @@ MonoBehaviour:
   Max: 2
   Default: 1
   Exists: 1
+--- !u!114 &-8723798741131260008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu/Select/Normal
+  m_EditorClassIdentifier: 
+  Path: event:/Menu/Select/Normal
+  guid: 94e095e24104d946984fcfe168d2dbb3
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 500
 --- !u!114 &-8676406211281622075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +207,30 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 221
+--- !u!114 &-8450407057468353058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Battle/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/Battle/Attack
+  guid: 157a40ec2faa0f438b69d7c189acf37d
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5666432733059209342}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 565
 --- !u!114 &-8214652985814566941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,6 +509,50 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3076
+--- !u!114 &-6003101222251606049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\bills\Documents\GitHub\TeamNeo\TeamNeoGame\samurai\Build\Desktop\Master.bank
+  SubDir: 
+  lastModified: 636948327564447125
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 16251168
+  Exists: 1
+--- !u!114 &-5990980652443905047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Overworld/Dialogue/Player
+  m_EditorClassIdentifier: 
+  Path: event:/Overworld/Dialogue/Player
+  guid: 832b47094924a541b5b9e652a69ed33b
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 711017233177120910}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 96
 --- !u!114 &-5789393174888368028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,6 +618,40 @@ MonoBehaviour:
   Max: 1
   Default: 1
   Exists: 1
+--- !u!114 &-5722575971089857185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Enemy/Enemy Health
+  m_EditorClassIdentifier: 
+  Name: Enemy Health
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-5666432733059209342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Attack/Missed
+  m_EditorClassIdentifier: 
+  Name: Missed
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &-5627344283888800204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,6 +716,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 98990
+--- !u!114 &-4834239095109287255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\bills\Documents\GitHub\TeamNeo\TeamNeoGame\samurai\Build\Desktop\Master.strings.bank
+  SubDir: 
+  lastModified: 636948327564496990
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1740
+  Exists: 1
 --- !u!114 &-4788777593616995506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,6 +753,29 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-4499967084478946723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Battle/Game Over
+  m_EditorClassIdentifier: 
+  Path: event:/Battle/Game Over
+  guid: 95505334a1c22746b539815581cf6c17
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 15000
 --- !u!114 &-4441448110055053307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,6 +914,54 @@ MonoBehaviour:
   Max: 1
   Default: 1
   Exists: 1
+--- !u!114 &-3923921498594132001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Overworld/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Overworld/Music
+  guid: 4a2f9667db771245b362e56144ee2fbe
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5974096776312241578}
+  - {fileID: -3540896394035361548}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 70750
+--- !u!114 &-3830043591794241672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Battle/Music/Boss
+  m_EditorClassIdentifier: 
+  Path: event:/Battle/Music/Boss
+  guid: 3042a9e15307df4c93329b31d75f0c1a
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 189280
 --- !u!114 &-3588379639239190179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,6 +986,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 12469
+--- !u!114 &-3540896394035361548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Finished
+  m_EditorClassIdentifier: 
+  Name: Finished
+  Min: 0
+  Max: 2
+  Default: 1
+  Exists: 1
 --- !u!114 &-3358361755638988381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,6 +1246,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1548
   Exists: 1
+--- !u!114 &-2116173670608299985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Battle/Pause Music/Normal
+  m_EditorClassIdentifier: 
+  Path: event:/Battle/Pause Music/Normal
+  guid: 7ddff6a13a5bb64da666d9cceb12ec16
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 67968
 --- !u!114 &-2004989722231674219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1039,6 +1312,53 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 101215
+--- !u!114 &-1732085749580977695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Battle/Damage/Player
+  m_EditorClassIdentifier: 
+  Path: event:/Battle/Damage/Player
+  guid: 037d85bc434e7849abb3033beed951fb
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3076
+--- !u!114 &-1523796671103279550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Credits/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Credits/Music
+  guid: 1c0e605ea790d24fb2ed16b95826050b
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2855233527363376622}
   MinDistance: 0
   MaxDistance: 0
   Length: 101215
@@ -1128,6 +1448,31 @@ MonoBehaviour:
   Max: 2
   Default: 1
   Exists: 1
+--- !u!114 &-1017365145691803217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Battle/Music/Normal
+  m_EditorClassIdentifier: 
+  Path: event:/Battle/Music/Normal
+  guid: efd071d6f405844fba2318c8f59161a6
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7500020923695290214}
+  - {fileID: -401004767682016635}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 77941
 --- !u!114 &-859585930269445173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1231,6 +1576,23 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1548
+  Exists: 1
+--- !u!114 &-401004767682016635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Normal/Finished
+  m_EditorClassIdentifier: 
+  Name: Finished
+  Min: 0
+  Max: 2
+  Default: 1
   Exists: 1
 --- !u!114 &-363222837796187665
 MonoBehaviour:
@@ -1342,28 +1704,32 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -428954250936306730}
-  - {fileID: 7768859925741573751}
+  - {fileID: -4834239095109287255}
+  - {fileID: -6003101222251606049}
   EditorEvents:
-  - {fileID: -6092475834420758562}
-  - {fileID: 6260936316653544801}
-  - {fileID: 8338519785921516206}
-  - {fileID: -9018627727907841410}
-  - {fileID: -202559449344795147}
-  - {fileID: 1900300435038704560}
-  - {fileID: 7747881241915631841}
-  - {fileID: -2442475279088546595}
-  - {fileID: 5236654141915613645}
-  - {fileID: -6192497676485328142}
-  - {fileID: 6232163145086222995}
-  - {fileID: 5903875611015292818}
-  - {fileID: -629541726094442059}
+  - {fileID: -1732085749580977695}
+  - {fileID: -8450407057468353058}
+  - {fileID: -1523796671103279550}
+  - {fileID: -3830043591794241672}
+  - {fileID: 4416423822068979288}
+  - {fileID: 1221584804823170592}
+  - {fileID: -3923921498594132001}
+  - {fileID: 5869336836070905137}
+  - {fileID: 9094321807359400667}
+  - {fileID: -2116173670608299985}
+  - {fileID: 5015070251892485301}
+  - {fileID: -5990980652443905047}
+  - {fileID: -8723798741131260008}
+  - {fileID: -4499967084478946723}
+  - {fileID: 4918081459537063241}
+  - {fileID: -1017365145691803217}
+  - {fileID: 9208717429671058038}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 7768859925741573751}
+  - {fileID: -6003101222251606049}
   StringsBanks:
-  - {fileID: -428954250936306730}
-  stringsBankWriteTime: 636947492698642303
+  - {fileID: -4834239095109287255}
+  stringsBankWriteTime: 636948327564496990
   cacheVersion: 3
 --- !u!114 &140649147019966676
 MonoBehaviour:
@@ -1492,6 +1858,23 @@ MonoBehaviour:
   Max: 2
   Default: 1
   Exists: 1
+--- !u!114 &711017233177120910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player/Finished
+  m_EditorClassIdentifier: 
+  Name: Finished
+  Min: 0
+  Max: 2
+  Default: 1
+  Exists: 1
 --- !u!114 &763548851186423856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1566,6 +1949,29 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &1221584804823170592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Menu/Music
+  guid: 3a60036656001442a1b51fb26e80f139
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 98990
 --- !u!114 &1519173036145327245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1802,6 +2208,23 @@ MonoBehaviour:
   Max: 2
   Default: 1
   Exists: 1
+--- !u!114 &2855233527363376622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Finished
+  m_EditorClassIdentifier: 
+  Name: Finished
+  Min: 0
+  Max: 2
+  Default: 1
+  Exists: 1
 --- !u!114 &2898647472259969636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1903,6 +2326,29 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 1
+--- !u!114 &4416423822068979288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Overworld/Pause Music
+  m_EditorClassIdentifier: 
+  Path: event:/Overworld/Pause Music
+  guid: 31e0048043b2b04ba352d2143b9b633a
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 67968
 --- !u!114 &4661665844456991804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1961,6 +2407,53 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 1
+--- !u!114 &4918081459537063241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Battle/Heal
+  m_EditorClassIdentifier: 
+  Path: event:/Battle/Heal
+  guid: bfb824ac232e7b40a57699e8593ed075
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2507
+--- !u!114 &5015070251892485301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Battle/Damage/Enemy
+  m_EditorClassIdentifier: 
+  Path: event:/Battle/Damage/Enemy
+  guid: 82ed2987a0fe424385176ca2a8d425d2
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5722575971089857185}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 221
 --- !u!114 &5140935613374008596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2108,6 +2601,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 98990
+--- !u!114 &5869336836070905137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Battle/Pause Music/Boss
+  m_EditorClassIdentifier: 
+  Path: event:/Battle/Pause Music/Boss
+  guid: 63f0d478c3588c46bbdb3e863bb4dee9
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 67968
 --- !u!114 &5903875611015292818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2133,6 +2649,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 77941
+--- !u!114 &5974096776312241578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Distance to Closest Enemy
+  m_EditorClassIdentifier: 
+  Name: Distance to Closest Enemy
+  Min: 0
+  Max: 1
+  Default: 1
+  Exists: 1
 --- !u!114 &5987150206839862445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2390,6 +2923,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 565
+--- !u!114 &7500020923695290214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Normal/Player Health
+  m_EditorClassIdentifier: 
+  Name: Player Health
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &7604558964088575989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2739,6 +3289,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 500
+--- !u!114 &9094321807359400667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu/Select/Final
+  m_EditorClassIdentifier: 
+  Path: event:/Menu/Select/Final
+  guid: 740d264e0f6e7743aac3c8cab93f0c2c
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 500
 --- !u!114 &9102097078798239175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2760,6 +3333,30 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 7313264571820949270}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12469
+--- !u!114 &9208717429671058038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Overworld/Dialogue/Enemy
+  m_EditorClassIdentifier: 
+  Path: event:/Overworld/Dialogue/Enemy
+  guid: ff22994ea8281b4cb40c4c5f33555a83
+  Banks:
+  - {fileID: -6003101222251606049}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -9113736765146598443}
   MinDistance: 0
   MaxDistance: 0
   Length: 12469
