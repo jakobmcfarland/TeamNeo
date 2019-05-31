@@ -8,13 +8,10 @@ public class MenuFade : MonoBehaviour
 	public int to = -1;
 	public float time = 1;
 	public float timer = -1;
-    bool saveFileFound = false;
+    bool success = true;
     // Start is called before the first frame update
     void Start()
     {
-        string filePath = Application.persistentDataPath + "/GameData.test";
-        if (File.Exists(filePath))
-            saveFileFound = true;
     }
 
     // Update is called once per frame
@@ -34,8 +31,10 @@ public class MenuFade : MonoBehaviour
                 //  Load Game
                 case 1:
                     bool state = SaveGameManager.LoadGame();
-                        if (state && saveFileFound)
+                        if (state)
                             SceneManager.LoadScene("Map");
+                        else
+                            success = false;
                         break;
                 //  Credits
                 case 2:
@@ -55,8 +54,11 @@ public class MenuFade : MonoBehaviour
 
     }
     public void FadeTo(int f) {
-    	timer = 0;
-    	to = f;
-    	GetComponent<Animator>().enabled = true;
+        if (success)
+        {
+            timer = 0;
+            to = f;
+            GetComponent<Animator>().enabled = true;
+        }
     }
 }
