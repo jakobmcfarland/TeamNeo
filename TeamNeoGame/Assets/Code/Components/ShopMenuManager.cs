@@ -23,7 +23,7 @@ public class ShopMenuManager : MonoBehaviour
     {
         if (colliding)
         {
-            if (Input.GetKeyDown(enableKey))
+            if (Input.GetKeyDown(enableKey) && !menuObj.activeSelf)
             {
                 menuObj.SetActive(!menuObj.activeSelf);
             }
@@ -37,6 +37,9 @@ public class ShopMenuManager : MonoBehaviour
             else
                 player.GetComponent<MapPlayerController>().enabled = true;
         }
+    }
+    public void DisableMenu() {
+        menuObj.SetActive(false);
     }
     void OnTriggerEnter2D(Collider2D col)
     {

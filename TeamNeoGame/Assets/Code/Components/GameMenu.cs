@@ -26,6 +26,7 @@ public class GameMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.parent.gameObject.activeSelf) {
         if (Input.GetKeyDown(downKey))
         {
             if (selected == options.Length - 1)
@@ -52,6 +53,7 @@ public class GameMenu : MonoBehaviour
         {
             if (store)
             {
+                print(selected);
                 switch(selected)
                 {
                     case 0:
@@ -96,4 +98,5 @@ public class GameMenu : MonoBehaviour
             }
         }
     }
+}
 }

@@ -38,6 +38,7 @@ public class MapPlayerController : MonoBehaviour
         gameObject.transform.position = GameState.Player;
         if (CombatInfo.TutorialText)
         {
+            paused = true;
             string[] d= { "you can press enter to open the store" };
             TextBox.DisplayText(d, 5, false);
             CombatInfo.TutorialText = false;

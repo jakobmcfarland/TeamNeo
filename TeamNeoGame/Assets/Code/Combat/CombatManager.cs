@@ -21,11 +21,17 @@ public class CombatManager : MonoBehaviour
     public int[] tuts = {0,0,0,0,0,0};
     public FMODUnity.StudioEventEmitter battleSound;
     public FMODUnity.StudioEventEmitter hurtSound;
+    public FMODUnity.StudioEventEmitter bossMusic;
     // Start is called before the first frame update
     void Awake() {
-        battleSound.Play();
+        if (CombatInfo.FightType != 1) {
+            bossMusic.Stop();
+            battleSound.Play();
+            } else {
+                bossMusic.Play();
+                battleSound.Stop();
+            }
         SelectEnvironment(CombatInfo.Env);
-        enemy.GetComponent<SpriteRenderer>().sprite = CombatInfo.EnemySprite;
     }
     public void Pause(bool p){
         paused = p;
@@ -49,6 +55,9 @@ public class CombatManager : MonoBehaviour
             {
                 startAnimators[i].enabled = true;
             }
+                    enemy.GetComponent<SpriteRenderer>().sprite = CombatInfo.EnemySprite;
+
+            enemy.SetName(CombatInfo.EnemyName);
         }
         if (startTimer >= startTime && startTimer >= 0)
         {
@@ -88,7 +97,6 @@ public class CombatManager : MonoBehaviour
     void StartCombat()
     {
         print("start combat");
-        enemy.SetName(CombatInfo.EnemyName);
         player.damage = CombatInfo.PlayerDamage;
         enemy.attackManager.hpWrong = CombatInfo.EnemyDamage;
         enemy.attackManager.staminaRight = CombatInfo.StaminaGain;
@@ -100,6 +108,7 @@ public class CombatManager : MonoBehaviour
         enemy.attackManager.attackCount = CombatInfo.ArrowCount;
         enemy.attackManager.bufferTime = CombatInfo.BufferTime;
         player.healthCount = CombatInfo.HealthPotionCount;
+        player.iceCream.ModNum(CombatInfo.HealthPotionCount);
         player.enabled = true;
         enemy.enabled = true;
         am.Begin();
