@@ -9,6 +9,8 @@ public class Cinematic : MonoBehaviour
     private SpriteRenderer sprite;
     private Sprite[] frames;
     private int index = -1;
+    public float offset = 1;
+    private float offsetTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +25,12 @@ public class Cinematic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Escape)) { 
             End();
         }
+        offsetTimer += Time.deltaTime;
+        if (offsetTimer >= offset) {
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
@@ -40,6 +45,7 @@ public class Cinematic : MonoBehaviour
                 sprite.sprite = frames[index];
             }
         }
+            }
     }
     void SetTutorialSettings() {
         CombatInfo.MaxHealth = 100;
@@ -51,7 +57,7 @@ public class Cinematic : MonoBehaviour
         CombatInfo.FightType = -1;
         CombatInfo.ArrowCount = 3;
         CombatInfo.EnemyName = "tutorial dude";
-        CombatInfo.EnemySprite= Resources.Load<Sprite>("EnemyIdle_0");
+        CombatInfo.EnemySprite= Resources.Load<Sprite>("EnemyBattle1");
         CombatInfo.StaminaGain = 19;
         CombatInfo.MaxStamina = 60;
         CombatInfo.BufferTime = 0;

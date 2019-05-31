@@ -68,6 +68,7 @@ public class BasicEnemy : MonoBehaviour
             GameState.curHealth = cm.player.health;
             CombatInfo.CoinCount+= CombatInfo.CoinsToDrop;
             if (CombatInfo.FightType == 1) {
+                SaveGameManager.DeleteGame();
                 SceneManager.LoadScene("Credits");
             } else {
                SceneManager.LoadScene("Map");

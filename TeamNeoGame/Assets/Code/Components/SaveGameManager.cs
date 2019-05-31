@@ -27,7 +27,10 @@ public static class SaveGameManager
         Debug.Log("saved successfully");
         stream.Close();
     }
-
+    public static void DeleteGame() {
+        string filePath = Application.persistentDataPath + "/GameData.test";
+        File.Delete(filePath);
+    }
     public static bool LoadGame()
     {
         string filePath = Application.persistentDataPath + "/GameData.test";
