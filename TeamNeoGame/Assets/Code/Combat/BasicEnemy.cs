@@ -52,9 +52,8 @@ public class BasicEnemy : MonoBehaviour
         health += mod;
         healthText.text = health.ToString();
         hpBar.UpdateHP((float)health / (float)maxHealth);
-        GetComponent<Animator>().SetTrigger("Damage");
         if (mod < 0) {
-
+        GetComponent<Animator>().SetTrigger("Damage");
         }
         if (health <= 0)
         {

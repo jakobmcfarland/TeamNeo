@@ -14807,6 +14807,16 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.7529412
       objectReference: {fileID: 0}
+    - target: {fileID: 4359802040904368822, guid: a42502b5f9eccde4385742a141baf7b7,
+        type: 3}
+      propertyPath: PlayerDamage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359802040904368822, guid: a42502b5f9eccde4385742a141baf7b7,
+        type: 3}
+      propertyPath: EnemyHealth
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a42502b5f9eccde4385742a141baf7b7, type: 3}
 --- !u!1001 &4556979567338389474

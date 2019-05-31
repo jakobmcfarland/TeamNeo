@@ -93,6 +93,7 @@ public class CombatManager : MonoBehaviour
         player.maxStamina = CombatInfo.MaxStamina;
         player.maxHealth = CombatInfo.MaxHealth;
         enemy.maxHealth = CombatInfo.EnemyHealth;
+        enemy.health = CombatInfo.EnemyHealth;
         enemy.attackManager.time = CombatInfo.TimePerBar;
         enemy.attackManager.attackCount = CombatInfo.ArrowCount;
         enemy.attackManager.bufferTime = CombatInfo.BufferTime;
