@@ -319,7 +319,7 @@ MonoBehaviour:
   dialogue:
   - "A TRASH CAN\x13"
   timePerBox: 2
-  nextKey: 32
+  nextKey: 13
   textSprite: {fileID: 8372605961921682095}
   done: 1
   timer: 0.14949957

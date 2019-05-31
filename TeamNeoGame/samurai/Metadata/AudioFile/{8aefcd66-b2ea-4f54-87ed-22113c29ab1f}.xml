@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{8aefcd66-b2ea-4f54-87ed-22113c29ab1f}">
 		<property name="assetPath">
-			<value>Map Theme (no flute).ogg</value>
+			<value>map_other.ogg</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

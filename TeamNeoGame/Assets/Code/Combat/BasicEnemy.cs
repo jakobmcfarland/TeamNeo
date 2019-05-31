@@ -33,10 +33,10 @@ public class BasicEnemy : MonoBehaviour
         nameText.text = nam.ToUpper();
         switch(ename) {
             case "Park":
-                anim.SetInteger("Enemy", 1);
+                anim.SetInteger("Enemy", 2);
                 break;
             case "Car":
-                anim.SetInteger("Enemy", 2);
+                anim.SetInteger("Enemy", 1);
                 break;
             case "Boss":
                 anim.SetInteger("Enemy", 3);
@@ -52,6 +52,9 @@ public class BasicEnemy : MonoBehaviour
         health += mod;
         healthText.text = health.ToString();
         hpBar.UpdateHP((float)health / (float)maxHealth);
+
+        GetComponent<Animator>().SetBool("Damaged", true);
+
         if (health <= 0)
         {
             print("Victory!");

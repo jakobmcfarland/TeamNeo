@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/* File:    MapNode
+ * By:      Jakob McFarland
+ * Date:    5/30/2019
+ * Brief:
+ *      Stores activation function 
+ *      and info about map nodes.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
@@ -105,8 +113,7 @@ namespace Assets.Code.Map
                                 CombatInfo.Env = Environment.City;
                             }
 
-                                GameObject.FindObjectOfType<FadeOut>().Fade();
-                            combat.LoadCombat();
+                            GameObject.FindObjectOfType<FadeOut>().Fade(combat);
                         }
                     }
                 }

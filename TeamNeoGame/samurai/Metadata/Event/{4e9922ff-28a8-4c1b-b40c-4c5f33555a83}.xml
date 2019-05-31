@@ -148,10 +148,10 @@
 	</object>
 	<object class="TransitionRegion" id="{6a2d8235-1c7f-4c3d-8774-ad235f8aa65b}">
 		<property name="position">
-			<value>0</value>
+			<value>0.27777777777777779</value>
 		</property>
 		<property name="length">
-			<value>8.8888888888888946</value>
+			<value>8.611111111111116</value>
 		</property>
 		<property name="triggerProbability">
 			<value>0</value>
@@ -188,6 +188,8 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{0a556e5f-0ae8-4f37-a336-c489158ace13}">
 		<relationship name="effects">
+			<destination>{4f54ba4a-205f-4a33-ad30-f07d48fb8221}</destination>
+			<destination>{b22b84bf-00ba-4782-a360-918a52aba78f}</destination>
 			<destination>{20247f55-171c-475b-85f3-0c7f6659fdff}</destination>
 		</relationship>
 	</object>
@@ -202,14 +204,42 @@
 	<object class="MixerBusPanner" id="{1ad63d35-4ba9-4864-91c9-8dddb706ba9d}" />
 	<object class="ParameterCondition" id="{59e45e3f-d318-4d0d-9850-933c404997dc}">
 		<property name="minimum">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<property name="maximum">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{a7099701-76d4-472e-8fb8-82caa54a6f91}</destination>
 		</relationship>
+	</object>
+	<object class="CompressorEffect" id="{4f54ba4a-205f-4a33-ad30-f07d48fb8221}">
+		<property name="threshold">
+			<value>-11</value>
+		</property>
+		<property name="gain">
+			<value>6.5</value>
+		</property>
+	</object>
+	<object class="SFXReverbEffect" id="{b22b84bf-00ba-4782-a360-918a52aba78f}">
+		<property name="decayTime">
+			<value>3000</value>
+		</property>
+		<property name="lateDelay">
+			<value>29</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>70</value>
+		</property>
+		<property name="highCut">
+			<value>5650</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>80</value>
+		</property>
+		<property name="wetLevel">
+			<value>-13.5</value>
+		</property>
 	</object>
 	<object class="MixerBusFader" id="{20247f55-171c-475b-85f3-0c7f6659fdff}" />
 	<object class="SFXReverbEffect" id="{770e59ef-4078-46ca-a9f0-1738306f73d5}">
