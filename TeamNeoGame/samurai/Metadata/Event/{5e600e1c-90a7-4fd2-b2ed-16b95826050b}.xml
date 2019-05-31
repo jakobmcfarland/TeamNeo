@@ -24,6 +24,8 @@
 		</relationship>
 		<relationship name="markerTracks">
 			<destination>{2f8564a2-fe49-432a-a128-67490363646a}</destination>
+			<destination>{3364bd5e-301e-4458-a51e-40ca4b5c49bb}</destination>
+			<destination>{a26250b6-4415-4d6c-b38d-1449b05258f2}</destination>
 		</relationship>
 		<relationship name="groupTracks">
 			<destination>{5154789f-1824-422a-a0ed-c1535458a487}</destination>
@@ -58,6 +60,8 @@
 	</object>
 	<object class="EventAutomatableProperties" id="{19e31530-18c6-43c3-86e4-47af6e888313}" />
 	<object class="MarkerTrack" id="{2f8564a2-fe49-432a-a128-67490363646a}" />
+	<object class="MarkerTrack" id="{3364bd5e-301e-4458-a51e-40ca4b5c49bb}" />
+	<object class="MarkerTrack" id="{a26250b6-4415-4d6c-b38d-1449b05258f2}" />
 	<object class="GroupTrack" id="{5154789f-1824-422a-a0ed-c1535458a487}">
 		<relationship name="modules">
 			<destination>{4b5dfb05-74c0-4c4f-bcca-b4b8190ad73b}</destination>
@@ -72,6 +76,9 @@
 		</relationship>
 		<relationship name="markers">
 			<destination>{c70615d4-0a82-4849-853b-89dd17827f0b}</destination>
+			<destination>{74cbd231-fecf-4d55-9fd6-eb9610f432c5}</destination>
+			<destination>{100738bf-8166-416b-92cb-616023014739}</destination>
+			<destination>{9d9dbc10-a6e0-40db-ba07-09cca88c9b2b}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{7a8323d5-9519-405c-9a3b-f6a20fd08dc8}">
@@ -127,6 +134,60 @@
 			<destination>{2f8564a2-fe49-432a-a128-67490363646a}</destination>
 		</relationship>
 	</object>
+	<object class="LoopRegion" id="{74cbd231-fecf-4d55-9fd6-eb9610f432c5}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="length">
+			<value>96</value>
+		</property>
+		<property name="triggerProbability">
+			<value>0</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{66a43c84-cd1e-45b0-b674-8493562311e1}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{a26250b6-4415-4d6c-b38d-1449b05258f2}</destination>
+		</relationship>
+	</object>
+	<object class="TransitionRegion" id="{100738bf-8166-416b-92cb-616023014739}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="length">
+			<value>96</value>
+		</property>
+		<property name="quantizationInterval">
+			<value>1</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{66a43c84-cd1e-45b0-b674-8493562311e1}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{3364bd5e-301e-4458-a51e-40ca4b5c49bb}</destination>
+		</relationship>
+		<relationship name="destination">
+			<destination>{9d9dbc10-a6e0-40db-ba07-09cca88c9b2b}</destination>
+		</relationship>
+		<relationship name="triggerConditions">
+			<destination>{715c7fa7-ad72-4bd2-b1a1-f7f601223a66}</destination>
+		</relationship>
+	</object>
+	<object class="NamedMarker" id="{9d9dbc10-a6e0-40db-ba07-09cca88c9b2b}">
+		<property name="position">
+			<value>96</value>
+		</property>
+		<property name="name">
+			<value>End</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{66a43c84-cd1e-45b0-b674-8493562311e1}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{3364bd5e-301e-4458-a51e-40ca4b5c49bb}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{147aa445-218b-4f45-9328-ecf8d3184488}">
 		<relationship name="effects">
 			<destination>{774e76ba-bb13-4c5c-af06-9d2bed23d2de}</destination>
@@ -141,6 +202,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{609c6d16-9be7-49dd-ad32-1af890ac3295}" />
+	<object class="ParameterCondition" id="{715c7fa7-ad72-4bd2-b1a1-f7f601223a66}">
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>1</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{a7099701-76d4-472e-8fb8-82caa54a6f91}</destination>
+		</relationship>
+	</object>
 	<object class="SFXReverbEffect" id="{774e76ba-bb13-4c5c-af06-9d2bed23d2de}">
 		<property name="decayTime">
 			<value>3900</value>

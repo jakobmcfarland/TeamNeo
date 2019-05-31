@@ -1,4 +1,11 @@
-﻿using System;
+﻿/* File:    MapNodeList
+ * By:      Jakob McFarland
+ * Date:    5/30/2019
+ * Brief:
+ *      Static storage for all map nodes.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

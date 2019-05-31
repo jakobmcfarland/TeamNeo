@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{2cc8b1df-454b-4271-9907-13ba83345e32}">
+		<property name="assetPath">
+			<value>game_over2.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>14.49</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b1cebe09-6ea5-40c3-bd67-cfb72c48d87b}</destination>
+		</relationship>
+	</object>
+</objects>

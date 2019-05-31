@@ -1,4 +1,11 @@
-﻿using System;
+﻿/* File:    MapNodeComponent
+ * By:      Jakob McFarland
+ * Date:    5/30/2019
+ * Brief:
+ *      Accessor to MapNodeList from scene.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
