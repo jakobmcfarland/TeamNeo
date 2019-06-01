@@ -433,13 +433,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31668748}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.78, y: 4.0368447, z: -1.0675813}
-  m_LocalScale: {x: 14, y: 14, z: 1}
+  m_LocalRotation: {x: 0.0004674763, y: -0.004089282, z: 0.11357673, w: 0.99352074}
+  m_LocalPosition: {x: 9.59, y: -2.12, z: -1.0675813}
+  m_LocalScale: {x: 28, y: 28, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.106000006, y: -0.45900002, z: 13.043}
 --- !u!95 &31668751
 Animator:
   serializedVersion: 3
@@ -1135,13 +1135,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230703608}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.19, y: -3.19, z: -6.9692025}
-  m_LocalScale: {x: 14, y: 14, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.322895, w: 0.9464348}
+  m_LocalPosition: {x: -3.67, y: -8.11, z: -6.9692025}
+  m_LocalScale: {x: 28, y: 28, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 37.676003}
 --- !u!1 &238853596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,7 +1210,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cc8647af1aa569247a3153499eea88b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 87b32523dddb0c3468e72a64ac365f5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4608,6 +4608,7 @@ GameObject:
   - component: {fileID: 1869960427}
   - component: {fileID: 1869960429}
   - component: {fileID: 1869960430}
+  - component: {fileID: 1869960431}
   m_Layer: 0
   m_Name: StaminaSwordFilled
   m_TagString: Untagged
@@ -4703,6 +4704,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!223 &1869960431
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869960425}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: -1
+  m_TargetDisplay: 0
 --- !u!1 &1902054047
 GameObject:
   m_ObjectHideFlags: 0

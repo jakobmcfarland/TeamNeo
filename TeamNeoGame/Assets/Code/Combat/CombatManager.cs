@@ -40,6 +40,7 @@ public class CombatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+//        battleSound.SetParameter("Player Health", (float)player.health/(float)player.maxHealth);
         if (!paused) {
         if (startTimer >= 0){
         startTimer += Time.deltaTime;

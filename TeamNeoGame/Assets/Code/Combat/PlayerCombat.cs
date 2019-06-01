@@ -39,6 +39,7 @@ public class PlayerCombat : MonoBehaviour
     public FMODUnity.StudioEventEmitter healSound;
     public Animator damageAnim;
     public Animator healAnim;
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +48,7 @@ public class PlayerCombat : MonoBehaviour
         health = GameState.curHealth;
         float percentage = (float)((float)health / (float)(maxHealth));
         hpBar.UpdateHP(percentage);
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -88,6 +90,7 @@ public class PlayerCombat : MonoBehaviour
         GameState.curHealth = health;
         if (mod < 0) {
             hurtSound.Play();
+            anim.SetTrigger("Damage");
             damageAnim.SetTrigger("Damage");
         }
         health += mod;

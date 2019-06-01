@@ -49,10 +49,13 @@ public class DialogueBox : MonoBehaviour
                     if (cm != null) {
                         cm.Pause(false);
                     }
-                if(textSprite == null) {
-                    textImage.enabled = false;
-                } else {
+                if(textSprite != null) {
                     textSprite.enabled = false;
+
+                }
+                if (textImage != null) {
+                                    textImage.enabled = false;
+
                 }
                     textBox.enabled = false;
                     enabled = false;  
