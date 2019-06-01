@@ -21,6 +21,7 @@ public class BasicEnemy : MonoBehaviour
     private Animator anim;
     public float dieTime = 1;
     private float dieTimer = -1;
+    public Animator fadeAnim;
     // Start is called before the first frame update
     void Start()
     { 
@@ -32,6 +33,7 @@ public class BasicEnemy : MonoBehaviour
         if (anim == null) {
             anim = GetComponent<Animator>(); 
         }
+        fadeAnim.SetTrigger("Reverse");
         attackManager.enabled = false;
         cm.Pause(true);
         anim.SetTrigger("Death");

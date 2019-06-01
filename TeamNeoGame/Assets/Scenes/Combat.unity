@@ -4383,13 +4383,14 @@ GameObject:
   - component: {fileID: 1718280870}
   - component: {fileID: 1718280871}
   - component: {fileID: 1718280869}
+  - component: {fileID: 1718280872}
   m_Layer: 0
   m_Name: FadeIn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1718280869
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4470,6 +4471,25 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!95 &1718280872
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718280868}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fcfe69ad10680bb4294cd0595b22a970, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1834253239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5061,6 +5081,11 @@ PrefabInstance:
       propertyPath: dieTime
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 5208386833214094583, guid: 5b311563783c7484a8fcd9fe0f013fa1,
+        type: 3}
+      propertyPath: fadeAnim
+      value: 
+      objectReference: {fileID: 1718280872}
     - target: {fileID: 1716868057977947447, guid: 5b311563783c7484a8fcd9fe0f013fa1,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -45,6 +45,9 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{a0436bfd-3cb5-44d2-9fec-14d6e3c56d75}">
+		<property name="uiTrackHeight">
+			<value>100</value>
+		</property>
 		<relationship name="mixerGroup">
 			<destination>{33459a63-13f1-4bb1-87f8-9a513c44a020}</destination>
 		</relationship>
@@ -93,6 +96,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{33459a63-13f1-4bb1-87f8-9a513c44a020}">
+		<property name="volume">
+			<value>-6</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{f839a7ac-2a27-4d3c-b9ae-16cda71f0fd0}</destination>
 		</relationship>
@@ -188,6 +194,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{f839a7ac-2a27-4d3c-b9ae-16cda71f0fd0}">
 		<relationship name="effects">
+			<destination>{85bb1c83-732f-44d0-a54e-e0506b3e2ae8}</destination>
 			<destination>{26b6e50c-dc02-4922-ae5c-ef3c21595f5e}</destination>
 			<destination>{5e204105-ab59-416c-b4aa-ac5f450b5338}</destination>
 		</relationship>
@@ -292,6 +299,23 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{4d17797c-4c46-4941-a2d6-9343c9ccbb0d}" />
+	<object class="CompressorEffect" id="{85bb1c83-732f-44d0-a54e-e0506b3e2ae8}">
+		<property name="threshold">
+			<value>-17</value>
+		</property>
+		<property name="ratio">
+			<value>1.99999988</value>
+		</property>
+		<property name="attackTime">
+			<value>10</value>
+		</property>
+		<property name="releaseTime">
+			<value>100</value>
+		</property>
+		<property name="gain">
+			<value>5</value>
+		</property>
+	</object>
 	<object class="SFXReverbEffect" id="{26b6e50c-dc02-4922-ae5c-ef3c21595f5e}">
 		<property name="decayTime">
 			<value>500</value>

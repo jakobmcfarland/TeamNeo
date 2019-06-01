@@ -41,6 +41,9 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{86c23825-110a-40bf-a1e3-8b38e50fd656}">
+		<property name="uiTrackHeight">
+			<value>100</value>
+		</property>
 		<relationship name="mixerGroup">
 			<destination>{29478bb8-1aff-4e3f-924a-dac5887a4687}</destination>
 		</relationship>
@@ -69,6 +72,9 @@
 	<object class="Timeline" id="{f40c2020-57a7-4fff-86b9-9c4765f4fd59}">
 		<relationship name="modules">
 			<destination>{25f2e8fa-beb8-4eda-9803-72d534f70e8a}</destination>
+		</relationship>
+		<relationship name="markers">
+			<destination>{c93e49c3-02a7-45d7-a3c5-a658292de2cf}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{29478bb8-1aff-4e3f-924a-dac5887a4687}">
@@ -110,6 +116,20 @@
 			<destination>{29478bb8-1aff-4e3f-924a-dac5887a4687}</destination>
 		</relationship>
 	</object>
+	<object class="LoopRegion" id="{c93e49c3-02a7-45d7-a3c5-a658292de2cf}">
+		<property name="position">
+			<value>0.52000000000000002</value>
+		</property>
+		<property name="length">
+			<value>185.43000000000001</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{f40c2020-57a7-4fff-86b9-9c4765f4fd59}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{1c80e8ef-faad-4c6e-81fa-c31dfd2a4204}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{31593bab-f9c2-404c-b26d-2d116d89b0b0}">
 		<relationship name="effects">
 			<destination>{ce6bfe75-57f7-4bad-8cdd-563f80303ec1}</destination>
@@ -119,10 +139,28 @@
 	<object class="MixerBusFader" id="{1c8386ff-a1b6-49f4-8272-8bc27f47b15d}" />
 	<object class="MixerBusEffectChain" id="{86052ca9-26c3-4fce-9052-a0737bb0d9ac}">
 		<relationship name="effects">
+			<destination>{97957358-e8bf-4cfa-9ec6-2716a14ba7f5}</destination>
 			<destination>{84a67385-e184-43f1-b3f1-c46353acbea1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{ba08e0a0-73fe-4df1-829f-a9ef96d16bc5}" />
 	<object class="MixerBusFader" id="{ce6bfe75-57f7-4bad-8cdd-563f80303ec1}" />
+	<object class="CompressorEffect" id="{97957358-e8bf-4cfa-9ec6-2716a14ba7f5}">
+		<property name="threshold">
+			<value>-20</value>
+		</property>
+		<property name="ratio">
+			<value>2</value>
+		</property>
+		<property name="attackTime">
+			<value>10</value>
+		</property>
+		<property name="releaseTime">
+			<value>175</value>
+		</property>
+		<property name="gain">
+			<value>4</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{84a67385-e184-43f1-b3f1-c46353acbea1}" />
 </objects>
