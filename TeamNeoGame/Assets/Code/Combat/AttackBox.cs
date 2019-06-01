@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/******************************
+ * Author: Nico
+ * Date Last Edited: 5-30-2019
+ * Description: A basick attack box
+ ******************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

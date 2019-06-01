@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/******************************
+ * Author: Nico
+ * Description: Keeps track of the amount of potions (icecream scoops) that the player has
+ ******************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;

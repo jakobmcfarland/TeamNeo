@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/******************************
+ * Author: Nico
+ * Description: the stamina bar manager
+ ******************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
