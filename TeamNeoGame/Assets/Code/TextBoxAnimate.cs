@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/******************************
+ * Author: Nico
+ * Description: animates the text box
+ ******************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;

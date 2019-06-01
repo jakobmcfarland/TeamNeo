@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/******************************
+ * Author: Nico
+ * Date Last Edited: 5-31-2019
+ * Description: the attack manager
+ ******************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;

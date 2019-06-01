@@ -1,4 +1,10 @@
-﻿using Assets.Code.Map;
+﻿/* File:    MapNodeList
+ * By:      Jakob McFarland and William Siauw
+ * Brief:
+ *      manages the nodes (activation and deactivation)
+ */
+using System.Collections;
+using Assets.Code.Map;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

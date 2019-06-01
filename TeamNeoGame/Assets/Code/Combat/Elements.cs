@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/******************************
+ * Author: Nico
+ * Description: changes the arrow direction
+ ******************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
