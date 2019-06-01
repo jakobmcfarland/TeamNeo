@@ -1,5 +1,5 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Code/Components/Cinematic.cs">
+﻿<Properties StartupConfiguration="{89CF487F-ACEA-011F-AB8F-8F8FCCD90F2C}|Unit Tests">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Code/Combat/StaminaBar.cs">
     <Files>
       <File FileName="Assets/Code/Components/TextBox.cs" Line="1" Column="1" />
       <File FileName="Assets/Code/Components/DialogueBox.cs" Line="1" Column="1" />
@@ -13,20 +13,19 @@
       <File FileName="Assets/Code/Components/Combat.cs" Line="1" Column="1" />
       <File FileName="Assets/Code/Combat/CombatManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Code/Combat/PlayerCombat.cs" Line="1" Column="1" />
-      <File FileName="Assets/Code/Combat/CombatInfo.cs" Line="27" Column="19" />
+      <File FileName="Assets/Code/Combat/CombatInfo.cs" Line="33" Column="1" />
       <File FileName="Assets/Code/Components/GameState.cs" Line="1" Column="1" />
       <File FileName="Assets/Code/Components/SaveGameManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Code/Combat/AttackManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Code/Components/StatusText.cs" Line="1" Column="1" />
-      <File FileName="Assets/Code/TextBoxAnimate.cs" Line="22" Column="33" />
-      <File FileName="Assets/CoinCounter.cs" Line="7" Column="1" />
-      <File FileName="Assets/Code/Combat/BasicEnemy.cs" Line="49" Column="14" />
-      <File FileName="Assets/PotionCounter.cs" Line="20" Column="43" />
+      <File FileName="Assets/Code/TextBoxAnimate.cs" Line="22" Column="6" />
+      <File FileName="Assets/Code/Combat/BasicEnemy.cs" Line="49" Column="1" />
       <File FileName="Assets/Code/Map/MapNodeComponent.cs" Line="1" Column="1" />
       <File FileName="Assets/Code/Map/MapNode.cs" Line="1" Column="1" />
       <File FileName="Assets/Code/Map/mapCameraFollow.cs" Line="1" Column="1" />
       <File FileName="Assets/Code/Map/MapNodeList.cs" Line="1" Column="1" />
-      <File FileName="Assets/Code/Components/Cinematic.cs" Line="66" Column="40" />
+      <File FileName="Assets/Code/Components/Cinematic.cs" Line="13" Column="16" />
+      <File FileName="Assets/Code/Combat/StaminaBar.cs" Line="13" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -35,12 +34,20 @@
             <Node name="Assembly-CSharp" expanded="True">
               <Node name="Assets" expanded="True">
                 <Node name="Code" expanded="True">
-                  <Node name="Combat" expanded="True" />
-                  <Node name="Components" expanded="True">
-                    <Node name="Cinematic.cs" selected="True" />
+                  <Node name="Combat" expanded="True">
+                    <Node name="StaminaBar.cs" selected="True" />
                   </Node>
-                  <Node name="Map" expanded="True" />
                 </Node>
+              </Node>
+            </Node>
+            <Node name="Assembly-CSharp-Editor-firstpass" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Plugins" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Assembly-CSharp-firstpass" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="PLugins" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -50,6 +57,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
