@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/******************************
+ * Author: Nico
+ * Description: Changes the environ
+ ******************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public enum Environment

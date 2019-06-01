@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/******************************
+ * Author: Nico
+ * Description: Counts the coins
+ ******************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
