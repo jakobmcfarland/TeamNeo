@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/******************************
+ * Author: Nico
+ * Date Last Edited: 5-29-2019
+ * Description: component that contains object descriptions for the inspector
+ ******************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
