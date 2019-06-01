@@ -43,6 +43,9 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{d766ea03-5779-4c78-85e1-9e1c36b4ba80}">
+		<property name="uiTrackHeight">
+			<value>100</value>
+		</property>
 		<relationship name="mixerGroup">
 			<destination>{7a8323d5-9519-405c-9a3b-f6a20fd08dc8}</destination>
 		</relationship>
@@ -107,6 +110,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{71362cc4-28f7-4ced-b69f-5c83e4a703e3}">
+		<property name="volume">
+			<value>-4</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>

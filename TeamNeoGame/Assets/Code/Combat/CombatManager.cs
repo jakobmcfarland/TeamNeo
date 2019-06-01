@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/******************************
+ * Author: Nico
+ * Description: The combat manager
+ ******************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

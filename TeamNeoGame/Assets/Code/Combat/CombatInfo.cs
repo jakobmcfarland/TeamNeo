@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/******************************
+ * Author: Nico
+ * Description: The information for the combat scene
+ ******************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
