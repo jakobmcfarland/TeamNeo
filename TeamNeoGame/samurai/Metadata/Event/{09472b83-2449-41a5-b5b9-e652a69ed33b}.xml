@@ -41,6 +41,9 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{1e7073ca-e7fd-4338-9279-ed5fb053b4f8}">
+		<property name="uiTrackHeight">
+			<value>100</value>
+		</property>
 		<relationship name="mixerGroup">
 			<destination>{66754a10-8a46-45e9-b6ea-653a5db37ec2}</destination>
 		</relationship>
@@ -103,6 +106,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{409b26b0-b977-4fef-99fd-632236b7e65e}">
+		<property name="volume">
+			<value>-14</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -163,14 +169,23 @@
 		<property name="filterTypeB">
 			<value>8</value>
 		</property>
+		<property name="filterTypeC">
+			<value>4</value>
+		</property>
 		<property name="frequencyA">
 			<value>1583.61926</value>
 		</property>
 		<property name="frequencyB">
 			<value>7647.40625</value>
 		</property>
+		<property name="frequencyC">
+			<value>72.2634354</value>
+		</property>
 		<property name="qualityA">
 			<value>0.686068952</value>
+		</property>
+		<property name="qualityC">
+			<value>0.497689635</value>
 		</property>
 		<property name="gainB">
 			<value>-0.517240524</value>
